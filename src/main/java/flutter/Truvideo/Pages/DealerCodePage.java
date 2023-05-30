@@ -97,6 +97,7 @@ public class DealerCodePage extends UtilityClass {
 		if(helloThereText.isDisplayed() && enterDealerCodeMessage.isDisplayed() && 
 				truVideoLogo.isDisplayed()) {
 			log.info("All elements are Present on Dealer Screen");
+			System.out.println("test  source treee");
 			return true;
 		}else {
 			log.info("All elements are not Present on Dealer Screen");
