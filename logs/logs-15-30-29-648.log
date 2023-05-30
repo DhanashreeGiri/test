@@ -1,0 +1,10 @@
+19:21:44 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Dealer Not found message is displayed
+19:22:31 [main] INFO  flutter.Truvideo.Tests.ServiceSideTest - Connected to Appium Server, Launching Application. . .
+19:23:37 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Dealer Not found message is displayed
+14:29:45 [main] INFO  flutter.Truvideo.Tests.ServiceSideTest - Error in Reading Capabilities from Json File 
+14:37:43 [main] INFO  flutter.Truvideo.Tests.ServiceSideTest - Error in Reading Capabilities from Json File 
+14:52:53 [main] INFO  flutter.Truvideo.Tests.ServiceSideTest - Error in Reading Capabilities from Json File 
+15:25:00 [main] INFO  flutter.Truvideo.Tests.ServiceSideTest - Connected to Appium Server, Launching Application. . .
+15:26:06 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Dealer Not found message is displayed
+15:29:23 [main] INFO  flutter.Truvideo.Tests.ServiceSideTest - Connected to Appium Server, Launching Application. . .
+15:30:23 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - PopUp not present

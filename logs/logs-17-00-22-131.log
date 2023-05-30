@@ -1,0 +1,11 @@
+15:34:04 [main] INFO  flutter.Truvideo.Pages.RO_ListPage - Status is : Sent
+15:34:04 [main] INFO  flutter.Truvideo.Pages.RO_ListPage - In New Filter, All Status of RO is New 
+18:47:14 [main] INFO  flutter.Truvideo.Tests.ServiceSideTest - Connected to Appium Server, Launching Application. . .
+18:48:14 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - PopUp not present
+18:48:21 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Dealer Not found message is displayed
+18:49:21 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - PopUp not present
+18:49:27 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Dealer name is Displayed
+18:49:33 [main] INFO  flutter.Truvideo.Pages.UserListPage - Error message displayed while entering invalid pin
+18:51:41 [main] INFO  flutter.Truvideo.Pages.RO_ListPage - ROSearch--  SearchBar Closed 
+16:58:57 [main] INFO  flutter.Truvideo.Tests.ServiceSideTest - Connected to Appium Server, Launching Application. . .
+16:59:58 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - PopUp not present

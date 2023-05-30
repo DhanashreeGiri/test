@@ -1,0 +1,12 @@
+20:01:12 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - PopUp not present
+20:01:12 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Entering Dealer code
+20:01:13 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Dealer code is entered
+20:01:13 [main] INFO  flutter.Truvideo.Pages.UserListPage - inside valid pin
+20:01:28 [main] INFO  flutter.Truvideo.Tests.DealerCodePageTest - inside verifyEnterDealerCodeFunction
+20:01:34 [main] INFO  flutter.Truvideo.Pages.RO_ListPage - inside Footer tab method
+20:01:34 [main] INFO  flutter.Truvideo.Pages.RO_ListPage - All Footer tabs & Create button are Present on RO Screen
+16:16:59 [main] INFO  flutter.Truvideo.Tests.ServiceSideTest - Connected to Appium Server, Launching Application. . .
+16:17:59 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - PopUp not present
+16:17:59 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Entering Dealer code
+16:18:00 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Dealer code is entered
+16:18:00 [main] INFO  flutter.Truvideo.Pages.UserListPage - inside valid pin

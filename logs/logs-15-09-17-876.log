@@ -1,0 +1,11 @@
+15:03:55 [main] INFO  flutter.Truvideo.Pages.RO_ListPage - In New Filter, All Status of RO is New 
+15:03:58 [main] INFO  flutter.Truvideo.Pages.RO_ListPage - Status is : New
+15:03:58 [main] INFO  flutter.Truvideo.Pages.RO_ListPage - In New Filter, All Status of RO is New 
+15:06:54 [main] INFO  flutter.Truvideo.Tests.DealerCodePageTest - Connected to Appium Server, Launching Application. . .
+15:07:25 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - PopUp not present
+15:07:44 [main] INFO  flutter.Truvideo.Pages.RO_ListPage - All Footer tabs & Create button are Present on RO Screen
+15:07:59 [main] INFO  flutter.Truvideo.Tests.ServiceSideTest - Connected to Appium Server, Launching Application. . .
+15:08:30 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - PopUp not present
+15:08:36 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Dealer Not found message is displayed
+15:09:06 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - PopUp not present
+15:09:11 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Dealer name is Displayed

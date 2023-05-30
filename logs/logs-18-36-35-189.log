@@ -1,0 +1,12 @@
+17:45:01 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - PopUp not present
+17:45:01 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Entering Dealer code
+17:45:02 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Dealer code is entered
+17:45:08 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Dealer name is Displayed
+17:50:10 [main] INFO  flutter.Truvideo.Tests.DealerCodePageTest1 - Connected to Appium Server, Launching Application. . .
+17:50:12 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - All elements are Present on Dealer Screen
+17:50:32 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - PopUp not present
+17:50:39 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Dealer Not found message is displayed
+17:50:59 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - PopUp not present
+17:50:59 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Entering Dealer code
+17:51:00 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Dealer code is entered
+17:51:05 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Dealer name is Displayed
