@@ -242,7 +242,7 @@ public class RO_ListPage extends UtilityClass {
 		}
 	}
 
-	public boolean checkNavigationTo_Add_Order_Page() {
+	public boolean checkNavigationTo_AddOrder_Page() {
 		createButton.click();
 		AddOrderPage addOrderPage = new AddOrderPage(driver);
 		if (addOrderPage.getAddOrder_Title().isDisplayed()) {
