@@ -44,7 +44,7 @@ public class RO_SettingPage extends UtilityClass {
 		settings.click();
 		fontSize.click();
 		smallFont.click();
-		
+		System.out.println("HELLO TEST");
 			
 		
 	}
