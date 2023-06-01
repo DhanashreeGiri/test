@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite_CreateNewUserPage">
+	<listeners>
+		<listener class-name="flutter.Truvideo.TestUtils.Listeners"></listener>
+	</listeners>
+	<test thread-count="5" name="Test_CreateNewUserPage" preserve-order="true">
+		<classes>
+			<class name="flutter.Truvideo.Tests.DealerCodePageTest">
+				<methods>
+					<include name="verifyLogin_ValidDealerCode" />
+				</methods>
+			</class>
+			<class name="flutter.Truvideo.Tests.UserListPageTest">
+				<methods>
+					<include name="verifyCreateUserFunction"/>
+				</methods>
+			</class>
+			<class name="flutter.Truvideo.Tests.CreateNewUserPageTest">
+				<methods>
+					<include name="verifyCancelButton"></include>
+				</methods>
+			</class>
+			<class name="flutter.Truvideo.Tests.UserListPageTest">
+				<methods>
+					<include name="verifyCreateUserFunction"/>
+				</methods>
+			</class>
+			<class name="flutter.Truvideo.Tests.CreateNewUserPageTest">
+				<methods>
+					<exclude name="verifyCancelButton"></exclude>
+				</methods>
+			</class>
+			<class name="flutter.Truvideo.Tests.RO_ListPageTest">
+			</class>
+		</classes>
+	</test> 
+</suite> 
