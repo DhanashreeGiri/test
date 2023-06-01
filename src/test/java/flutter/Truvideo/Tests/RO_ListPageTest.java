@@ -70,4 +70,11 @@ public class RO_ListPageTest extends BaseClass{
 		Assert.assertTrue(ro_ListPage.checkNavigationBackTo_Order());
 	}
 	
+	@Test(priority = 11)
+	public void verifyNavigationToAddOrderPage() {
+		ro_ListPage=new RO_ListPage(driver);
+		Assert.assertTrue(ro_ListPage.checkNavigationTo_Add_Order_Page());
+	}
+	
+	
 }

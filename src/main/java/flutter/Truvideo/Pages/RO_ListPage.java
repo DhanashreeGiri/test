@@ -152,18 +152,6 @@ public class RO_ListPage extends UtilityClass {
 		}
 		return false;
 	}
-
-	/*
-	 * public boolean checkRO_Status_All() throws Exception { allFilter.click();
-	 * Thread.sleep(2000); for (WebElement statusObject : filterStatusList) { if
-	 * (statusObject.getAttribute("content-desc").equals("Sent") ||
-	 * statusObject.getAttribute("content-desc").equals("New") ||
-	 * statusObject.getAttribute("content-desc").equals("For Review") ||
-	 * statusObject.getAttribute("content-desc").equals("Viewed")) {
-	 * log.info("Status is : " + statusObject.getAttribute("content-desc"));
-	 * log.info("In New Filter, All Status of RO is New "); return true; } else
-	 * return false; } return false; }
-	 */
 	
 	public boolean checkRO_Status_All() throws Exception {
 	    allFilter.click();
@@ -254,7 +242,7 @@ public class RO_ListPage extends UtilityClass {
 		}
 	}
 
-	public boolean checkNavigationTo_Add_RO_Page() {
+	public boolean checkNavigationTo_Add_Order_Page() {
 		createButton.click();
 		AddOrderPage addOrderPage = new AddOrderPage(driver);
 		if (addOrderPage.getAddOrder_Title().isDisplayed()) {

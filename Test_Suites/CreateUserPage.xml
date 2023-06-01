@@ -13,7 +13,7 @@
 			</class>
 			<class name="flutter.Truvideo.Tests.UserListPageTest">
 				<methods>
-					<include name="verifyCreateUserFunction"/>
+					<include name="verifyCreateUserFunction" />
 				</methods>
 			</class>
 			<class name="flutter.Truvideo.Tests.CreateNewUserPageTest">
@@ -23,7 +23,7 @@
 			</class>
 			<class name="flutter.Truvideo.Tests.UserListPageTest">
 				<methods>
-					<include name="verifyCreateUserFunction"/>
+					<include name="verifyCreateUserFunction" />
 				</methods>
 			</class>
 			<class name="flutter.Truvideo.Tests.CreateNewUserPageTest">
@@ -31,8 +31,6 @@
 					<exclude name="verifyCancelButton"></exclude>
 				</methods>
 			</class>
-			<class name="flutter.Truvideo.Tests.RO_ListPageTest">
-			</class>
 		</classes>
-	</test> 
+	</test>
 </suite> 
