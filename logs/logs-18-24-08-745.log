@@ -1,0 +1,9 @@
+18:16:30 [main] INFO  flutter.Truvideo.Pages_Android.Android_RO_ListPage - Status is : New
+18:16:30 [main] INFO  flutter.Truvideo.Pages_Android.Android_RO_ListPage - In New Filter, All Status of RO is New 
+18:16:31 [main] INFO  flutter.Truvideo.Pages_Android.Android_RO_ListPage - Status is : New
+18:16:31 [main] INFO  flutter.Truvideo.Pages_Android.Android_RO_ListPage - In New Filter, All Status of RO is New 
+18:23:38 [main] INFO  flutter.Truvideo.Android_Tests.ServiceSideTest - Connected to Appium Server, Launching Android App. . .
+18:23:47 [main] INFO  flutter.Truvideo.Pages_Android.Android_DealerCodePage - Dealer Not found message is displayed
+18:23:54 [main] INFO  flutter.Truvideo.Pages_Android.Android_DealerCodePage - Dealer name is Displayed
+18:23:59 [main] INFO  flutter.Truvideo.Pages_Android.Android_UserListPage - Error message displayed while entering invalid pin
+18:24:06 [main] INFO  flutter.Truvideo.Pages_Android.Android_UserListPage - User logged in successfully and Navigating to the RO List Page

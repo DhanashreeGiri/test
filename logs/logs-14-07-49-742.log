@@ -1,0 +1,11 @@
+14:05:35 [main] INFO  flutter.Truvideo.Tests.ServiceSideTest - Connected to Appium Server, Launching Application. . .
+14:06:05 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - PopUp not present
+14:06:11 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Dealer Not found message is displayed
+14:06:42 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - PopUp not present
+14:06:47 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Dealer name is Displayed
+14:06:53 [main] INFO  flutter.Truvideo.Pages.UserListPage - Error message displayed while entering invalid pin
+14:07:02 [main] INFO  flutter.Truvideo.Pages.RO_ListPage - All Footer tabs & Create button are Present on RO Screen
+14:07:08 [main] INFO  flutter.Truvideo.Pages.RO_ListPage - ROSearch--  SearchBar Closed 
+14:07:48 [main] INFO  flutter.Truvideo.Pages.RO_ListPage - Status is : New
+14:07:48 [main] INFO  flutter.Truvideo.Pages.RO_ListPage - In New Filter, All Status of RO is New 
+14:07:49 [main] INFO  flutter.Truvideo.Pages.RO_ListPage - Status is : New

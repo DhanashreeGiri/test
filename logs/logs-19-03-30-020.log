@@ -1,0 +1,9 @@
+18:49:21 [main] INFO  flutter.Truvideo.Pages_Android.Android_DealerCodePage - Dealer Not found message is displayed
+18:49:29 [main] INFO  flutter.Truvideo.Pages_Android.Android_DealerCodePage - Dealer name is Displayed
+18:49:35 [main] INFO  flutter.Truvideo.Pages_Android.Android_UserListPage - Error message displayed while entering invalid pin
+18:49:44 [main] INFO  flutter.Truvideo.Pages_Android.Android_UserListPage - User logged in successfully and Navigating to the RO List Page
+18:52:30 [main] INFO  flutter.Truvideo.Android_Tests.ServiceSideTest - Connected to Appium Server, Launching Android App. . .
+18:52:38 [main] INFO  flutter.Truvideo.Pages_Android.Android_DealerCodePage - Dealer Not found message is displayed
+18:52:46 [main] INFO  flutter.Truvideo.Pages_Android.Android_DealerCodePage - Dealer name is Displayed
+18:52:52 [main] INFO  flutter.Truvideo.Pages_Android.Android_UserListPage - Error message displayed while entering invalid pin
+18:52:58 [main] INFO  flutter.Truvideo.Pages_Android.Android_UserListPage - User logged in successfully and Navigating to the RO List Page

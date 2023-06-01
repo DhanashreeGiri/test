@@ -1,0 +1,11 @@
+22:31:39 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Dealer code is entered
+22:31:47 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Dealer name is Displayed
+22:31:48 [main] INFO  flutter.Truvideo.Pages.UserListPage - Dealer Name and refresh button is Displayed
+22:31:50 [main] INFO  flutter.Truvideo.Pages.UserListPage - No User Found message is Displayed
+22:31:58 [main] INFO  flutter.Truvideo.Pages.UserListPage - Error message displayed while entering invalid pin
+22:33:07 [main] INFO  flutter.Truvideo.Tests.DealerCodePageTest1 - Connected to Appium Server, Launching Application. . .
+22:33:17 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - PopUp not present
+22:33:17 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Entering Dealer code
+22:33:18 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Dealer code is entered
+22:33:24 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Dealer name is Displayed
+22:33:25 [main] INFO  flutter.Truvideo.Pages.UserListPage - Dealer Name and refresh button is Displayed

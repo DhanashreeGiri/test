@@ -1,0 +1,10 @@
+14:58:52 [main] INFO  flutter.Truvideo.Pages_Android.Android_RO_ListPage - Searched RO is at First index : Search Function Passed
+14:58:54 [main] INFO  flutter.Truvideo.Pages_Android.Android_RO_ListPage - Status is : New
+14:58:54 [main] INFO  flutter.Truvideo.Pages_Android.Android_RO_ListPage - In New Filter, All Status of RO is New 
+14:58:55 [main] INFO  flutter.Truvideo.Pages_Android.Android_RO_ListPage - Status is : New
+14:58:55 [main] INFO  flutter.Truvideo.Pages_Android.Android_RO_ListPage - In New Filter, All Status of RO is New 
+14:58:58 [main] INFO  flutter.Truvideo.Pages_Android.Android_RO_ListPage - Status is : New
+14:58:58 [main] INFO  flutter.Truvideo.Pages_Android.Android_RO_ListPage - In New Filter, All Status of RO is New 
+15:15:29 [main] INFO  flutter.Truvideo.Android_Tests.ServiceSideTest - Connected to Appium Server, Launching Android App. . .
+15:15:38 [main] INFO  flutter.Truvideo.Pages_Android.Android_DealerCodePage - Dealer Not found message is displayed
+15:15:45 [main] INFO  flutter.Truvideo.Pages_Android.Android_DealerCodePage - Dealer name is Displayed
