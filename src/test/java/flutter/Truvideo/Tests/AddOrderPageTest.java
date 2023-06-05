@@ -9,9 +9,17 @@ import flutter.Truvideo.Pages.AddOrderPage;
 public class AddOrderPageTest extends  BaseClass{
 	AddOrderPage addOrder;
 	
-	@Test
-	public void checkNewOrderCreation() throws Exception {
+	@Test(priority = 1)
+	public void verifyMandatoryFieldRequiredMessage() {
 		addOrder=new AddOrderPage(driver);
+		Assert.assertTrue(addOrder.checkErrorMessage());
+	}
+	
+	
+	@Test(priority = 2)
+	public void checkNewOrderCreation() throws Exception {
+		addOrder = new AddOrderPage(driver);
 		Assert.assertTrue(addOrder.checkCreateOrder());
 	}
+	 
 }

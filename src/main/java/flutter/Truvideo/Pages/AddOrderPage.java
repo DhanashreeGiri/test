@@ -10,8 +10,7 @@ import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 
 public class AddOrderPage extends UtilityClass{
 	AppiumDriver<WebElement> driver;
-	String roNumber="";
-
+	
 	public AddOrderPage(AppiumDriver<WebElement> driver) {
 		super(driver);
 		this.driver = driver;
@@ -34,10 +33,10 @@ public class AddOrderPage extends UtilityClass{
 		return cancelButton;
 	}
 	
-	@AndroidFindBy(xpath = "//android.widget.EditText[@index='2']")
+	@AndroidFindBy(xpath = "//android.widget.EditText[1]")
 	private WebElement order_textBox;
 	
-	@AndroidFindBy(xpath="//android.view.View[@index='6']")
+	@AndroidFindBy(xpath="//android.view.View[7]")
 	private WebElement advisor_DropDown;
 	
 	@AndroidFindBy(accessibility = "Advisor")
@@ -46,17 +45,16 @@ public class AddOrderPage extends UtilityClass{
 	@AndroidFindBy(xpath = "//android.widget.EditText")
 	private WebElement searchBox_advisor;
 	
-	@AndroidFindBy(xpath = "//android.view.View[@content-desc=\"Disha Gupta\r\n"
-			+ "disha.gupta@5exceptions.com\"]")
+	@AndroidFindBy(xpath = "//android.view.View[contains(@content-desc,'Disha Gupta')]")
 	private WebElement DishaGupta_advisor;
 	
 	@AndroidFindBy(xpath="//android.widget.EditText")
 	private WebElement advisor_SearchBox;
 	
-	@AndroidFindBy(xpath="//android.widget.EditText[@index='9']")
+	@AndroidFindBy(xpath="//android.widget.EditText[2]")
 	private WebElement firstName_textBox;
 	
-	@AndroidFindBy(xpath="//android.widget.EditText[@index='12']")
+	@AndroidFindBy(xpath="//android.widget.EditText[3]")
 	private WebElement lastName_textBox;
 	
 	@AndroidFindBy(xpath="//android.widget.Button")
@@ -65,14 +63,20 @@ public class AddOrderPage extends UtilityClass{
 	@AndroidFindBy(xpath="//android.widget.EditText")
 	private WebElement country_SearchBar;
 	
-	@AndroidFindBy(accessibility = "United States 1")
+	@AndroidFindBy(accessibility = "//android.widget.ImageView[contains(@content-desc,'United States')]")
 	private WebElement unitedState;
 	
-	@AndroidFindBy(xpath = "//android.widget.EditText[@index='17']")
+	@AndroidFindBy(xpath = "//android.widget.EditText[4]")
 	private WebElement mobileTextBox;
 	
-	@AndroidFindBy(xpath="//android.widget.EditText[@index='17']")
+	@AndroidFindBy(xpath="//android.widget.EditText[3]")
+	private WebElement mobileNumber_enter;
+	
+	@AndroidFindBy(xpath="//android.widget.EditText[5]")
 	private WebElement eMail_textBox;
+	
+	@AndroidFindBy(xpath = "//android.widget.EditText[4]")
+	private WebElement email_enter;
 	
 	@AndroidFindBy(accessibility = "Do not send video directly to customer")
 	private WebElement checkBox_DoNotSendDirectly;
@@ -80,27 +84,67 @@ public class AddOrderPage extends UtilityClass{
 	@AndroidFindBy(accessibility = "CREATE")
 	private WebElement createButton;
 	
+	@AndroidFindBy(xpath="(//android.view.View[@content-desc=\"Required\"])[1]")
+	private WebElement required_order;
+	
+	@AndroidFindBy(xpath = "(//android.view.View[@content-desc=\"Required\"])[2]")
+	private WebElement required_advisor;
+	
+	@AndroidFindBy(xpath = "(//android.view.View[@content-desc=\"Required\"])[3]")
+	private WebElement required_firstName;
+	
+	@AndroidFindBy(xpath = "(//android.view.View[@content-desc=\"Required\"])[4]")
+	private WebElement required_lastName;
+	
+	public boolean checkErrorMessage() {
+		createButton.click();
+		if(required_order.isDisplayed()&&required_advisor.isDisplayed()&&required_firstName.isDisplayed()
+				&&required_lastName.isDisplayed()) {
+			return true;
+		}else {
+			return false;
+		}
+		
+	}
+	
 	public boolean checkCreateOrder() throws Exception {
 		Thread.sleep(2000);
-		order_textBox.sendKeys("985421");
+		order_textBox.click();
+		order_textBox.sendKeys("RO"+randomNumber());
+		String newRo=order_textBox.getText();	
 		advisor_DropDown.click();
+		Thread.sleep(2000);
 		advisor_Title.click();
 		advisor_SearchBox.sendKeys("Disha Gupta");
 		DishaGupta_advisor.click();
 		Thread.sleep(2000);
-		firstName_textBox.sendKeys("abcd");
-		lastName_textBox.sendKeys("xyz");
+		firstName_textBox.click();
+		firstName_textBox.sendKeys("First"+randomWord());
+		addOrder_Title.click();//hiding keyboard	
+		lastName_textBox.click();
+		lastName_textBox.sendKeys("Last"+randomWord());
 		addOrder_Title.click();//hiding keayboard
-		country_DropDown.click();
-		country_SearchBar.sendKeys("united");
-		unitedState.click();
-		mobileTextBox.sendKeys("7812059487");
+		//country_DropDown.click();
+		//country_SearchBar.sendKeys("united");
+		//unitedState.click();
+		mobileTextBox.click();
+		mobileNumber_enter.sendKeys("7812059487");
 		addOrder_Title.click();//hiding keayboard
-		eMail_textBox.sendKeys(generateRandomString(8)+"abc"+"@gmail.com");
+		eMail_textBox.click();
+		email_enter.sendKeys(randomWord()+"abc"+"@gmail.com");
 		addOrder_Title.click();//hiding keayboard
 		createButton.click();
-			
-		return true;
+		Thread.sleep(5000);
+		OrderDetailsPage orderDetails=new OrderDetailsPage(driver);
+		Thread.sleep(3000);
+		if(orderDetails.getStatus_New().isDisplayed() ) {
+			log.info("New Ro Created Successfully");
+			return true;
+		}else {
+			log.info("New Ro Creation Unsuccessfull");
+			return false;
+		}
+		
 	}
 
 }
