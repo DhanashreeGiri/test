@@ -27,7 +27,7 @@ public class CreateNewUserPage extends UtilityClass {
 	public WebElement getBackButton() {
 		return backButton.get(4);
 	}
-	
+	@iOSXCUITFindBy(accessibility="Create user")
 	@AndroidFindBy(accessibility = "Create user")
 	private WebElement createUserPage_Title;
 	

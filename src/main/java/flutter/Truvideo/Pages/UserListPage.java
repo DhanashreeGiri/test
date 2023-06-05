@@ -1,5 +1,6 @@
 package flutter.Truvideo.Pages;
 
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import flutter.Truvideo.Utils.UtilityClass;
@@ -22,7 +23,7 @@ public class UserListPage extends UtilityClass {
 	private WebElement reFreshButton;//modified
 
 	@AndroidFindBy(xpath = "//android.widget.EditText")
-	@iOSXCUITFindBy(xpath="//XCUIElementTypeTextField[@name=\"Search...\"]")
+	@iOSXCUITFindBy(accessibility="Search")
 	private WebElement searchBar;
 
 	@AndroidFindBy(accessibility = "NO USERS FOUND")
@@ -136,6 +137,9 @@ public class UserListPage extends UtilityClass {
 	@AndroidFindBy(accessibility = "NO")
 	@iOSXCUITFindBy(accessibility = "NO")
 	private WebElement noButton;
+	
+	@iOSXCUITFindBy(accessibility = "Allow")
+	private WebElement notificationsAllow;
 
 	public boolean checkVisibleText_Icons() throws Exception {
 		Thread.sleep(1000);
@@ -188,6 +192,7 @@ public class UserListPage extends UtilityClass {
 		if (errorPin.isDisplayed() && invalidPinCode.isDisplayed()) {
 			log.info("Error message displayed while entering invalid pin");
 			okButton.click();
+			Thread.sleep(2000);
 			x_button.click();
 			return true;
 		} else {
@@ -207,6 +212,14 @@ public class UserListPage extends UtilityClass {
 		four.click();
 		five.click();
 		six.click();
+		try {
+			if (notificationsAllow.isDisplayed()) {
+				notificationsAllow.click();
+				log.info("Notifications allowed.");
+			}
+		}catch(NoSuchElementException e) {
+		log.info("Notifications allowed pop up not displayed");
+		}
 		biometric_no.click();
 		RO_ListPage roListpage = new RO_ListPage(driver);
 		Thread.sleep(3000);
@@ -258,9 +271,10 @@ public class UserListPage extends UtilityClass {
 		}
 	}
 	
-	public boolean check_ChangeDealerFunction() {
+	public boolean check_ChangeDealerFunction() throws InterruptedException {
+		Thread.sleep(2000);
 		threeDotButton.click();
-		changeDealer.click();
+        changeDealer.click();
 		yesButton.click();
 		DealerCodePage dealeCodePage=new DealerCodePage(driver);
 		if(dealeCodePage.getHelloThereText().isDisplayed()) {
