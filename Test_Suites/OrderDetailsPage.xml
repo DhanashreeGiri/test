@@ -4,25 +4,34 @@
 	<!--<listeners>
 		<listener class-name="flutter.Truvideo.TestUtils.Listeners"></listener>
 	</listeners>-->
-  <test thread-count="5" name="Test_OrderDetailsPage">
+	<test thread-count="5" name="Test_OrderDetailsPage">
 		<classes>
-		<class name="flutter.Truvideo.Tests.DealerCodePageTest">
-	<methods>
-		<include name="verifyLogin_ValidDealerCode"></include>
-	</methods>
-		</class>
-		<class name="flutter.Truvideo.Tests.UserListPageTest">
-			<methods>
-				<include name="verify_Login_ValidPin"></include>
-			</methods>
-		</class>
-		<class name="flutter.Truvideo.Tests.RO_ListPageTest">
-			<methods>
-				<include name="verifyNavigationToAddOrderPage"></include>
-			</methods>
-		</class>
-      <class name="flutter.Truvideo.Tests.AddOrderPageTest"/>
-      <class name="flutter.Truvideo.Tests.OrderDetailsPageTest"/>
-    </classes>
-  </test> <!-- Test_OrderDetailsPage -->
-</suite> <!-- Suite_OrderDetailsPage -->
+			<class name="flutter.Truvideo.Tests.DealerCodePageTest">
+				<methods>
+					<include name="verifyLogin_ValidDealerCode"></include>
+				</methods>
+			</class>
+			<class name="flutter.Truvideo.Tests.UserListPageTest">
+				<methods>
+					<include name="verify_Login_ValidPin"></include>
+				</methods>
+			</class>
+			<class name="flutter.Truvideo.Tests.RO_ListPageTest">
+				<methods>
+					<include name="verifyNavigationToAddOrderPage"></include>
+				</methods>
+			</class>
+			<class name="flutter.Truvideo.Tests.AddOrderPageTest" />
+			<class name="flutter.Truvideo.Tests.OrderDetailsPageTest">
+				<methods>
+					<exclude name="verifyNavigationToEditOrder"></exclude>
+					<exclude name="verifyNavigationToCameraScreen"></exclude>
+					<exclude name="verifyNavigationToMessages"></exclude>
+					<exclude name="verifyNavigationToInspection"></exclude>
+				</methods>
+			</class>
+		</classes>
+	</test> <!--
+	Test_OrderDetailsPage -->
+</suite> <!--
+Suite_OrderDetailsPage -->

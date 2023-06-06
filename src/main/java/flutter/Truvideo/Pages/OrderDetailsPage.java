@@ -8,6 +8,7 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 
+
 public class OrderDetailsPage extends UtilityClass {
 	AppiumDriver<WebElement> driver;
 
@@ -25,8 +26,6 @@ public class OrderDetailsPage extends UtilityClass {
 		return orderNumber;
 	}
 
-	
-	
 	@AndroidFindBy(xpath = "//android.view.View[4][@index='3']")
 	@iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[4][@index='4']")
 	 private WebElement editButton;
@@ -85,11 +84,11 @@ public class OrderDetailsPage extends UtilityClass {
 
 	@AndroidFindBy(id = "com.android.permissioncontroller:id/permission_message")
 	@iOSXCUITFindBy(accessibility = "OK" )
-	private WebElement PermissionMessage;
+	private WebElement permissionMessage;
 
 	@AndroidFindBy(id = "com.android.permissioncontroller:id/permission_allow_foreground_only_button")
 	@iOSXCUITFindBy(accessibility = "OK" )
-	private WebElement Permission_Allow;
+	private WebElement permission_Allow;
 	
 	@AndroidFindBy(accessibility = "INSPECTIONS")
 	@iOSXCUITFindBy(accessibility = "INSPECTIONS" )
@@ -118,9 +117,10 @@ public class OrderDetailsPage extends UtilityClass {
 	}
 
 	// need to call in editRo.xml file
-	public boolean checkEditRO_Navigation() {
+	public boolean checkNavigation_EditRO() throws InterruptedException {
 		editButton.click();
 		EditOrderPage editOrder = new EditOrderPage(driver);
+		Thread.sleep(2000);
 		if (editOrder.getEditOrderTitle().isDisplayed()) {
 			log.info("user is navigated to the Edit Ro Screen");
 			return true;
@@ -134,8 +134,8 @@ public class OrderDetailsPage extends UtilityClass {
 	public boolean checkNavigation_To_CameraScreen() {
 		VideoRecordingPage recordingPage = new VideoRecordingPage(driver);
 		cameraIcon.click();
-		Permission_Allow.click();// camera permission
-		Permission_Allow.click();// audio permission
+		permission_Allow.click();// camera permission
+		permission_Allow.click();// audio permission
 		if (recordingPage.getRotateDeviceMessage().isDisplayed()) {
 			log.info("Camera screen is displayed");
 			return true;

@@ -158,8 +158,8 @@ public class AddOrderPage extends UtilityClass{
 		createButton.click();
 		Thread.sleep(5000);
 		OrderDetailsPage orderDetails=new OrderDetailsPage(driver);
-		Thread.sleep(3000);
-		if(orderDetails.getStatus_New().isDisplayed() ) {
+		Thread.sleep(10000);
+		if(orderDetails.getStatus_New().isDisplayed()) {
 			log.info("New Ro Created Successfully");
 			return true;
 		}else {
@@ -169,4 +169,5 @@ public class AddOrderPage extends UtilityClass{
 		
 	}
 
-}
+	}
+
