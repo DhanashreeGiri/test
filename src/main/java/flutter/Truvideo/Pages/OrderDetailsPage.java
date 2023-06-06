@@ -98,9 +98,10 @@ public class OrderDetailsPage extends UtilityClass {
 	}
 
 	// need to call in editRo.xml file
-	public boolean checkEditRO_Navigation() {
+	public boolean checkNavigation_EditRO() throws InterruptedException {
 		editButton.click();
 		EditOrderPage editOrder = new EditOrderPage(driver);
+		Thread.sleep(2000);
 		if (editOrder.getEditOrderTitle().isDisplayed()) {
 			log.info("user is navigated to the Edit Ro Screen");
 			return true;
