@@ -15,14 +15,29 @@ public class UtilityClass {
 	public UtilityClass(AppiumDriver<WebElement> driver) {
 		this.driver = driver;
 	}
+	
+	Random rnd = new Random();
+	int random = rnd.nextInt(999999);
+	String roNum = "RO " + String.valueOf(random);
 
+	String fName = "FName" + random;
+	String lName = "LName" + random;
+	String mobileNum = "7812059487";
+	String mail = "mailto:dinesh.borude@5exceptions.com";
 
-
-	public static String randomNumber() {
+	
+	public  String randomWord() {
 		Random rnd = new Random();
 		int random = rnd.nextInt(999999);
-		String roNum = "RO " + String.valueOf(random);
-		return roNum;
+		String generatedName = "Name" + String.valueOf(random);
+		return generatedName;
+	}
+
+
+	public  int randomNumber() {
+		Random rnd = new Random();
+		int number = rnd.nextInt(999999999);
+		return number;
 	}
 
 	public String generateRandomNumber(int length) {
