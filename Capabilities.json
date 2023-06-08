@@ -34,5 +34,16 @@
             "bundleId":"com.truvideo.enterprise.rc",
             "app":"/src/main/resources/ApplicationFile/RCTruvideoflutter.apk"
                 }
+    },
+    {
+        "name":"Samsung_zFlip",
+        "caps":{
+            "automationName":"UiAutomator2",
+            "platformName":"ANDROID",
+            "deviceName":"Galaxy Z Flip3 5G",
+            "platformVersion":"13.0",
+            "bundleId":"com.truvideo.enterprise.rc",
+            "app":"/src/main/resources/ApplicationFile/RCTruvideoflutter.apk"
+            }
     }
 ]

@@ -41,9 +41,15 @@ public class OrderDetailsPageTest extends BaseClass{
 	}
 	
 	@Test
-	public void verifyNavigationToInspection() throws InterruptedException {
+	public void verifyCheck_UncheckVideoFunction() throws InterruptedException {
 		orderDetails=new OrderDetailsPage(driver);
-		Assert.assertTrue(orderDetails.checkNavigation_To_Inspection());
+		Assert.assertTrue(orderDetails.check_UncheckButton_Function());
 	}
-
+	
+	@Test
+	public void verifyNavigationToPendingToUpload() throws InterruptedException {
+		orderDetails=new OrderDetailsPage(driver);
+		Assert.assertTrue(orderDetails.checkNavigation_PendingToUploadScreen());
+	}
+	
 }

@@ -67,13 +67,36 @@ public class OrderDetailsPage extends UtilityClass {
 	private WebElement cameraIcon;
 
 	@AndroidFindBy(id = "com.android.permissioncontroller:id/permission_message")
-	private WebElement popUpMessage;
+	private WebElement permissionMessage;
 
 	@AndroidFindBy(id = "com.android.permissioncontroller:id/permission_allow_foreground_only_button")
-	private WebElement whileUsingApp;
-	
+	private WebElement permission_Allow;
+
 	@AndroidFindBy(accessibility = "INSPECTIONS")
 	private WebElement inspectionsTab;
+
+	@AndroidFindBy(accessibility = "//android.widget.ImageView/android.view.View[1]")
+	private WebElement check_Button;
+
+	@AndroidFindBy(xpath = "//android.view.View[@index=3]")
+	private WebElement selectedVideo_Count;
+
+	@AndroidFindBy(xpath = "//android.view.View[2][@index='1'][@clickable='true']")
+	private WebElement x_Button;
+
+	@AndroidFindBy(xpath = "//android.widget.ImageView[@index='0']")
+	private WebElement pendingToUpload_video;
+
+	public WebElement getPendingToUploadVideo() {
+		return pendingToUpload_video;
+	}
+
+	@AndroidFindBy(xpath = "//android.widget.ImageView[contains(@content-desc,'Video')]")
+	private WebElement video_MediaGallery;
+
+	public WebElement getVideo_MediaGallery() {
+		return video_MediaGallery;
+	}
 
 	public boolean checkAllImportantTextsArePresent() {
 		if (orderNumber.getText() != null && customerBlock.isDisplayed() && serviceAdvisorBlock.isDisplayed()
@@ -112,11 +135,25 @@ public class OrderDetailsPage extends UtilityClass {
 	}
 
 	// need to call in cameraScreen.xml file
-	public boolean checkNavigation_To_CameraScreen() {
+	public boolean checkNavigation_To_CameraScreen() throws InterruptedException {
 		VideoRecordingPage recordingPage = new VideoRecordingPage(driver);
 		cameraIcon.click();
-		whileUsingApp.click();// camera permission
-		whileUsingApp.click();// audio permission
+		Thread.sleep(4000);
+		try {
+			log.info("Camera permission Displayed");
+			permission_Allow.click();// camera permission
+		} catch (Exception e) {
+			log.info("Camera permission Not Displayed");
+		}
+		Thread.sleep(4000);
+		try {
+			log.info("Audio permission Displayed");
+		permission_Allow.click();// audio permission
+		}catch (Exception e) {
+			log.info("Audio permission Displayed");
+			
+		}
+			Thread.sleep(4000);
 		if (recordingPage.getRotateDeviceMessage().isDisplayed()) {
 			log.info("Camera screen is displayed");
 			return true;
@@ -124,7 +161,6 @@ public class OrderDetailsPage extends UtilityClass {
 			log.info("Camera screen is not displayed");
 			return false;
 		}
-
 	}
 
 	// need to call in messages.xml
@@ -139,16 +175,41 @@ public class OrderDetailsPage extends UtilityClass {
 			return false;
 		}
 	}
-	
-	//need to call in inspection.xml
+
+	// need to call in inspection.xml
 	public boolean checkNavigation_To_Inspection() {
-		InspectionPage inspectionPage=new InspectionPage(driver);
+		InspectionPage inspectionPage = new InspectionPage(driver);
 		inspectionsTab.click();
-		if(inspectionPage.getInspection_Title().isDisplayed()) {
+		if (inspectionPage.getInspection_Title().isDisplayed()) {
 			log.info("User is navigated to the Inspection page");
 			return true;
-		}else {
+		} else {
 			log.info("User is not able to navigated to the Inspection page");
+			return false;
+		}
+	}
+
+	public boolean check_UncheckButton_Function() throws InterruptedException {
+		Thread.sleep(30000);//wait for video encoding
+		check_Button.click();
+		if (selectedVideo_Count.isDisplayed()) {
+			log.info("Video is selected for the next operations");
+			x_Button.click();
+			return true;
+		} else {
+			log.info("Video is not selected for the next operations");
+			return false;
+		}
+	}
+
+	public boolean checkNavigation_PendingToUploadScreen() {
+		pendingToUpload_video.click();
+		PendingToUploadPage pendingToUpload = new PendingToUploadPage(driver);
+		if (pendingToUpload.getPendingToUpload_Title().isDisplayed()) {
+			log.info("User is on Pending to Upload screen");
+			return true;
+		} else {
+			log.info("User is not able to navigate to Pending Upload screen");
 			return false;
 		}
 	}

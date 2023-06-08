@@ -115,6 +115,7 @@ public class AddOrderPage extends UtilityClass{
 		advisor_DropDown.click();
 		Thread.sleep(2000);
 		advisor_Title.click();
+		advisor_SearchBox.click();//need to delete in next build
 		advisor_SearchBox.sendKeys("Disha Gupta");
 		DishaGupta_advisor.click();
 		Thread.sleep(2000);
