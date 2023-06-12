@@ -23,10 +23,10 @@ public class VideoPreviewScreen extends UtilityClass{
 		return play_Pause_Button;
 	}
 	
-	@AndroidFindBy(xpath = "//android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[3]")
+	@AndroidFindBy(xpath = "//android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[4]")
 	private WebElement greenButton;
 	
-	@AndroidFindBy(xpath = "//android.view.View[4][@index='3']")
+	@AndroidFindBy(xpath = "//android.view.View[5][@index='4']")
 	private WebElement redButton;
 	
 	@AndroidFindBy(xpath = "//android.view.View[5]")
@@ -75,6 +75,7 @@ public class VideoPreviewScreen extends UtilityClass{
 	private WebElement delete_Image;
 	
 	public boolean checkDeleteVideoFunction_NOButton() throws InterruptedException {
+		next_ScreenButton.click();
 		redButton.click();
 		Thread.sleep(2000);
 		if(delete_Message.isDisplayed()&&areYouSure_Message.isDisplayed()) {
@@ -89,7 +90,7 @@ public class VideoPreviewScreen extends UtilityClass{
 		}
 	}
 	
-	public boolean checkDeleteVideoFunction_DeleteButton() throws InterruptedException{
+	public boolean checkDeleteVideoFunction_DeleteButton_MediaGallery() throws InterruptedException{
 		redButton.click();
 		Thread.sleep(2000);
 		delete_Button.click();
@@ -104,8 +105,42 @@ public class VideoPreviewScreen extends UtilityClass{
 		}
 	}
 	
+	public boolean checkDeleteVideoFunction_DeleteButton_Recorder() throws InterruptedException{
+		redButton.click();
+		Thread.sleep(2000);
+		delete_Button.click();
+		VideoRecordingPage recordingScreen=new VideoRecordingPage(driver);
+		Thread.sleep(2000);
+		if(recordingScreen.getRecordingTimer().isDisplayed()) {
+			log.info("video deleted from video preview screen");
+			return true;
+		}else {
+			log.info("video not deleted from video preview screen");
+			return false;
+		}
+	}
+	
+	//need for recording side only
+	public void deleteImages() {
+		next_ScreenButton.click();
+		delete_Image.click();
+		delete_Button.click();
+		log.info("image deleted : 1st");
+		delete_Image.click();
+		delete_Button.click();
+		log.info("image deleted : 2nd");
+		delete_Image.click();
+		delete_Button.click();
+		log.info("image deleted : 3rd");
+		delete_Image.click();
+		delete_Button.click();
+		log.info("image deleted : 4th");
+		previous_ScreenButton.click();
+	}
+	
 	public boolean checkPreviewScreenFunction() throws InterruptedException {
 		Thread.sleep(2000);
+		//previous_ScreenButton.click();
 		rotation_Anticlockwise_video.click();
 		log.info("Video : Anticlockwise rotation done");
 		rotation_Clockwise_video.click();

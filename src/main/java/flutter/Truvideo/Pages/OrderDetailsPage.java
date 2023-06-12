@@ -190,6 +190,7 @@ public class OrderDetailsPage extends UtilityClass {
 	}
 
 	public boolean check_UncheckButton_Function() throws InterruptedException {
+		scrollDown();
 		Thread.sleep(30000);//wait for video encoding
 		check_Button.click();
 		if (selectedVideo_Count.isDisplayed()) {
@@ -203,6 +204,7 @@ public class OrderDetailsPage extends UtilityClass {
 	}
 
 	public boolean checkNavigation_PendingToUploadScreen() {
+		scrollDown();
 		pendingToUpload_video.click();
 		PendingToUploadPage pendingToUpload = new PendingToUploadPage(driver);
 		if (pendingToUpload.getPendingToUpload_Title().isDisplayed()) {

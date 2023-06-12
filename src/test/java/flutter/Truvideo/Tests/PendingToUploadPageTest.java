@@ -22,7 +22,7 @@ public class PendingToUploadPageTest extends BaseClass{
 	}
 	
 	@Test(priority = 3)
-	public void verifyDeleteImage() {
+	public void verifyDeleteImage() throws InterruptedException {
 		pendingToUploadPage=new PendingToUploadPage(driver);
 		Assert.assertTrue(pendingToUploadPage.deleteImage());
 	}

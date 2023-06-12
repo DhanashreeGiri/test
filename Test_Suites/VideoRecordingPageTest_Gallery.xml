@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite_VideoPreviewScreenTest">
+<suite name="Suite_VideoRecordingPageTest">
 	<!--<listeners>
 		<listener class-name="flutter.Truvideo.TestUtils.Listeners"></listener>
 	</listeners>-->
-	<test thread-count="5" name="Test_VideoPreviewScreenTest_01">
+	<test thread-count="5" name="Test_VideoRecordingPageTest">
 		<classes>
 			<class name="flutter.Truvideo.Tests.DealerCodePageTest">
 				<methods>
@@ -28,31 +28,9 @@
 				</methods>
 			</class>
 			<class name="flutter.Truvideo.Tests.VideoRecordingPageTest" >
-				<methods>
-					<include name="verifyVideoUploading_MediaGallery"></include>
-				</methods>
-			</class>
-			<class name="flutter.Truvideo.Tests.VideoPreviewScreenTest">
-				<methods>
-					<include name="verifyDeleteVideoFunction_NOButton"></include>
-					<include name="verifyDeleteVideoFunction_DeleteButton_MediaGallery"></include>
-				</methods>
-			</class>
+			<methods>
+				<include name="verifyVideoUploading_MediaGallery"></include>
+			</methods>
 		</classes>
 	</test> 
-	<test name="Test_VideoPreviewScreenTest_02">
-		<classes>
-			<class name="flutter.Truvideo.Tests.VideoRecordingPageTest" >
-				<methods>
-					<include name="verifyVideoUploading_MediaGallery"></include>
-				</methods>
-			</class>
-			<class name="flutter.Truvideo.Tests.VideoPreviewScreenTest">
-				<methods>
-					<include name="verifyPreviewScreenFunction"></include>
-				</methods>
-			</class>
-		</classes>
-	</test>
-</suite> <!--
-Suite_VideoPreviewScreenTest -->
+</suite> 

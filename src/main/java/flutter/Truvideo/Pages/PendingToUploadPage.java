@@ -35,7 +35,7 @@ public class PendingToUploadPage extends UtilityClass{
 	@AndroidFindBy(xpath = "//android.view.View[2]")
 	private WebElement backButton_playerScreen;
 	
-	@AndroidFindBy(xpath = "//android.view.View[5]")
+	@AndroidFindBy(xpath = "//android.view.View[3]")
 	private WebElement tagDropdown;
 	
 	@AndroidFindBy(accessibility = "Inspection Video")
@@ -56,7 +56,7 @@ public class PendingToUploadPage extends UtilityClass{
 	@AndroidFindBy(xpath = "//android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]")
 	private WebElement backButton_VideoTag;
 	
-	@AndroidFindBy(xpath = "//android.view.View[7]")
+	@AndroidFindBy(xpath = "//android.view.View[5]")
 	private WebElement videoDescription_MessageButton;
 	
 	@AndroidFindBy(xpath = "//android.view.View[2]/android.widget.EditText")
@@ -65,7 +65,7 @@ public class PendingToUploadPage extends UtilityClass{
 	@AndroidFindBy(accessibility = "CLOSE")
 	private WebElement close_Button;
 	
-	@AndroidFindBy(xpath = "//android.view.View[7]")
+	@AndroidFindBy(xpath = "//android.view.View[@index='5']")
 	private WebElement enteredVideoDescription;
 	
 	@AndroidFindBy(xpath = "//android.widget.ImageView[1][contains(@content-desc,'Resolution')]/android.view.View[1]")
@@ -116,8 +116,9 @@ public class PendingToUploadPage extends UtilityClass{
 	}
 	
 	public boolean changeVideoTagAndDescription() throws InterruptedException {
-		scrollDown();
 		Thread.sleep(5000);
+		scrollDown();
+		Thread.sleep(1000);
 		tagDropdown.click();
 		Thread.sleep(2000);
 		log.info("Video tag dropdown opened");
@@ -137,7 +138,9 @@ public class PendingToUploadPage extends UtilityClass{
 		}	
 	}
 	
-	public boolean deleteImage() {
+	public boolean deleteImage() throws InterruptedException {
+		scrollDown();
+		Thread.sleep(1000);
 		firstImageDescription_DeleteButton.click();
 		if(delete_Message.isDisplayed() && areYouSure_Message.isDisplayed()) {
 			log.info("Delete Pop-up window is displayed");
@@ -159,22 +162,21 @@ public class PendingToUploadPage extends UtilityClass{
 	public boolean uploadVideo() throws InterruptedException {
 		scrollUp();
 		scrollUp();
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		upload_button.click();
 		Thread.sleep(30000);//wait for video encoding  and uploading process
 		backButton.click();//Need to remove when the bug will fixed
 		Thread.sleep(2000);
 		OrderDetailsPage orderDetailsPage=new OrderDetailsPage(driver);
+		scrollDown();
+		Thread.sleep(2000);
 		if(orderDetailsPage.getVideo_MediaGallery().isDisplayed()) {
 			log.info("Video Uploaded Successfully");
 			return true;
 		}else {
 			log.info("Video Uploading failed");
 			return false;
-		}
-		
+		}	
 	}
 	
-	
-
 }

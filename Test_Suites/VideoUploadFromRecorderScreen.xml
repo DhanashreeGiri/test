@@ -29,13 +29,13 @@
 			</class>
 			<class name="flutter.Truvideo.Tests.VideoRecordingPageTest" >
 				<methods>
-					<include name="verifyVideoUploading_MediaGallery"></include>
+					<exclude name="verifyVideoUploading_MediaGallery"></exclude>
 				</methods>
 			</class>
 			<class name="flutter.Truvideo.Tests.VideoPreviewScreenTest">
 				<methods>
 					<include name="verifyDeleteVideoFunction_NOButton"></include>
-					<include name="verifyDeleteVideoFunction_DeleteButton_MediaGallery"></include>
+					<include name="verifyDeleteVideoFunction_DeleteButton_Recorder"></include>
 				</methods>
 			</class>
 		</classes>
@@ -44,11 +44,12 @@
 		<classes>
 			<class name="flutter.Truvideo.Tests.VideoRecordingPageTest" >
 				<methods>
-					<include name="verifyVideoUploading_MediaGallery"></include>
+					<exclude name="verifyVideoUploading_MediaGallery"></exclude>
 				</methods>
 			</class>
 			<class name="flutter.Truvideo.Tests.VideoPreviewScreenTest">
 				<methods>
+					<include name="verifyDeleteImagesFunction"></include>
 					<include name="verifyPreviewScreenFunction"></include>
 				</methods>
 			</class>

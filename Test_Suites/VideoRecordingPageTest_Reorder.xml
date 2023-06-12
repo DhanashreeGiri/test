@@ -27,7 +27,11 @@
 					<include name="verifyNavigationToCameraScreen"></include>
 				</methods>
 			</class>
-			<class name="flutter.Truvideo.Tests.VideoRecordingPageTest" />
+			<class name="flutter.Truvideo.Tests.VideoRecordingPageTest" >
+				<methods>
+					<exclude name="verifyVideoUploading_MediaGallery"></exclude>
+				</methods>
+			</class>
 		</classes>
 	</test> 
 </suite> 
