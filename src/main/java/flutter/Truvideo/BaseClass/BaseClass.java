@@ -4,9 +4,7 @@ import java.util.concurrent.TimeUnit;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-
+import org.testng.annotations.*;
 import flutter.Truvideo.Utils.AppConfig;
 import flutter.Truvideo.Utils.CapabilityReader;
 import io.appium.java_client.AppiumDriver;
@@ -17,7 +15,7 @@ public static AppiumDriver<WebElement> driver;
 	
 	public Logger log = LogManager.getLogger(this.getClass().getName());
 		
-	@BeforeTest
+	@BeforeSuite
 	public AppiumDriver<WebElement> setUpApplication()  {
 		String capabilityName= AppConfig.capabilityName;
 		String capsContentRootLocation="./Capabilities.json";
@@ -35,7 +33,7 @@ public static AppiumDriver<WebElement> driver;
 		return driver;
 	}
 	
-	@AfterTest
+	@AfterSuite
 	public void tearDown() {
 		driver.quit();
 	}

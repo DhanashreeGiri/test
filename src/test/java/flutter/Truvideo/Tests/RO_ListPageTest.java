@@ -76,7 +76,7 @@ public class RO_ListPageTest extends BaseClass{
 		Assert.assertTrue(ro_ListPage.checkNavigationToProfileIcon());
 	}
 	
-	@Test(priority = 12)//need to call in profileIcon.xml file
+	@Test(priority = 12)
 	public void verifyNavigationToAddOrderPage() {
 		ro_ListPage=new RO_ListPage(driver);
 		Assert.assertTrue(ro_ListPage.checkNavigationTo_AddOrder_Page());
