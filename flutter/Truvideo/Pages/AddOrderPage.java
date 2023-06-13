@@ -10,92 +10,92 @@ import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 
 public class AddOrderPage extends UtilityClass{
 	AppiumDriver<WebElement> driver;
-
+	
 	public AddOrderPage(AppiumDriver<WebElement> driver) {
 		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
-
+	
 	@AndroidFindBy(accessibility = "Add Order")
 	@iOSXCUITFindBy(accessibility = "Add Order")
 	private WebElement addOrder_Title;
-
+	
 	public WebElement getAddOrder_Title() {
 		return addOrder_Title;
 	}
-
+	
 	@AndroidFindBy(accessibility = "CANCEL")
 	@iOSXCUITFindBy(accessibility = "CANCEL")
 	private WebElement cancelButton;
-
+	
 	public WebElement getCancelButton() {
 		return cancelButton;
 	}
-
+	
 	@AndroidFindBy(xpath = "//android.widget.EditText[1]")
 	private WebElement order_textBox;
-
+	
 	@AndroidFindBy(xpath="//android.view.View[7]")
 	private WebElement advisor_DropDown;
-
+	
 	@AndroidFindBy(accessibility = "Advisor")
 	private WebElement advisor_Title;
-
+	
 	@AndroidFindBy(xpath = "//android.widget.EditText")
 	private WebElement searchBox_advisor;
-
+	
 	@AndroidFindBy(xpath = "//android.view.View[contains(@content-desc,'Disha Gupta')]")
 	private WebElement DishaGupta_advisor;
-
+	
 	@AndroidFindBy(xpath="//android.widget.EditText")
 	private WebElement advisor_SearchBox;
-
+	
 	@AndroidFindBy(xpath="//android.widget.EditText[2]")
 	private WebElement firstName_textBox;
-
+	
 	@AndroidFindBy(xpath="//android.widget.EditText[3]")
 	private WebElement lastName_textBox;
-
+	
 	@AndroidFindBy(xpath="//android.widget.Button")
 	private WebElement country_DropDown;
-
+	
 	@AndroidFindBy(xpath="//android.widget.EditText")
 	private WebElement country_SearchBar;
-
+	
 	@AndroidFindBy(accessibility = "//android.widget.ImageView[contains(@content-desc,'United States')]")
 	private WebElement unitedState;
-
+	
 	@AndroidFindBy(xpath = "//android.widget.EditText[4]")
 	private WebElement mobileTextBox;
-
+	
 	@AndroidFindBy(xpath="//android.widget.EditText[3]")
 	private WebElement mobileNumber_enter;
-
+	
 	@AndroidFindBy(xpath="//android.widget.EditText[5]")
 	private WebElement eMail_textBox;
-
+	
 	@AndroidFindBy(xpath = "//android.widget.EditText[4]")
 	private WebElement email_enter;
-
+	
 	@AndroidFindBy(accessibility = "Do not send video directly to customer")
 	private WebElement checkBox_DoNotSendDirectly;
-
+	
 	@AndroidFindBy(accessibility = "CREATE")
 	private WebElement createButton;
-
+	
 	@AndroidFindBy(xpath="(//android.view.View[@content-desc=\"Required\"])[1]")
 	private WebElement required_order;
-
+	
 	@AndroidFindBy(xpath = "(//android.view.View[@content-desc=\"Required\"])[2]")
 	private WebElement required_advisor;
-
+	
 	@AndroidFindBy(xpath = "(//android.view.View[@content-desc=\"Required\"])[3]")
 	private WebElement required_firstName;
-
+	
 	@AndroidFindBy(xpath = "(//android.view.View[@content-desc=\"Required\"])[4]")
 	private WebElement required_lastName;
-
+	
 	public boolean checkErrorMessage() {
 		createButton.click();
 		if(required_order.isDisplayed()&&required_advisor.isDisplayed()&&required_firstName.isDisplayed()
@@ -104,14 +104,14 @@ public class AddOrderPage extends UtilityClass{
 		}else {
 			return false;
 		}
-
+		
 	}
-
+	
 	public boolean checkCreateOrder() throws Exception {
 		Thread.sleep(2000);
 		order_textBox.click();
 		order_textBox.sendKeys("RO"+randomNumber());
-		String newRo=order_textBox.getText();
+		String newRo=order_textBox.getText();	
 		advisor_DropDown.click();
 		Thread.sleep(2000);
 		advisor_Title.click();
@@ -121,7 +121,7 @@ public class AddOrderPage extends UtilityClass{
 		Thread.sleep(2000);
 		firstName_textBox.click();
 		firstName_textBox.sendKeys("First"+randomWord());
-		addOrder_Title.click();//hiding keyboard
+		addOrder_Title.click();//hiding keyboard	
 		lastName_textBox.click();
 		lastName_textBox.sendKeys("Last"+randomWord());
 		addOrder_Title.click();//hiding keayboard
@@ -147,8 +147,9 @@ public class AddOrderPage extends UtilityClass{
 			return false;
 		}
 	}
+	
+	private void syso() {
+		// TODO Auto-generated method stub
 
-	public void checkCounrtydropdown() {
-		log.info("running");
 	}
 }
