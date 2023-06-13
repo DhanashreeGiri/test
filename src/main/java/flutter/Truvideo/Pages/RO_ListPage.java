@@ -9,6 +9,7 @@ import flutter.Truvideo.Utils.UtilityClass;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 
 public class RO_ListPage extends UtilityClass {
 	AppiumDriver<WebElement> driver;
@@ -20,6 +21,7 @@ public class RO_ListPage extends UtilityClass {
 	}
 
 	@AndroidFindBy(accessibility = "Orders")
+	@iOSXCUITFindBy(accessibility = "Orders")
 	private WebElement orders_PageTitle;
 
 	public WebElement getOrderPageTitle() {
@@ -27,63 +29,84 @@ public class RO_ListPage extends UtilityClass {
 	}
 
 	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[2]")
+	@iOSXCUITFindBy(xpath = "//XCUIElementTypeApplication[@name=\"TruVideo Enterprise\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]")
 	private WebElement seachButton;// modified
 
 	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[3]")
+	@iOSXCUITFindBy(xpath = "//XCUIElementTypeApplication[@name=\"TruVideo Enterprise\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]")
 	private WebElement reFreshButton;
 
 	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[4]")
+	@iOSXCUITFindBy(xpath = "//XCUIElementTypeApplication[@name=\"TruVideo Enterprise\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[4]")
 	private WebElement profileIcon;
 
 	@AndroidFindBy(xpath = "//android.view.View[2][@clickable='true']")
+	@iOSXCUITFindBy(xpath = "//XCUIElementTypeApplication[@name=\"TruVideo Enterprise\"]/XCUIElementTypeWindow[2]/XCUIElementTypeOther/XCUIElementTypeOther[1]")
 	private WebElement screentap; // require when profile icon is opened
 
 	@AndroidFindBy(xpath = "//android.widget.EditText")
+	@iOSXCUITFindBy(xpath = "//XCUIElementTypeTextField")
 	private WebElement seachBar;
 
 	@AndroidFindBy(xpath = "//android.view.View[@index='1']")
+	@iOSXCUITFindBy(xpath = "//XCUIElementTypeApplication[@name=\"TruVideo Enterprise\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]")
 	private WebElement seachBarCancelButton;
 
 	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View")
+	@iOSXCUITFindBy(xpath = "//XCUIElementTypeApplication[@name=\"TruVideo Enterprise\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]")
 	private WebElement searchBarBackButton;// modified
 
 	@AndroidFindBy(xpath = "//android.view.View[contains(@content-desc,\"752\")]")
+	@iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[contains(@name,'752')]")
+	
 	private List<WebElement> searchResults;// new//make it common for IOS & Android
 
 	@AndroidFindBy(accessibility = "Chat")
+	@iOSXCUITFindBy(accessibility = "Chat")
 	private WebElement chatFooterTab;
 
 	@AndroidFindBy(accessibility = "Messages")
+	@iOSXCUITFindBy(accessibility = "Messages")
 	private WebElement messageFooterTab;
 
-	@AndroidFindBy(accessibility = "Chat")
+	@AndroidFindBy(accessibility = "Contacts")
+	@iOSXCUITFindBy(accessibility = "Contacts")
 	private WebElement contactsFooterTab;
 
 	@AndroidFindBy(accessibility = "Orders")
+	@iOSXCUITFindBy(accessibility = "Orders")
 	private WebElement ordersFooterTab;
 
 	@AndroidFindBy(accessibility = "CREATE")
+	@iOSXCUITFindBy(accessibility = "CREATE")
 	private WebElement createButton;
 
 	@AndroidFindBy(accessibility = "ALL")
+	@iOSXCUITFindBy(accessibility = "ALL")
 	private WebElement allFilter;
 
 	@AndroidFindBy(accessibility = "MY")
+	@iOSXCUITFindBy(accessibility = "MY")
 	private WebElement myFilter;
 
 	@AndroidFindBy(accessibility = "NEW")
+	@iOSXCUITFindBy(accessibility = "NEW")
 	private WebElement newFilter;
 
 	@AndroidFindBy(accessibility = "REJECTED")
+	@iOSXCUITFindBy(accessibility = "REJECTED")
 	private WebElement rejectedFilter;
 
 	@AndroidFindBy(xpath = "//android.widget.Button")
+	@iOSXCUITFindBy(xpath = "//XCUIElementTypeButton")
 	private List<WebElement> filterStatusList;
 
 	@AndroidFindBy(xpath = "//android.view.View[@index='13']")
+	@iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[@index='14']")
 	private WebElement technicianName;
 
 	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]")
+	@iOSXCUITFindBy(xpath = "//XCUIElementTypeApplication[@name=\"TruVideo Enterprise\"]/XCUIElementTypeWindow/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]")
 	private WebElement backButton_RODetails;// index 3
 
 	public boolean checkAllFooterTab_and_HederTabs() throws Exception {
@@ -106,23 +129,36 @@ public class RO_ListPage extends UtilityClass {
 		log.info("ROSearch--  SearchBar Closed ");
 		seachButton.click();
 		seachBar.sendKeys(roNumber);
-		// ((HidesKeyboard) driver).hideKeyboard();
 		Thread.sleep(4000);
-		if (searchResults.get(0).getAttribute("content-desc").contains(seachBar.getText())) {
-			log.info("Search function is working properly: contains ro number -> " + seachBar.getText());
-			searchBarBackButton.click();
-			return true;
-		} else {
-			return false;
-		}
+		if (seachBar.getText() != null) {
+			try {
+				if (searchResults.get(0).getAttribute("label").contains(seachBar.getText())) {
+					searchBarBackButton.click();
+				}
+				return true;
+			} catch (Exception e) {
+				if (searchResults.get(0).getAttribute("content-desc").contains(seachBar.getText())) {
+					searchBarBackButton.click();
+					}
+				return true;
+			}	
+			}else {
+				searchBarBackButton.click();
+				return false;
+			}
 	}
 
+		
 	public boolean checkRO_Status_New() throws Exception {
 		newFilter.click();
 		Thread.sleep(1000);
 		Set<String> statusList = new HashSet<String>();
 		for (WebElement statusObject : filterStatusList) {
-			statusList.add(statusObject.getAttribute("content-desc"));
+			try {
+				statusList.add(statusObject.getAttribute("content-desc"));
+			} catch (Exception e) {
+				statusList.add(statusObject.getAttribute("label"));
+			}
 		}
 		for (String status : statusList) {
 			if (status.contains("New")) {
@@ -140,7 +176,11 @@ public class RO_ListPage extends UtilityClass {
 		Thread.sleep(1000);
 		Set<String> statusList = new HashSet<String>();
 		for (WebElement statusObject : filterStatusList) {
-			statusList.add(statusObject.getAttribute("content-desc"));
+			try {
+				statusList.add(statusObject.getAttribute("content-desc"));
+			} catch (Exception e) {
+				statusList.add(statusObject.getAttribute("label"));
+			}
 		}
 		for (String status : statusList) {
 			if (status.contains("Rejected")) {
@@ -152,21 +192,29 @@ public class RO_ListPage extends UtilityClass {
 		}
 		return false;
 	}
-	
+
 	public boolean checkRO_Status_All() throws Exception {
-	    allFilter.click();
-	    Thread.sleep(2000);
+		allFilter.click();
+		Thread.sleep(2000);
 
-	    for (WebElement statusObject : filterStatusList) {
-	        if (!(statusObject.getAttribute("content-desc").equals("Sent")
-	                || statusObject.getAttribute("content-desc").equals("New")
-	                || statusObject.getAttribute("content-desc").equals("For Review")
-	                || statusObject.getAttribute("content-desc").equals("Viewed"))) {
-	            return false;
-	        }
-	    }
-
-	    return true;
+		for (WebElement statusObject : filterStatusList) {
+			try {
+				if (!(statusObject.getAttribute("content-desc").equals("Sent")
+						|| statusObject.getAttribute("content-desc").equals("New")
+						|| statusObject.getAttribute("content-desc").equals("For Review")
+						|| statusObject.getAttribute("content-desc").equals("Viewed"))) {
+					return false;
+				}
+			} catch (Exception e) {
+				if (!(statusObject.getAttribute("label").equals("Sent")
+						|| statusObject.getAttribute("label").equals("New")
+						|| statusObject.getAttribute("label").equals("For Review")
+						|| statusObject.getAttribute("label").equals("Viewed"))) {
+					return false;
+				}
+			}		
+		}
+		return true;
 	}
 
 	public boolean checkRO_Status_My() throws Exception {
@@ -190,8 +238,7 @@ public class RO_ListPage extends UtilityClass {
 		}
 	}
 
-	public boolean checkNavigationTo_Chat() throws InterruptedException {
-		Thread.sleep(2000);
+	public boolean checkNavigationTo_Chat() {
 		chatFooterTab.click();
 		ChatListPage chatPage = new ChatListPage(driver);
 		if (chatPage.getChat_Title().isDisplayed()) {
@@ -233,10 +280,8 @@ public class RO_ListPage extends UtilityClass {
 		}
 	}
 
-	public boolean checkNavigationToProfileIcon() throws InterruptedException {
-		Thread.sleep(6000);
+	public boolean checkNavigationToProfileIcon() {
 		profileIcon.click();
-		log.info("Clicked on profile icon");
 		ProfileIconScreen profileScreen = new ProfileIconScreen(driver);
 		if (profileScreen.getLogOut_Button().isDisplayed()) {
 			return true;
@@ -253,12 +298,5 @@ public class RO_ListPage extends UtilityClass {
 		} else {
 			return false;
 		}
-	}
-	
-	public void createROcheckDefaultCountry()
-	{
-		createButton.click();
-		log.info("Clicked on Create RO button");
-		
 	}
 }

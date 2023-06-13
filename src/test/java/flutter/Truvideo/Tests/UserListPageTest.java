@@ -31,7 +31,7 @@ public class UserListPageTest extends BaseClass {
 	}
 	
 	@Test(priority =4)
-	public void verify_ChangeDealerFunction() {
+	public void verify_ChangeDealerFunction() throws InterruptedException {
 		userListPage = new UserListPage(driver);
 		Assert.assertTrue(userListPage.check_ChangeDealerFunction());
 	}

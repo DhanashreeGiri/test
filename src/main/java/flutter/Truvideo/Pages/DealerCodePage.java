@@ -134,6 +134,7 @@ public class DealerCodePage extends UtilityClass {
 	public boolean dealerLogin_ValidCredentials() throws Exception {
 		try {
 	        if (popUpOK.isDisplayed()) {
+	        	Thread.sleep(2000);
 	            log.info("PopUp Displayed");
 	            popUpOK.click();
 	        }
@@ -149,7 +150,6 @@ public class DealerCodePage extends UtilityClass {
 		ONE.click();
 		log.info("Dealer code is entered");
 		UserListPage userListpage=new UserListPage(driver);
-		Thread.sleep(4000);
 		if(userListpage.getDealerName().isDisplayed())
 		{
 			log.info("Dealer name is Displayed");

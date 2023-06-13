@@ -18,6 +18,7 @@ public class VideoRecordingPage extends UtilityClass{
 	}
 	
 	@AndroidFindBy(accessibility = "Rotate your device Left or Right")
+	 @iOSXCUITFindBy(accessibility = "Rotate your device Left or Right" )
 	private WebElement rotateDeviceMessage;
 	
 	public WebElement getRotateDeviceMessage() {
