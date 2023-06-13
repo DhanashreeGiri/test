@@ -1,0 +1,38 @@
+
+[
+
+    {
+        "name":"Samsung S21 5G",
+        "caps":{
+            "automationName":"UiAutomator2",
+            "platformName":"ANDROID",
+            "deviceName":"Samsung S21 5G",
+            "platformVersion":"12.0",
+            "bundleId":"com.truvideo.enterprise.rc",
+            "app":"/src/main/resources/ApplicationFile/RCTruvideoflutter.apk"
+                }
+    },
+    {
+    "name":"iPhone8",
+    "caps":{
+        "automationName":"XCUITest",
+        "platformName":"iOS",
+        "deviceName":"iPhone8",
+        "platformVersion":"15.5",
+        "bundleId":"com.truvideo.enterprise.rc",
+        "udid":"f56dbf11ec7c4f28f4147740577c3dfa121023b3",
+        "app":"/src/main/resources/ApplicationFile/TruVideoEnterprise.app"
+            }
+     },
+     {
+        "name":"MI10I",
+        "caps":{
+            "automationName":"UiAutomator2",
+            "platformName":"ANDROID",
+            "deviceName":"M2007J17I",
+            "platformVersion":"12.0",
+            "bundleId":"com.truvideo.enterprise.rc",
+            "app":"/src/main/resources/ApplicationFile/RCTruvideoflutter.apk"
+                }
+    }
+]
