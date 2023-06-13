@@ -21,19 +21,19 @@ public class VideoRecordingPageTest extends BaseClass{
 		vidioRecordingPage.checkChangingVideoQualityFromRecorder();
 	}
 	
-	//@Test(priority = 2)
+	@Test(priority = 2)
 	public void verifyFlashlightFunction() throws InterruptedException {
 		vidioRecordingPage=new VideoRecordingPage(driver);
 		Assert.assertTrue(vidioRecordingPage.checkFlashlightFunction());
 	}
 	
-	//@Test(priority = 3)
+	@Test(priority = 3)
 	public void verifyNarratorMode() throws InterruptedException {
 		vidioRecordingPage=new VideoRecordingPage(driver);
 		Assert.assertTrue(vidioRecordingPage.checkNarratorMode());
 	}
 	
-	//@Test(priority = 4)
+	@Test(priority = 4)
 	public void verifyNoiseCancellation() throws InterruptedException {
 		vidioRecordingPage=new VideoRecordingPage(driver);
 		Assert.assertTrue(vidioRecordingPage.checkNoiseCancellation());

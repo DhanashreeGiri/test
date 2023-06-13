@@ -75,6 +75,30 @@ public class VideoRecordingPage extends UtilityClass {
 	@AndroidFindBy(xpath = "/hierarchy/android.widget.Toast")
 	@iOSXCUITFindBy(accessibility = "Temporary Message")
 	private WebElement toastMessage;
+	
+	@AndroidFindBy(accessibility = "Flash enabled")
+	@iOSXCUITFindBy(accessibility = "Flash enabled")
+	private WebElement flashEnabled;
+	
+	@AndroidFindBy(accessibility = "Flash disabled")
+	@iOSXCUITFindBy(accessibility = "Flash disabled")
+	private WebElement flashDisabled;
+	
+	@AndroidFindBy(accessibility = "Narrator mode disabled")
+	@iOSXCUITFindBy(accessibility = "Narrator mode disabled")
+	private WebElement narratorDisabled;
+	
+	@AndroidFindBy(accessibility = "Narrator mode enabled")
+	@iOSXCUITFindBy(accessibility = "Narrator mode enabled")
+	private WebElement narratorEnabled;
+	
+	@AndroidFindBy(accessibility = "Noise cancellation enabled")
+	@iOSXCUITFindBy(accessibility = "Noise cancellation enabled")
+	private WebElement noiseCancellationEnabled;
+	
+	@AndroidFindBy(accessibility = "Noise cancellation disabled")
+	@iOSXCUITFindBy(accessibility = "Noise cancellation disabled")
+	private WebElement noiseCancellationDisabled;
 
 	@AndroidFindBy(xpath = "//android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[2]")
 	private WebElement quality_CameraScreen;
@@ -201,11 +225,11 @@ public class VideoRecordingPage extends UtilityClass {
 
 	public boolean checkFlashlightFunction() {
 		flash_CameraScreen.click();
-		if (toastMessage.getAttribute("name").equalsIgnoreCase("Flash enabled")) {
-			log.info("Falsh Working : Flash Enabled");
+		if (flashEnabled.isDisplayed()) {
+			log.info("Flash Working : Flash Enabled");
 			flash_CameraScreen.click();
-			if (toastMessage.getAttribute("name").equalsIgnoreCase("Flash disabled")) {
-				log.info("Falsh Working : Flash disabled");
+			if (flashDisabled.isDisplayed()) {
+				log.info("Flash Working : Flash disabled");
 				return true;
 			} else {
 				log.info("Falsh Not Working ");
@@ -219,10 +243,10 @@ public class VideoRecordingPage extends UtilityClass {
 	
 	public boolean checkNarratorMode() {
 		narator_CameraScreen.click();
-		if (toastMessage.getAttribute("name").equalsIgnoreCase("Narrator mode disabled")) {
+		if (narratorDisabled.isDisplayed()) {
 			log.info("Narrator Working : Narrator disabled");
 			narator_CameraScreen.click();
-			if (toastMessage.getAttribute("name").equalsIgnoreCase("Narrator mode enabled")) {
+			if (narratorEnabled.isDisplayed()) {
 				log.info("Narrator Working : Narrator enabled");
 				return true;
 			} else {
@@ -237,10 +261,10 @@ public class VideoRecordingPage extends UtilityClass {
 	
 	public boolean checkNoiseCancellation() {
 		noiseCancellationON_CameraScreen.click();
-		if (toastMessage.getAttribute("name").equalsIgnoreCase("Noise cancellation enabled")) {
+		if (noiseCancellationEnabled.isDisplayed()) {
 			log.info("Noise cancellation Working : Noise cancellation enabled");
 			noiseCancellationOff_CameraScreen.click();
-			if (toastMessage.getAttribute("name").equalsIgnoreCase("Noise cancellation disabled")) {
+			if (noiseCancellationDisabled.isDisplayed()) {
 				log.info("Noise cancellation Working : Noise cancellation disabled");
 				return true;
 			} else {

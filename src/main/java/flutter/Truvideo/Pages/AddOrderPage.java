@@ -128,7 +128,8 @@ public class AddOrderPage extends UtilityClass{
 		//country_DropDown.click();
 		//country_SearchBar.sendKeys("united");
 		//unitedState.click();
-		//mobileTextBox.click();
+		mobileTextBox.click();
+		//mobileTextBox.sendKeys("7812059487");
 		mobileNumber_enter.sendKeys("7812059487");
 		addOrder_Title.click();//hiding keayboard
 		eMail_textBox.click();

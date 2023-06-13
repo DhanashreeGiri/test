@@ -59,7 +59,7 @@ public class PendingToUploadPage extends UtilityClass{
 	@AndroidFindBy(xpath = "//android.view.View[5]")
 	private WebElement videoDescription_MessageButton;
 	
-	@AndroidFindBy(xpath = "//android.view.View[2]/android.widget.EditText")
+	@AndroidFindBy(xpath = "//android.widget.EditText")
 	private WebElement descriptionTextBox;
 	
 	@AndroidFindBy(accessibility = "CLOSE")
@@ -169,7 +169,7 @@ public class PendingToUploadPage extends UtilityClass{
 		Thread.sleep(2000);
 		OrderDetailsPage orderDetailsPage=new OrderDetailsPage(driver);
 		scrollDown();
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		if(orderDetailsPage.getVideo_MediaGallery().isDisplayed()) {
 			log.info("Video Uploaded Successfully");
 			return true;
