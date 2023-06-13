@@ -1,0 +1,9 @@
+16:12:47 [main] INFO  flutter.Truvideo.Pages_Android.Android_RO_ListPage - All Footer tabs & Create button are Present on RO Screen
+16:12:49 [main] INFO  flutter.Truvideo.Pages_Android.Android_RO_ListPage - ROSearch--  SearchBar Closed 
+16:22:03 [main] INFO  flutter.Truvideo.Android_Tests.ServiceSideTest - Connected to Appium Server, Launching Android App. . .
+16:22:11 [main] INFO  flutter.Truvideo.Pages_Android.Android_DealerCodePage - Dealer Not found message is displayed
+16:22:18 [main] INFO  flutter.Truvideo.Pages_Android.Android_DealerCodePage - Dealer name is Displayed
+16:22:23 [main] INFO  flutter.Truvideo.Pages_Android.Android_UserListPage - Error message displayed while entering invalid pin
+16:22:30 [main] INFO  flutter.Truvideo.Pages_Android.Android_UserListPage - User logged in successfully and Navigating to the RO List Page
+16:22:32 [main] INFO  flutter.Truvideo.Pages_Android.Android_RO_ListPage - All Footer tabs & Create button are Present on RO Screen
+16:22:33 [main] INFO  flutter.Truvideo.Pages_Android.Android_RO_ListPage - ROSearch--  SearchBar Closed 

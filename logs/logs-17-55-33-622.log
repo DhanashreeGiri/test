@@ -1,0 +1,11 @@
+17:42:02 [main] INFO  flutter.Truvideo.Tests.ServiceSideTest - Connected to Appium Server, Launching Application. . .
+17:43:02 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - PopUp not present
+17:43:09 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Dealer Not found message is displayed
+17:50:03 [main] INFO  flutter.Truvideo.Tests.ServiceSideTest - Connected to Appium Server, Launching Application. . .
+17:51:03 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - PopUp not present
+17:51:09 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Dealer Not found message is displayed
+17:52:10 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - PopUp not present
+17:52:10 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Entering Dealer code
+17:52:11 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Dealer code is entered
+17:52:20 [main] INFO  flutter.Truvideo.Pages.UserListPage - Error message displayed while entering invalid pin
+17:54:33 [main] INFO  flutter.Truvideo.Tests.ServiceSideTest - Connected to Appium Server, Launching Application. . .

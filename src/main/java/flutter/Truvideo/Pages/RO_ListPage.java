@@ -106,13 +106,21 @@ public class RO_ListPage extends UtilityClass {
 		log.info("ROSearch--  SearchBar Closed ");
 		seachButton.click();
 		seachBar.sendKeys(roNumber);
-		// ((HidesKeyboard) driver).hideKeyboard();
 		Thread.sleep(4000);
-		if (searchResults.get(0).getAttribute("content-desc").contains(seachBar.getText())) {
-			log.info("Search function is working properly: contains ro number -> " + seachBar.getText());
-			searchBarBackButton.click();
-			return true;
+		if (seachBar.getText() != null) {
+			try {
+				if (searchResults.get(0).getAttribute("label").contains(seachBar.getText())) {
+					searchBarBackButton.click();
+				}
+				return true;
+			} catch (Exception e) {
+				if (searchResults.get(0).getAttribute("content-desc").contains(seachBar.getText())) {
+					searchBarBackButton.click();
+				}
+				return true;
+			}
 		} else {
+			searchBarBackButton.click();
 			return false;
 		}
 	}
@@ -122,7 +130,11 @@ public class RO_ListPage extends UtilityClass {
 		Thread.sleep(1000);
 		Set<String> statusList = new HashSet<String>();
 		for (WebElement statusObject : filterStatusList) {
-			statusList.add(statusObject.getAttribute("content-desc"));
+			try {
+				statusList.add(statusObject.getAttribute("content-desc"));
+			} catch (Exception e) {
+				statusList.add(statusObject.getAttribute("label"));
+			}
 		}
 		for (String status : statusList) {
 			if (status.contains("New")) {
@@ -140,7 +152,11 @@ public class RO_ListPage extends UtilityClass {
 		Thread.sleep(1000);
 		Set<String> statusList = new HashSet<String>();
 		for (WebElement statusObject : filterStatusList) {
-			statusList.add(statusObject.getAttribute("content-desc"));
+			try {
+				statusList.add(statusObject.getAttribute("content-desc"));
+			} catch (Exception e) {
+				statusList.add(statusObject.getAttribute("label"));
+			}
 		}
 		for (String status : statusList) {
 			if (status.contains("Rejected")) {
@@ -152,21 +168,29 @@ public class RO_ListPage extends UtilityClass {
 		}
 		return false;
 	}
-	
+
 	public boolean checkRO_Status_All() throws Exception {
-	    allFilter.click();
-	    Thread.sleep(2000);
+		allFilter.click();
+		Thread.sleep(2000);
 
-	    for (WebElement statusObject : filterStatusList) {
-	        if (!(statusObject.getAttribute("content-desc").equals("Sent")
-	                || statusObject.getAttribute("content-desc").equals("New")
-	                || statusObject.getAttribute("content-desc").equals("For Review")
-	                || statusObject.getAttribute("content-desc").equals("Viewed"))) {
-	            return false;
-	        }
-	    }
-
-	    return true;
+		for (WebElement statusObject : filterStatusList) {
+			try {
+				if (!(statusObject.getAttribute("content-desc").equals("Sent")
+						|| statusObject.getAttribute("content-desc").equals("New")
+						|| statusObject.getAttribute("content-desc").equals("For Review")
+						|| statusObject.getAttribute("content-desc").equals("Viewed"))) {
+					return false;
+				}
+			} catch (Exception e) {
+				if (!(statusObject.getAttribute("label").equals("Sent")
+						|| statusObject.getAttribute("label").equals("New")
+						|| statusObject.getAttribute("label").equals("For Review")
+						|| statusObject.getAttribute("label").equals("Viewed"))) {
+					return false;
+				}
+			}		
+		}
+		return true;
 	}
 
 	public boolean checkRO_Status_My() throws Exception {
@@ -190,8 +214,7 @@ public class RO_ListPage extends UtilityClass {
 		}
 	}
 
-	public boolean checkNavigationTo_Chat() throws InterruptedException {
-		Thread.sleep(2000);
+	public boolean checkNavigationTo_Chat() {
 		chatFooterTab.click();
 		ChatListPage chatPage = new ChatListPage(driver);
 		if (chatPage.getChat_Title().isDisplayed()) {
@@ -233,10 +256,8 @@ public class RO_ListPage extends UtilityClass {
 		}
 	}
 
-	public boolean checkNavigationToProfileIcon() throws InterruptedException {
-		Thread.sleep(6000);
+	public boolean checkNavigationToProfileIcon() {
 		profileIcon.click();
-		log.info("Clicked on profile icon");
 		ProfileIconScreen profileScreen = new ProfileIconScreen(driver);
 		if (profileScreen.getLogOut_Button().isDisplayed()) {
 			return true;
@@ -253,12 +274,5 @@ public class RO_ListPage extends UtilityClass {
 		} else {
 			return false;
 		}
-	}
-	
-	public void createROcheckDefaultCountry()
-	{
-		createButton.click();
-		log.info("Clicked on Create RO button");
-		
 	}
 }

@@ -1,0 +1,11 @@
+18:55:52 [main] INFO  flutter.Truvideo.Tests.ServiceSideTest - Error in Reading Capabilities from Json File 
+18:56:32 [main] INFO  flutter.Truvideo.Tests.ServiceSideTest - Connected to Appium Server, Launching Application. . .
+19:21:03 [main] INFO  flutter.Truvideo.Tests.ServiceSideTest - Connected to Appium Server, Launching Application. . .
+19:22:04 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - PopUp not present
+19:22:04 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Entering Dealer code
+19:22:05 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Dealer code is entered
+19:30:17 [main] INFO  flutter.Truvideo.Tests.ServiceSideTest - Connected to Appium Server, Launching Application. . .
+19:31:18 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - PopUp not present
+19:31:18 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Entering Dealer code
+19:31:19 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Dealer code is entered
+19:38:57 [main] INFO  flutter.Truvideo.Tests.ServiceSideTest - Error in Reading Capabilities from Json File 

@@ -1,0 +1,11 @@
+18:36:35 [main] INFO  flutter.Truvideo.Tests.DealerCodePageTest1 - Connected to Appium Server, Launching Application. . .
+18:36:55 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - PopUp not present
+18:36:55 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Entering Dealer code
+18:36:56 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Dealer code is entered
+18:37:01 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Dealer name is Displayed
+18:39:37 [main] INFO  flutter.Truvideo.Tests.DealerCodePageTest1 - Connected to Appium Server, Launching Application. . .
+18:39:58 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - PopUp not present
+18:39:58 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Entering Dealer code
+18:39:58 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Dealer code is entered
+18:40:07 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Dealer name is Displayed
+18:44:21 [main] INFO  flutter.Truvideo.Tests.DealerCodePageTest1 - Connected to Appium Server, Launching Application. . .

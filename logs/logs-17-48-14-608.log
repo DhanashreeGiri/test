@@ -1,0 +1,11 @@
+17:33:43 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Entering Dealer code
+17:33:44 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Dealer code is entered
+17:33:48 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Dealer name is Displayed
+17:33:52 [main] INFO  flutter.Truvideo.Pages.UserListPage - User is navigated to the Create User page
+17:33:55 [main] INFO  flutter.Truvideo.Pages.CreateNewUserPage - Error message is Displayed when trying to create user with null values
+17:47:52 [main] INFO  flutter.Truvideo.Tests.DealerCodePageTest - Connected to Appium Server, Launching Application. . .
+17:48:02 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - PopUp not present
+17:48:02 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Entering Dealer code
+17:48:03 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Dealer code is entered
+17:48:08 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Dealer name is Displayed
+17:48:12 [main] INFO  flutter.Truvideo.Pages.UserListPage - User is navigated to the Create User page

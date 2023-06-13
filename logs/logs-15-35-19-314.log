@@ -1,0 +1,11 @@
+15:31:17 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - PopUp not present
+15:31:17 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Entering Dealer code
+15:31:18 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Dealer code is entered
+15:31:23 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Dealer name is Displayed
+15:31:24 [main] INFO  flutter.Truvideo.Pages.UserListPage - Dealer Name and refresh button is Displayed
+15:31:32 [main] INFO  flutter.Truvideo.Pages.UserListPage - User is navigated to the Create User page
+15:34:49 [main] INFO  flutter.Truvideo.Tests.DealerCodePageTest1 - Connected to Appium Server, Launching Application. . .
+15:34:59 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - PopUp not present
+15:34:59 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Entering Dealer code
+15:35:00 [main] INFO  flutter.Truvideo.Pages.DealerCodePage - Dealer code is entered
+15:35:12 [main] INFO  flutter.Truvideo.Pages.UserListPage - Dealer Name and refresh button is Displayed
