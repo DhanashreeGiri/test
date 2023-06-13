@@ -24,9 +24,10 @@
 			<class name="flutter.Truvideo.Tests.AddOrderPageTest" />
 			<class name="flutter.Truvideo.Tests.OrderDetailsPageTest">
 				<methods>
-					<include name=""></include>
+					<include name="verifyNavigationToInspection"></include>
 				</methods>
 			</class>
+			<class name="flutter.Truvideo.Tests.InspectionPageTest"/>
 		</classes>
 	</test> <!-- Test_InspectionPage -->
 </suite> <!-- Suite_InspectionPage -->
