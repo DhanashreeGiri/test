@@ -134,6 +134,7 @@ public class DealerCodePage extends UtilityClass {
 	public boolean dealerLogin_ValidCredentials() throws Exception {
 		try {
 	        if (popUpOK.isDisplayed()) {
+	        	Thread.sleep(2000);
 	            log.info("PopUp Displayed");
 	            popUpOK.click();
 	        }

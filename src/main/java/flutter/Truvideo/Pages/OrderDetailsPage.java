@@ -6,6 +6,8 @@ import flutter.Truvideo.Utils.UtilityClass;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.appium.java_client.pagefactory.iOSXCUITFindBy;
+
 
 public class OrderDetailsPage extends UtilityClass {
 	AppiumDriver<WebElement> driver;
@@ -17,22 +19,27 @@ public class OrderDetailsPage extends UtilityClass {
 	}
 
 	@AndroidFindBy(xpath = "//android.view.View[1][@clickable='false'][@focusable='true']")
-	private WebElement orderNumber;
+	@iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[1][@accessible='true'][@index='1']")
+   private WebElement orderNumber;
 
 	public WebElement getOrderNumber() {
 		return orderNumber;
 	}
 
 	@AndroidFindBy(xpath = "//android.view.View[4][@index='3']")
-	private WebElement editButton;
+	@iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[4][@index='4']")
+	 private WebElement editButton;
 
 	@AndroidFindBy(xpath = "//android.view.View[3][@index='2'][@clickable='true']")
+	@iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[3][@index='3']")
 	private WebElement refreshButton;
 
 	@AndroidFindBy(accessibility = "Status")
+	@iOSXCUITFindBy(accessibility = "Status" )
 	private WebElement status;
 
 	@AndroidFindBy(accessibility = "New")
+	@iOSXCUITFindBy(accessibility = "New" )
 	private WebElement status_New;
 
 	public WebElement getStatus_New() {
@@ -40,39 +47,51 @@ public class OrderDetailsPage extends UtilityClass {
 	}
 
 	@AndroidFindBy(xpath = "//android.view.View[6]")
+	@iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[3][@index='7']")
 	private WebElement customer_Name;
 
 	@AndroidFindBy(xpath = "//android.view.View[10]")
+	@iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[6][@index='11']")
 	private WebElement advisor_Name;
 
 	@AndroidFindBy(accessibility = "Customer")
+	@iOSXCUITFindBy(accessibility = "Customer" )
 	private WebElement customerBlock;
 
 	@AndroidFindBy(accessibility = "Service Advisor")
+	@iOSXCUITFindBy(accessibility = "Service Advisor" )
 	private WebElement serviceAdvisorBlock;
 
 	@AndroidFindBy(accessibility = "Technician")
+   @iOSXCUITFindBy(accessibility = "Technician" )
 	private WebElement technicianBlock;
 
 	@AndroidFindBy(accessibility = "Last message")
+	  @iOSXCUITFindBy(accessibility = "Last message" )
 	private WebElement lastMessagesBlock;
 
 	@AndroidFindBy(accessibility = "VIEW ALL")
+	@iOSXCUITFindBy(accessibility = "VIEW ALL" )
 	private WebElement viewAll;
 
 	@AndroidFindBy(accessibility = "Media gallery")
+	@iOSXCUITFindBy(accessibility = "Media gallery" )
 	private WebElement mediaGallery;
 
 	@AndroidFindBy(xpath = "//android.view.View[5][@index='5'][@clickable='true']")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[6][@index='6']")
 	private WebElement cameraIcon;
 
 	@AndroidFindBy(id = "com.android.permissioncontroller:id/permission_message")
+	@iOSXCUITFindBy(accessibility = "OK" )
 	private WebElement permissionMessage;
 
 	@AndroidFindBy(id = "com.android.permissioncontroller:id/permission_allow_foreground_only_button")
+	@iOSXCUITFindBy(accessibility = "OK" )
 	private WebElement permission_Allow;
 
 	@AndroidFindBy(accessibility = "INSPECTIONS")
+	@iOSXCUITFindBy(accessibility = "INSPECTIONS" )
 	private WebElement inspectionsTab;
 
 	@AndroidFindBy(accessibility = "//android.widget.ImageView/android.view.View[1]")

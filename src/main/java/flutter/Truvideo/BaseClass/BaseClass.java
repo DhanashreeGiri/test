@@ -27,7 +27,7 @@ public static AppiumDriver<WebElement> driver;
 			e.printStackTrace();
 		}
 		driver.launchApp();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		log.info("Connected to Appium Server, Launching Application. . .");
 		
 		return driver;

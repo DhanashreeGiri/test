@@ -7,6 +7,7 @@ import flutter.Truvideo.Utils.UtilityClass;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 
 public class EditOrderPage extends UtilityClass{
 	AppiumDriver<WebElement> driver;
@@ -18,6 +19,7 @@ public class EditOrderPage extends UtilityClass{
 	}
 	
 	@AndroidFindBy(accessibility = "Edit Order")
+	 @iOSXCUITFindBy(accessibility = "Edit Order" )
 	private WebElement editOrder_Title;
 	
 	public WebElement getEditOrderTitle() {
@@ -29,7 +31,7 @@ public class EditOrderPage extends UtilityClass{
 	
 	@AndroidFindBy(xpath = "//android.widget.EditText[1]")
 	private WebElement companyName;
-	
+
 	@AndroidFindBy(xpath = "//android.view.View[6]")
 	private WebElement advisor_DropDown;
 	
