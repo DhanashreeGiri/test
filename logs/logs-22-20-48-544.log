@@ -1,9 +1,0 @@
-22:19:57 [main] INFO  flutter.Truvideo.Pages_Android.Android_DealerCodePage - Dealer Not found message is displayed
-22:20:15 [main] INFO  flutter.Truvideo.Pages_Android.Android_DealerCodePage - Dealer name is Displayed
-22:20:22 [main] INFO  flutter.Truvideo.Pages_Android.Android_UserListPage - Error message displayed while entering invalid pin
-22:20:31 [main] INFO  flutter.Truvideo.Pages_Android.Android_UserListPage - User logged in successfully and Navigating to the RO List Page
-22:20:33 [main] INFO  flutter.Truvideo.Pages_Android.Android_RO_ListPage - All Footer tabs & Create button are Present on RO Screen
-22:20:34 [main] INFO  flutter.Truvideo.Pages_Android.Android_RO_ListPage - ROSearch--  SearchBar Closed 
-22:20:41 [main] INFO  flutter.Truvideo.Pages_Android.Android_RO_ListPage - Searched RO is at First index : Search Function Passed
-22:20:47 [main] INFO  flutter.Truvideo.Pages_Android.Android_RO_ListPage - Status is : New
-22:20:47 [main] INFO  flutter.Truvideo.Pages_Android.Android_RO_ListPage - In New Filter, All Status of RO is New 

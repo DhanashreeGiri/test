@@ -1,9 +1,0 @@
-18:11:00 [main] INFO  flutter.Truvideo.Android_Tests.ServiceSideTest - Connected to Appium Server, Launching Android App. . .
-18:12:56 [main] INFO  flutter.Truvideo.Android_Tests.ServiceSideTest - Connected to Appium Server, Launching Android App. . .
-18:18:38 [main] INFO  flutter.Truvideo.Android_Tests.ServiceSideTest - Connected to Appium Server, Launching Android App. . .
-18:18:46 [main] INFO  flutter.Truvideo.Pages_Android.Android_DealerCodePage - Dealer Not found message is displayed
-18:18:52 [main] INFO  flutter.Truvideo.Pages_Android.Android_DealerCodePage - Dealer name is Displayed
-18:18:58 [main] INFO  flutter.Truvideo.Pages_Android.Android_UserListPage - Error message displayed while entering invalid pin
-18:19:06 [main] INFO  flutter.Truvideo.Pages_Android.Android_UserListPage - User logged in successfully and Navigating to the RO List Page
-18:24:30 [main] INFO  flutter.Truvideo.Android_Tests.ServiceSideTest - Connected to Appium Server, Launching Android App. . .
-18:24:38 [main] INFO  flutter.Truvideo.Pages_Android.Android_DealerCodePage - Dealer Not found message is displayed
