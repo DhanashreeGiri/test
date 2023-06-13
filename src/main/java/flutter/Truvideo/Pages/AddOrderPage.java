@@ -115,7 +115,6 @@ public class AddOrderPage extends UtilityClass{
 		advisor_DropDown.click();
 		Thread.sleep(2000);
 		advisor_Title.click();
-		advisor_SearchBox.click();//need to delete in next build
 		advisor_SearchBox.sendKeys("Disha Gupta");
 		DishaGupta_advisor.click();
 		Thread.sleep(2000);
@@ -129,7 +128,6 @@ public class AddOrderPage extends UtilityClass{
 		//country_SearchBar.sendKeys("united");
 		//unitedState.click();
 		mobileTextBox.click();
-		//mobileTextBox.sendKeys("7812059487");
 		mobileNumber_enter.sendKeys("7812059487");
 		addOrder_Title.click();//hiding keayboard
 		eMail_textBox.click();
@@ -138,18 +136,19 @@ public class AddOrderPage extends UtilityClass{
 		createButton.click();
 		Thread.sleep(5000);
 		OrderDetailsPage orderDetails=new OrderDetailsPage(driver);
-		Thread.sleep(10000);
-		if(orderDetails.getStatus_New().isDisplayed()) {
-			log.info("New Ro Created Successfully");
+		if(orderDetails.getOrderNumber().equals(newRo) && orderDetails.getStatus_New().isDisplayed() ) {
 			return true;
 		}else {
-			log.info("New Ro Creation Unsuccessfull");
 			return false;
 		}
+		
 	}
 	
-	private void syso() {
-		// TODO Auto-generated method stub
-
+	public void checkCounrtydropdown()
+	{
+		mobileTextBox.click();
+		mobileNumber_enter.sendKeys("9987586254");
+		log.info("Indian number is showing valid");
 	}
+
 }

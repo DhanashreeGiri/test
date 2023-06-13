@@ -149,6 +149,7 @@ public class DealerCodePage extends UtilityClass {
 		ONE.click();
 		log.info("Dealer code is entered");
 		UserListPage userListpage=new UserListPage(driver);
+		Thread.sleep(4000);
 		if(userListpage.getDealerName().isDisplayed())
 		{
 			log.info("Dealer name is Displayed");
