@@ -21,4 +21,36 @@ public class OrderDetailsPageTest extends BaseClass{
 		Assert.assertTrue(orderDetails.checkAllMandatoryFields());
 	}
 
+	//need to call in editRO.xml
+	@Test
+	public void verifyNavigationToEditOrder() throws InterruptedException {
+		orderDetails=new OrderDetailsPage(driver);
+		Assert.assertTrue(orderDetails.checkNavigation_EditRO());
+	}
+	
+	@Test
+	public void verifyNavigationToCameraScreen() throws InterruptedException {
+		orderDetails=new OrderDetailsPage(driver);
+		Assert.assertTrue(orderDetails.checkNavigation_To_CameraScreen());
+	}
+	
+	@Test
+	public void verifyNavigationToMessages() throws InterruptedException {
+		orderDetails=new OrderDetailsPage(driver);
+		Assert.assertTrue(orderDetails.checkNavigation_To_Messages());
+	}
+	
+	@Test
+	public void verifyCheck_UncheckVideoFunction() throws InterruptedException {
+		orderDetails=new OrderDetailsPage(driver);
+		Assert.assertTrue(orderDetails.check_UncheckButton_Function());
+	}
+	
+	@Test
+	public void verifyNavigationToPendingToUpload() throws InterruptedException {
+		orderDetails=new OrderDetailsPage(driver);
+		Assert.assertTrue(orderDetails.checkNavigation_PendingToUploadScreen());
+	}
+	
+
 }

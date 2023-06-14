@@ -27,7 +27,10 @@
 					<include name="verifyNavigationToInspection"></include>
 				</methods>
 			</class>
-			<class name="flutter.Truvideo.Tests.InspectionPageTest"/>
+			<class name="flutter.Truvideo.Tests.InspectionPageTest" />
 		</classes>
-	</test> <!-- Test_InspectionPage -->
-</suite> <!-- Suite_InspectionPage -->
+	</test>
+	 <!--
+	Test_InspectionPage -->
+</suite> <!--
+Suite_InspectionPage -->

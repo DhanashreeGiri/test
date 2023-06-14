@@ -4,11 +4,7 @@ import java.util.concurrent.TimeUnit;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
-
+import org.testng.annotations.*;
 import flutter.Truvideo.Utils.AppConfig;
 import flutter.Truvideo.Utils.CapabilityReader;
 import io.appium.java_client.AppiumDriver;
@@ -31,7 +27,7 @@ public static AppiumDriver<WebElement> driver;
 			e.printStackTrace();
 		}
 		driver.launchApp();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		log.info("Connected to Appium Server, Launching Application. . .");
 		
 		return driver;
@@ -42,3 +38,4 @@ public static AppiumDriver<WebElement> driver;
 		driver.quit();
 	}
 }
+
