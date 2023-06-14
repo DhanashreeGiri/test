@@ -28,7 +28,4 @@ public class DealerCodePageTest extends BaseClass {
 	
 	
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/Rahul

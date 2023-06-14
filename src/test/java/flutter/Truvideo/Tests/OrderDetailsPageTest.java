@@ -20,8 +20,6 @@ public class OrderDetailsPageTest extends BaseClass{
 		orderDetails=new OrderDetailsPage(driver);
 		Assert.assertTrue(orderDetails.checkAllMandatoryFields());
 	}
-<<<<<<< HEAD
-=======
 
 	//need to call in editRO.xml
 	@Test
@@ -54,6 +52,5 @@ public class OrderDetailsPageTest extends BaseClass{
 		Assert.assertTrue(orderDetails.checkNavigation_PendingToUploadScreen());
 	}
 	
->>>>>>> origin/Rahul
 
 }

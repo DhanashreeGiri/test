@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/Rahul
 package flutter.Truvideo.Utils;
 
 import java.time.Duration;

@@ -39,5 +39,5 @@ AppiumDriver<WebElement> driver;
 			return false;
 		}
 	}
-
+	
 }

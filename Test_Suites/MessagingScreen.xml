@@ -29,6 +29,7 @@
 			</class>
       <class name="flutter.Truvideo.Tests.MessagingScreenTest"/>
     </classes>
+    
   </test> 
   <!-- Test_MessagingScreen -->
 </suite> <!-- Suite_MessagingScreen -->

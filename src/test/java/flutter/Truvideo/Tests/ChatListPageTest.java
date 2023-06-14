@@ -14,5 +14,5 @@ public class ChatListPageTest extends BaseClass {
 		chatlistpage=new ChatListPage(driver);
 		chatlistpage.navigateTocallingFunctionButton();
 	}
-
+	
 }

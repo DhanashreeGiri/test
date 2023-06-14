@@ -31,8 +31,7 @@
 				<methods>
 					<exclude name="verifyVideoUploading_MediaGallery"></exclude>
 				</methods>
-			</class>
-			
+			</class>	
 		</classes>
 	</test> 
 </suite> 

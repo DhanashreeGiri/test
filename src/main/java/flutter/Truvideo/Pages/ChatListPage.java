@@ -72,7 +72,4 @@ public class ChatListPage extends UtilityClass {
 	}
 
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/Rahul

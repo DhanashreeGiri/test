@@ -45,10 +45,6 @@ public class RO_SettingPageTest extends BaseClass {
 		Assert.assertTrue(settingpage.defaultCountry("India"));
 		
 	}
-
+	
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/Rahul

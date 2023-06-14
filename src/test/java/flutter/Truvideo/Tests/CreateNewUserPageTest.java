@@ -26,10 +26,4 @@ public class CreateNewUserPageTest extends BaseClass{
 		createUser=new CreateNewUserPage(driver);
 		createUser.checkNewUserCreation();
 	}
-	
-<<<<<<< HEAD
 }
-
-=======
-}
->>>>>>> origin/Rahul

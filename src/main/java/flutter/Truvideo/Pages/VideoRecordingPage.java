@@ -350,11 +350,5 @@ public class VideoRecordingPage extends UtilityClass{
 		}
 		
 	}
-	
-<<<<<<< HEAD
-=======
-	
 
-
->>>>>>> origin/Rahul
 }

@@ -234,5 +234,5 @@ public class OrderDetailsPage extends UtilityClass {
 			return false;
 		}
 	}
-	
+
 }
