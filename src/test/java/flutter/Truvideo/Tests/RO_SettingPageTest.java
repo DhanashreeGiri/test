@@ -47,3 +47,8 @@ public class RO_SettingPageTest extends BaseClass {
 	}
 
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/Rahul

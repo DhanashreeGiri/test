@@ -27,5 +27,9 @@ public class CreateNewUserPageTest extends BaseClass{
 		createUser.checkNewUserCreation();
 	}
 	
+<<<<<<< HEAD
 }
 
+=======
+}
+>>>>>>> origin/Rahul

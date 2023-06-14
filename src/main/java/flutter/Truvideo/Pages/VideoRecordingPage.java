@@ -2,6 +2,7 @@ package flutter.Truvideo.Pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import flutter.Truvideo.Utils.UtilityClass;
 import io.appium.java_client.AppiumDriver;
@@ -25,7 +26,11 @@ public class VideoRecordingPage extends UtilityClass{
 	public WebElement getRotateDeviceMessage() {
 		return rotateDeviceMessage;
 	}
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> origin/Rahul
 	@AndroidFindBy(xpath  = "//android.view.View[@index='6']")
 	private WebElement RecordingTimer;
 	
@@ -350,4 +355,10 @@ public class VideoRecordingPage extends UtilityClass{
 		
 	}
 	
+<<<<<<< HEAD
+=======
+	
+
+
+>>>>>>> origin/Rahul
 }

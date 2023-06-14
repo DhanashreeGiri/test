@@ -606,5 +606,8 @@ public class InspectionPage extends UtilityClass {
 		}
 	}
 	
+<<<<<<< HEAD
 	
+=======
+>>>>>>> origin/Rahul
 }

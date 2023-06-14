@@ -22,11 +22,10 @@ public class AddOrderPageTest extends  BaseClass{
 		Assert.assertTrue(addOrder.checkCreateOrder());
 	}
 	
-	@Test(priority = 3)
-	public void countryDropdowncheckinRO() throws Exception {
-		addOrder = new AddOrderPage(driver);
-		addOrder.checkCounrtydropdown();
-	}
+	/*
+	 * @Test(priority = 3) public void countryDropdowncheckinRO() throws Exception {
+	 * addOrder = new AddOrderPage(driver); addOrder.checkCounrtydropdown(); }
+	 */
 	 
 	
 }

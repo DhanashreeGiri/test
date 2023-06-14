@@ -201,4 +201,7 @@ public class CreateNewUserPage extends UtilityClass {
 	}
 
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/Rahul

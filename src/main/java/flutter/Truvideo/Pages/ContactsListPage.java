@@ -27,3 +27,7 @@ public class ContactsListPage extends UtilityClass{
 
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/Rahul

@@ -135,9 +135,7 @@ public class AddOrderPage extends UtilityClass{
 		String newRo=order_textBox.getText();	
 		advisor_DropDown.click();
 		Thread.sleep(2000);
-		advisor_Title.click();
-		advisor_SearchBox.sendKeys("Disha Gupta");
-		Thread.sleep(2000);
+		advisor_Title.click();//hiding keyboard
 		advisor_SearchBox.click();//need to delete in next build
 		advisor_SearchBox.sendKeys("Disha Gupta");
 		DishaGupta_advisor.click();
@@ -171,5 +169,6 @@ public class AddOrderPage extends UtilityClass{
 		}
 		
 	}
+	
 }
 

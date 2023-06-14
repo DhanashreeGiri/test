@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite_CreateNewUserPage">
@@ -41,13 +42,15 @@
 	
 </suite> 
 =======
+=======
+>>>>>>> origin/Rahul
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite_CreateNewUserPage">
 	<listeners>
 		<listener class-name="flutter.Truvideo.TestUtils.Listeners"></listener>
 	</listeners>
-	<test thread-count="5" name="Test_CreateNewUserPage" preserve-order="true">
+	<test thread-count="5" name="Test_CreateNewUserPage_01" preserve-order="true">
 		<classes>
 			<class name="flutter.Truvideo.Tests.DealerCodePageTest">
 				<methods>
@@ -64,6 +67,10 @@
 					<include name="verifyCancelButton"></include>
 				</methods>
 			</class>
+		</classes>
+	</test>
+	<test thread-count="5" name="Test_CreateNewUserPage_02" preserve-order="true">
+		<classes>
 			<class name="flutter.Truvideo.Tests.UserListPageTest">
 				<methods>
 					<include name="verifyCreateUserFunction" />
@@ -75,6 +82,10 @@
 				</methods>
 			</class>
 		</classes>
-	</test>
+	</test>	
 </suite> 
+<<<<<<< HEAD
+>>>>>>> origin/Rahul
+=======
+
 >>>>>>> origin/Rahul

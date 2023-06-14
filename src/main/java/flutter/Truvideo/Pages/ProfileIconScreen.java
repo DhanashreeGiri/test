@@ -52,5 +52,9 @@ public class ProfileIconScreen extends UtilityClass{
 	   }
    }
    
+<<<<<<< HEAD
 }
 
+=======
+}
+>>>>>>> origin/Rahul
