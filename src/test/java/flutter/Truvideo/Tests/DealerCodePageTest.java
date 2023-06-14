@@ -25,9 +25,6 @@ public class DealerCodePageTest extends BaseClass {
 		dealerCodePage=new DealerCodePage(driver);
 		Assert.assertTrue(dealerCodePage.dealerLogin_ValidCredentials());
 	}
-	private void syso() {
-		// TODO Auto-generated method stub
-
-	}
+	
 	
 }

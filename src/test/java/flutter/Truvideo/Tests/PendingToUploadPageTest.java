@@ -33,8 +33,5 @@ public class PendingToUploadPageTest extends BaseClass{
 		Assert.assertTrue(pendingToUploadPage.uploadVideo());
 	}
 	
-	private void syso() {
-		// TODO Auto-generated method stub
-
-	}
+	
 }

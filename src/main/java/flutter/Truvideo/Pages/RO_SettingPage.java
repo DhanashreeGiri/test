@@ -48,8 +48,5 @@ public class RO_SettingPage extends UtilityClass {
 			
 		
 	}
-	private void syso() {
-		// TODO Auto-generated method stub
-
-	}
+	
 }

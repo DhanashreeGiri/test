@@ -199,9 +199,6 @@ public class CreateNewUserPage extends UtilityClass {
 		five.click();
 		six.click();
 	}
-	private void syso() {
-		// TODO Auto-generated method stub
-
-	}
+	
 
 }

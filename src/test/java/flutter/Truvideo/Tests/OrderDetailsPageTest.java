@@ -51,8 +51,5 @@ public class OrderDetailsPageTest extends BaseClass{
 		orderDetails=new OrderDetailsPage(driver);
 		Assert.assertTrue(orderDetails.checkNavigation_PendingToUploadScreen());
 	}
-	private void syso() {
-		// TODO Auto-generated method stub
-
-	}
+	
 }

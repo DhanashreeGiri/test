@@ -22,8 +22,5 @@ public class AddOrderPageTest extends  BaseClass{
 		Assert.assertTrue(addOrder.checkCreateOrder());
 	}
 	 
-	private void syso() {
-		// TODO Auto-generated method stub
-
-	}
+	
 }

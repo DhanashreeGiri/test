@@ -606,8 +606,5 @@ public class InspectionPage extends UtilityClass {
 		}
 	}
 	
-	private void syso() {
-		// TODO Auto-generated method stub
-
-	}
+	
 }

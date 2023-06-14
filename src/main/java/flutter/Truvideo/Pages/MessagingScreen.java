@@ -96,8 +96,5 @@ public class MessagingScreen extends UtilityClass {
 		soft.assertTrue(youHaveAlreadyResponded_text.isDisplayed());
 		soft.assertAll();
 	}
-	private void syso() {
-		// TODO Auto-generated method stub
-
-	}
+	
 }
