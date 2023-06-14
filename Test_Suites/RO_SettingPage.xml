@@ -19,5 +19,6 @@
    
       <class name="flutter.Truvideo.Tests.RO_SettingPageTest"/>
     </classes>
+    
   </test> <!-- Test -->
 </suite> <!-- Suite -->

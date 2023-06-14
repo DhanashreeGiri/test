@@ -30,4 +30,5 @@
 			<class name="flutter.Truvideo.Tests.EditOrderPageTest" />
 		</classes>
 	</test>
+	
 </suite>

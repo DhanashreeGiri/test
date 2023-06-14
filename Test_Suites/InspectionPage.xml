@@ -29,7 +29,8 @@
 			</class>
 			<class name="flutter.Truvideo.Tests.InspectionPageTest" />
 		</classes>
-	</test> <!--
+	</test>
+	 <!--
 	Test_InspectionPage -->
 </suite> <!--
 Suite_InspectionPage -->
