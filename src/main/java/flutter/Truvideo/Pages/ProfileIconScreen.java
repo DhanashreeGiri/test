@@ -24,5 +24,8 @@ public class ProfileIconScreen extends UtilityClass{
    public WebElement getLogOut_Button() {
 	   return logOut_Button;
    }
-   
+   private void syso() {
+		// TODO Auto-generated method stub
+
+	}
 }

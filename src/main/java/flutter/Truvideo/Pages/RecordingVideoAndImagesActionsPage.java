@@ -40,6 +40,9 @@ public class RecordingVideoAndImagesActionsPage extends UtilityClass{
 	@AndroidFindBy(xpath = "//android.widget.ImageView[contains(@content-desc,'Duration')]")
 	private WebElement firstImage;
 	
-	
+	private void syso() {
+		// TODO Auto-generated method stub
+
+	}
 
 }

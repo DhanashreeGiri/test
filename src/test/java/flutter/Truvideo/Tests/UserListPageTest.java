@@ -59,5 +59,8 @@ public class UserListPageTest extends BaseClass {
 		userListPage = new UserListPage(driver);
 		Assert.assertTrue(userListPage.selectUserToLogin_WithValidPin());
 	}
-	
+	private void syso() {
+		// TODO Auto-generated method stub
+
+	}
 }

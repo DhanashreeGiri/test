@@ -25,4 +25,8 @@ public class ContactsListPage extends UtilityClass{
 		return contacts_Title;
 	}
 
+	private void syso() {
+		// TODO Auto-generated method stub
+
+	}
 }

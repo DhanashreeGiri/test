@@ -14,5 +14,8 @@ public class RO_SettingPageTest extends BaseClass {
 		settingpage=new RO_SettingPage(driver);
 		settingpage.checkSmallFont();
 	}
+	private void syso() {
+		// TODO Auto-generated method stub
 
+	}
 }

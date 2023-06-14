@@ -26,4 +26,8 @@ public class ChatListPage extends UtilityClass {
 		return chat_Title;
 	}
 
+	private void syso() {
+		// TODO Auto-generated method stub
+
+	}
 }

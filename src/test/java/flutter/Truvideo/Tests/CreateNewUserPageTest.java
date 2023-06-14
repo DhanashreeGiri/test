@@ -26,5 +26,8 @@ public class CreateNewUserPageTest extends BaseClass{
 		createUser=new CreateNewUserPage(driver);
 		createUser.checkNewUserCreation();
 	}
-	
+	private void syso() {
+		// TODO Auto-generated method stub
+
+	}
 }
