@@ -45,7 +45,9 @@ public class RO_SettingPageTest extends BaseClass {
 		Assert.assertTrue(settingpage.defaultCountry("India"));
 		
 	}
-
+	private void syso() {
+		// TODO Auto-generated method stub
+        }
 }
 
 

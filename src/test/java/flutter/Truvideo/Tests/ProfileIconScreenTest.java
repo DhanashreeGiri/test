@@ -22,5 +22,7 @@ public class ProfileIconScreenTest extends BaseClass {
 		Profileiconscreen=new ProfileIconScreen(driver);
 		Assert.assertTrue(Profileiconscreen.varifyDealerName());
 	}
-
+	private void syso() {
+		// TODO Auto-generated method stub
+        }
 }

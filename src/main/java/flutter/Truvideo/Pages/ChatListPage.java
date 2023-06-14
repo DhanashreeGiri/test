@@ -70,5 +70,8 @@ public class ChatListPage extends UtilityClass {
 		searchButton.sendKeys(userName);
 		log.info(userName+" is displaying");
 	}
+	private void syso() {
+		// TODO Auto-generated method stub
 
+	}
 }

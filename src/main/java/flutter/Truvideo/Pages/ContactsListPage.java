@@ -24,7 +24,10 @@ public class ContactsListPage extends UtilityClass{
 	public WebElement getContacts_Title() {
 		return contacts_Title;
 	}
+	private void syso() {
+		// TODO Auto-generated method stub
 
+	}
 }
 
 

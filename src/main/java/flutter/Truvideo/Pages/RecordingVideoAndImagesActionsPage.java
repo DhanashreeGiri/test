@@ -41,5 +41,8 @@ public class RecordingVideoAndImagesActionsPage extends UtilityClass{
 	private WebElement firstImage;
 	
 	
+	private void syso() {
+		// TODO Auto-generated method stub
 
+	}
 }

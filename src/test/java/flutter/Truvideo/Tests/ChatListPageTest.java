@@ -14,5 +14,7 @@ public class ChatListPageTest extends BaseClass {
 		chatlistpage=new ChatListPage(driver);
 		chatlistpage.navigateTocallingFunctionButton();
 	}
-
+	private void syso() {
+		// TODO Auto-generated method stub
+        }
 }

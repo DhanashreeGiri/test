@@ -52,5 +52,7 @@ public class OrderDetailsPageTest extends BaseClass{
 		Assert.assertTrue(orderDetails.checkNavigation_PendingToUploadScreen());
 	}
 	
-
+	private void syso() {
+		// TODO Auto-generated method stub
+        }
 }

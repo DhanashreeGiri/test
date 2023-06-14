@@ -56,5 +56,7 @@ public class VideoRecordingPageTest extends BaseClass{
 		vidioRecordingPage=new VideoRecordingPage(driver);
 		Assert.assertTrue(vidioRecordingPage.checkVideoRecordingWithImageCapture());
 	}
-	
+	private void syso() {
+		// TODO Auto-generated method stub
+        }
 }

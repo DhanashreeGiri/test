@@ -64,7 +64,6 @@
 			</methods>
 		</class>
       <class name="flutter.Truvideo.Tests.PendingToUploadPageTest"/>
-    </classes>
-    
+    </classes>  
   </test> <!-- Test_PendingToUploadPage -->
 </suite> <!-- Suite_PendingToUploadPage -->
