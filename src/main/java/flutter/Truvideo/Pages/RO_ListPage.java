@@ -58,6 +58,7 @@ public class RO_ListPage extends UtilityClass {
 
 	@AndroidFindBy(xpath = "//android.view.View[contains(@content-desc,\"752\")]")
 	@iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[contains(@name,'752')]")
+	
 	private List<WebElement> searchResults;// new//make it common for IOS & Android
 
 	@AndroidFindBy(accessibility = "Chat")
@@ -298,5 +299,5 @@ public class RO_ListPage extends UtilityClass {
 			return false;
 		}
 	}
-	
 }
+

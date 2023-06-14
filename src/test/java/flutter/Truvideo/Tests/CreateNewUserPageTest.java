@@ -16,7 +16,7 @@ public class CreateNewUserPageTest extends BaseClass{
 	}
 	
 	@Test(priority = 1)
-	public void verifyRequiredErrorMessage() {
+	public void verifyErrorToastMessage() {
 		createUser=new CreateNewUserPage(driver);
 		Assert.assertTrue(createUser.checkErrorMessage_NullValue());	
 	}
@@ -28,3 +28,4 @@ public class CreateNewUserPageTest extends BaseClass{
 	}
 	
 }
+

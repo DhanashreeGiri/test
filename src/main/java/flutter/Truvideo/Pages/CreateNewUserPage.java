@@ -199,6 +199,6 @@ public class CreateNewUserPage extends UtilityClass {
 		five.click();
 		six.click();
 	}
-	
 
 }
+

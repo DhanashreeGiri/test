@@ -21,8 +21,36 @@ public class ProfileIconScreen extends UtilityClass{
    @iOSXCUITFindBy(accessibility = "Log out")
    private WebElement logOut_Button;
    
+   @AndroidFindBy(accessibility = "Settings")
+   private WebElement settingsButton;
+   
+   @AndroidFindBy(accessibility = "Demo-BMW2")
+   private WebElement dealerName;
+   
    public WebElement getLogOut_Button() {
 	   return logOut_Button;
    }
-  
+   
+   public boolean checkNavigationToSettingsScreen() {
+	   settingsButton.click();
+	   RO_SettingPage settingsScreen = new RO_SettingPage(driver);
+		if (settingsScreen.getSettingsLabel().isDisplayed()) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+   
+   public boolean varifyDealerName()
+   {
+	   if(dealerName.isDisplayed())
+	   {
+		   log.info("Changed dealer name is displayed");
+		   return true;
+	   }else {
+		   return false;
+	   }
+   }
+   
 }
+

@@ -25,5 +25,5 @@ public class ContactsListPage extends UtilityClass{
 		return contacts_Title;
 	}
 
-	
 }
+
