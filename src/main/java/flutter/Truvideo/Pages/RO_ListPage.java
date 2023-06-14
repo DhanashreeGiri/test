@@ -279,8 +279,10 @@ public class RO_ListPage extends UtilityClass {
 		}
 	}
 
-	public boolean checkNavigationToProfileIcon() {
+	public boolean checkNavigationToProfileIcon() throws InterruptedException {
+		Thread.sleep(3000);
 		profileIcon.click();
+		log.info("Clicked on Profile Icon");
 		ProfileIconScreen profileScreen = new ProfileIconScreen(driver);
 		if (profileScreen.getLogOut_Button().isDisplayed()) {
 			return true;

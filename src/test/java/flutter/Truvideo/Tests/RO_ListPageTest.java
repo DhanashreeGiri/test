@@ -71,7 +71,7 @@ public class RO_ListPageTest extends BaseClass{
 	}
 	
 	@Test(priority = 11)//need to call in profilrIcon.xml file
-	public void verifyNavigationToProfileIcon() {
+	public void verifyNavigationToProfileIcon() throws InterruptedException {
 		ro_ListPage=new RO_ListPage(driver);
 		Assert.assertTrue(ro_ListPage.checkNavigationToProfileIcon());
 	}
