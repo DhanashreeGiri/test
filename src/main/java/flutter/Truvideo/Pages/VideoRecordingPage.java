@@ -26,11 +26,7 @@ public class VideoRecordingPage extends UtilityClass{
 	public WebElement getRotateDeviceMessage() {
 		return rotateDeviceMessage;
 	}
-<<<<<<< HEAD
-	
-=======
 
->>>>>>> origin/Rahul
 	@AndroidFindBy(xpath  = "//android.view.View[@index='6']")
 	private WebElement RecordingTimer;
 	
