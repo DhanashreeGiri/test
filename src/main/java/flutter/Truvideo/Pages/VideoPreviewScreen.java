@@ -16,7 +16,7 @@ public class VideoPreviewScreen extends UtilityClass{
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 	
-	@AndroidFindBy(xpath = "//android.view.View[8]")
+	@AndroidFindBy(xpath = "//android.view.View[7]")//changed 26/06/23
 	private WebElement play_Pause_Button;
 	
 	public WebElement getPlay_PauseButton(){
@@ -53,7 +53,7 @@ public class VideoPreviewScreen extends UtilityClass{
 	@AndroidFindBy(accessibility = "NO")
 	private WebElement no_Button;
 	
-	@AndroidFindBy(xpath = "//android.view.View[2][@clickable='true']")
+	@AndroidFindBy(xpath = "//android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[2]")
 	private WebElement next_ScreenButton;
 	
 	@AndroidFindBy(xpath = "//android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[2]")
@@ -151,6 +151,7 @@ public class VideoPreviewScreen extends UtilityClass{
 		play_Pause_Button.click();
 		log.info("Video is Stopped");
 		next_ScreenButton.click();
+		Thread.sleep(2000);
 		log.info("Navigated to image preview screen");
 		rotate_Anticlockwise_image.click();
 		Thread.sleep(3000);
@@ -174,6 +175,8 @@ public class VideoPreviewScreen extends UtilityClass{
 		greenButton.click();
 		OrderDetailsPage orderDetailsPage=new OrderDetailsPage(driver);
 		Thread.sleep(4000);
+		scrollDown();
+		Thread.sleep(2000);	
 		if(orderDetailsPage.getPendingToUploadVideo().isDisplayed()) {
 			return true;
 		}else {

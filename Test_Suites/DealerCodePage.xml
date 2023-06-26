@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite_DealerCodePage">
@@ -10,26 +8,5 @@
     <classes>
       <class name="flutter.Truvideo.Tests.DealerCodePageTest"/>
     </classes>
-  </test> 
-  
+  </test>  
 </suite> 
-=======
-=======
->>>>>>> origin/Rahul
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite_DealerCodePage">
-	<listeners>
-		<listener class-name="flutter.Truvideo.TestUtils.Listeners"></listener>
-	</listeners>
-  <test thread-count="5" name="Tests_DealerCodePage">
-    <classes>
-      <class name="flutter.Truvideo.Tests.DealerCodePageTest"/>
-    </classes>
-  </test> 
-</suite> 
-<<<<<<< HEAD
->>>>>>> origin/Rahul
-=======
-
->>>>>>> origin/Rahul

@@ -1,5 +1,7 @@
 package flutter.Truvideo.Pages;
 
+import java.util.List;
+
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -17,6 +19,8 @@ public class UserListPage extends UtilityClass {
 		this.driver = driver;
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
+	
+	static String userName;
 
 	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[2]")
 	@iOSXCUITFindBy(xpath="//XCUIElementTypeOther[2]")
@@ -34,9 +38,9 @@ public class UserListPage extends UtilityClass {
 	@iOSXCUITFindBy(xpath="//XCUIElementTypeOther[4]")
 	private WebElement cancelButton_search;
 
-	@AndroidFindBy(accessibility = "Hello there Disha Gupta")
+	@AndroidFindBy(xpath = "//android.view.View[contains(@content-desc,'Hello there')]")//modified
 	@iOSXCUITFindBy(accessibility="Hello there Disha Gupta")
-	private WebElement helloThereDisha_Text;
+	private WebElement helloThere_UserText;
 
 	@AndroidFindBy(accessibility = "Please type your Personal Pin Code to login")
 	@iOSXCUITFindBy(accessibility="Please type your Personal Pin Code to login")
@@ -45,6 +49,9 @@ public class UserListPage extends UtilityClass {
 	@AndroidFindBy(xpath = "//android.view.View[@content-desc=\"Disha Gupta\"]")
 	@iOSXCUITFindBy(accessibility="Disha Gupta")
 	private WebElement userDishaGupta;
+	
+	@AndroidFindBy(xpath = "//android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[5]/android.view.View/android.view.View")
+	private List<WebElement>selectUser_Login;//modified
 
 	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[1]")
 	@iOSXCUITFindBy(xpath="//XCUIElementTypeApplication[@name=\"TruVideo Enterprise\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]")
@@ -138,6 +145,7 @@ public class UserListPage extends UtilityClass {
 	@iOSXCUITFindBy(accessibility = "NO")
 	private WebElement noButton;
 	
+	@AndroidFindBy(id = "com.android.permissioncontroller:id/permission_allow_button")
 	@iOSXCUITFindBy(accessibility = "Allow")
 	private WebElement notificationsAllow;
 
@@ -168,9 +176,9 @@ public class UserListPage extends UtilityClass {
 
 	}
 
-	public boolean check_VisibleText_PersonalPinScreen() throws Exception {
-		searchUser();
-		if (helloThereDisha_Text.isDisplayed() && pleaseEnterPin_text.isDisplayed()) {
+	public boolean check_VisibleText_PersonalPinScreen(String user) throws Exception {
+		searchUser(user);
+		if (helloThere_UserText.isDisplayed() && pleaseEnterPin_text.isDisplayed()) {
 			log.info("All text are displayed on Personal Pin Screen");
 			x_button.click();
 			return true;
@@ -180,8 +188,8 @@ public class UserListPage extends UtilityClass {
 		}
 	}
 
-	public boolean selectUserToLogin_WitInvalidPin() throws Exception {
-		searchUser();
+	public boolean selectUserToLogin_WitInvalidPin(String user) throws Exception {
+		searchUser(user);
 		Thread.sleep(2000);
 		two.click();
 		two.click();
@@ -202,9 +210,9 @@ public class UserListPage extends UtilityClass {
 		}
 	}
 
-	public boolean selectUserToLogin_WithValidPin() throws Exception {
+	public boolean selectUserToLogin_WithValidPin(String user) throws Exception {
 		Thread.sleep(2000);
-		searchUser();
+		searchUser(user);
 		Thread.sleep(3000);
 		one.click();
 		two.click();
@@ -213,6 +221,14 @@ public class UserListPage extends UtilityClass {
 		five.click();
 		six.click();
 		try {
+			if (biometric_no.isDisplayed()) {
+				biometric_no.click();
+				log.info("Biometric -> 'NO' clicked");
+			}
+		}catch(NoSuchElementException e) {
+		log.info("Biometric popup Not present");
+		}
+		try {
 			if (notificationsAllow.isDisplayed()) {
 				notificationsAllow.click();
 				log.info("Notifications allowed.");
@@ -220,7 +236,6 @@ public class UserListPage extends UtilityClass {
 		}catch(NoSuchElementException e) {
 		log.info("Notifications allowed pop up not displayed");
 		}
-		biometric_no.click();
 		RO_ListPage roListpage = new RO_ListPage(driver);
 		Thread.sleep(3000);
 		if (roListpage.getOrderPageTitle().isDisplayed()) {
@@ -233,13 +248,15 @@ public class UserListPage extends UtilityClass {
 		}
 	}
 
-	public void searchUser() throws Exception {
+	public void searchUser(String user) throws Exception {
 		Thread.sleep(1000);
 		searchBar.click();
 		searchBar.clear();
-		searchBar.sendKeys("Disha Gupta");
+		searchBar.sendKeys(user);
+		userName=searchBar.getText();
 		Thread.sleep(4);
-		userDishaGupta.click();
+		selectUser_Login.get(0).click();
+		//userDishaGupta.click();
 	}
 	
 	public boolean checkCreateUserFunction() throws InterruptedException {

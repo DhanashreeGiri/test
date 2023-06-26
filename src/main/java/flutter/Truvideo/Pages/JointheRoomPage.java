@@ -21,6 +21,10 @@ AppiumDriver<WebElement> driver;
 	@AndroidFindBy(accessibility = "JOIN THE ROOM")
 	private WebElement joinTheRoomButton;
 	
+	public WebElement getJoinTheRoomButton() {
+		return joinTheRoomButton;
+	}
+	
 	@AndroidFindBy(xpath = "//android.view.View[2]/android.view.View[1]")
 	private WebElement audioButton;
 	
@@ -29,6 +33,10 @@ AppiumDriver<WebElement> driver;
 	
 	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[1]")
 	private WebElement cancelButton;
+	
+	public WebElement getCancelButton() {
+		return cancelButton;
+	}
 	
 	public boolean verifyJoinTheRoom()
 	{

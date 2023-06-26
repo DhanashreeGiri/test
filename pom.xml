@@ -9,12 +9,33 @@
 		<capabilityName>capabilityName</capabilityName>
 	</properties>-->
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/com.github.wasiqb.coteafs/appium -->
+		<dependency>
+			<groupId>com.github.wasiqb.coteafs</groupId>
+			<artifactId>appium</artifactId>
+			<version>2.0.0</version>
+		</dependency>
+		<!--
+		https://mvnrepository.com/artifact/io.github.testsigma-eng/appium-flutterfinder-java -->
+		<dependency>
+			<groupId>io.github.testsigma-eng</groupId>
+			<artifactId>appium-flutterfinder-java</artifactId>
+			<version>0.1.1</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>7.0.0</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+		<!--	<dependency>
+			<groupId>io.appium</groupId>
+		<artifactId>java-client</artifactId>
+			<version>8.3.0</version>
+		</dependency>-->
+
 		<dependency>
 			<groupId>io.appium</groupId>
 			<artifactId>java-client</artifactId>
@@ -63,14 +84,14 @@
 			<version>1.18.24</version>
 			<scope>provided</scope>
 		</dependency>
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>7.7.0</version>
-            <scope>compile</scope>
-        </dependency>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.7.0</version>
+			<scope>compile</scope>
+		</dependency>
 
-    </dependencies>
+	</dependencies>
 	<build>
 		<plugins>
 			<plugin>

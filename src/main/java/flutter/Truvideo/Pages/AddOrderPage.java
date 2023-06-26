@@ -85,9 +85,13 @@ public class AddOrderPage extends UtilityClass{
 	@iOSXCUITFindBy(xpath = "//XCUIElementTypeTextField[4]")
 	private WebElement mobileNumber_enter;
 	
-	@AndroidFindBy(xpath="//android.widget.EditText[5]")
+	@AndroidFindBy(xpath="//android.widget.EditText[4]")
 	@iOSXCUITFindBy(xpath = "//XCUIElementTypeTextField[5]")
 	private WebElement eMail_textBox;
+	
+	@AndroidFindBy(xpath="//android.widget.EditText[5]")//Changed Dated 26/06/23
+	@iOSXCUITFindBy(xpath = "//XCUIElementTypeTextField[5]")
+	private WebElement eMail_textBox1;
 	
 	@AndroidFindBy(xpath = "//android.widget.EditText[4]")
 	@iOSXCUITFindBy(xpath = "//XCUIElementTypeTextField[5]")
@@ -153,8 +157,13 @@ public class AddOrderPage extends UtilityClass{
 		//mobileTextBox.sendKeys("7812059487");
 		mobileNumber_enter.sendKeys("7812059487");
 		addOrder_Title.click();//hiding keayboard
-		eMail_textBox.click();
-		email_enter.sendKeys(randomWord()+"abc"+"@gmail.com");
+		if(eMail_textBox.getText().equals("")) {
+			eMail_textBox.click();
+			email_enter.sendKeys(randomWord()+"abc"+"@gmail.com");
+		}else {
+			eMail_textBox1.click();
+			email_enter.sendKeys(randomWord()+"abc"+"@gmail.com");
+		}
 		addOrder_Title.click();//hiding keayboard
 		createButton.click();
 		Thread.sleep(5000);
