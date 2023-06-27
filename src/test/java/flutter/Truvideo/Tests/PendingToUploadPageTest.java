@@ -50,9 +50,7 @@ public class PendingToUploadPageTest extends BaseClass{
 		pendingToUploadPage=new PendingToUploadPage(driver);
 		Assert.assertTrue(pendingToUploadPage.checkVideoHighQuality());
 	}
-	private void syso() {
-		// TODO Auto-generated method stub
-        }
+
 
 	
 }
