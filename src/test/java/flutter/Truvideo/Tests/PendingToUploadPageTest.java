@@ -33,5 +33,24 @@ public class PendingToUploadPageTest extends BaseClass{
 		Assert.assertTrue(pendingToUploadPage.uploadVideo());
 	}
 	
+	@Test(priority = 8)
+	public void verifyLowVideoQuality() throws InterruptedException {
+		pendingToUploadPage=new PendingToUploadPage(driver);
+		Assert.assertTrue(pendingToUploadPage.checkVideoLowQuality());
+	}
+	
+	@Test(priority = 9)
+	public void verifyMediumVideoQuality() throws InterruptedException {
+		pendingToUploadPage=new PendingToUploadPage(driver);
+		Assert.assertTrue(pendingToUploadPage.checkVideoMediumQuality());
+	}
+	
+	@Test(priority = 10)
+	public void verifyHighVideoQuality() throws InterruptedException {
+		pendingToUploadPage=new PendingToUploadPage(driver);
+		Assert.assertTrue(pendingToUploadPage.checkVideoHighQuality());
+	}
+
+
 	
 }

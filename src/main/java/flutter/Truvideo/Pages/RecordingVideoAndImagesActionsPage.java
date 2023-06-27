@@ -41,5 +41,4 @@ public class RecordingVideoAndImagesActionsPage extends UtilityClass{
 	private WebElement firstImage;
 	
 	
-
 }

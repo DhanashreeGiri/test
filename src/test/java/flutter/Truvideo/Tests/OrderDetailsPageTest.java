@@ -20,7 +20,7 @@ public class OrderDetailsPageTest extends BaseClass{
 		orderDetails=new OrderDetailsPage(driver);
 		Assert.assertTrue(orderDetails.checkAllMandatoryFields());
 	}
-	
+
 	//need to call in editRO.xml
 	@Test
 	public void verifyNavigationToEditOrder() throws InterruptedException {
@@ -51,9 +51,17 @@ public class OrderDetailsPageTest extends BaseClass{
 		orderDetails=new OrderDetailsPage(driver);
 		Assert.assertTrue(orderDetails.checkNavigation_PendingToUploadScreen());
 	}
+
 	@Test
 	public void verifyNavigationToInspection() throws InterruptedException {
 		orderDetails=new OrderDetailsPage(driver);
 		Assert.assertTrue(orderDetails.checkNavigation_To_Inspection());
 	}
+	
+	@Test
+	public void verifyNavigationToListPage() throws InterruptedException {
+		orderDetails=new OrderDetailsPage(driver);
+		orderDetails.checkNavigationToListPage();
+	}
+	
 }

@@ -1,5 +1,6 @@
 package flutter.Truvideo.Tests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import flutter.Truvideo.BaseClass.BaseClass;
@@ -9,10 +10,66 @@ public class RO_SettingPageTest extends BaseClass {
 	
 	RO_SettingPage settingpage;
 	
-	@Test
+	@Test(priority = 0)
 	public void checkSmallFont() throws InterruptedException{
 		settingpage=new RO_SettingPage(driver);
-		settingpage.checkSmallFont();
+		Assert.assertTrue(settingpage.checkSmallFont());
+	}
+	@Test(priority = 1)
+	public void checkMediumFont() throws InterruptedException{
+		settingpage=new RO_SettingPage(driver);
+		Assert.assertTrue(settingpage.meduimFontCheck());
+	}
+	@Test(priority = 2)
+	public void checkLargeFont() throws InterruptedException{
+		settingpage=new RO_SettingPage(driver);
+		Assert.assertTrue(settingpage.largeFontCheck());
+	}
+	
+	@Test(priority = 3)
+	public void checkThemeMode() throws InterruptedException{
+		settingpage=new RO_SettingPage(driver);
+		Assert.assertTrue(settingpage.checkTheme());
 	}
 
+	@Test(priority = 4)
+	public void biometricConfiguration() throws InterruptedException{
+		settingpage=new RO_SettingPage(driver);
+		settingpage.biometricConfiguration();
+	}
+	
+	@Test
+	public void checkingCountryDopdown() throws InterruptedException
+	{
+		settingpage=new RO_SettingPage(driver);
+		Assert.assertTrue(settingpage.defaultCountry("India"));
+		
+	}
+
+	@Test
+	public void checkingLowCamQuality() throws InterruptedException
+	{
+		settingpage=new RO_SettingPage(driver);
+		settingpage.lowCameraQuality();
+		
+	}
+	
+	@Test
+	public void checkingMediumCamQuality() throws InterruptedException
+	{
+		settingpage=new RO_SettingPage(driver);
+		settingpage.mediumCameraQuality();
+		
+	}
+	
+	@Test
+	public void checkingHighCamQuality() throws InterruptedException
+	{
+		settingpage=new RO_SettingPage(driver);
+		settingpage.highCameraQuality();
+		
+	}
+	
+	
 }
+

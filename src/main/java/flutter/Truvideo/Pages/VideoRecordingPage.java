@@ -1,32 +1,32 @@
 package flutter.Truvideo.Pages;
 
-import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+
 import flutter.Truvideo.Utils.UtilityClass;
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.pagefactory.AndroidBy;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 
-public class VideoRecordingPage extends UtilityClass {
+public class VideoRecordingPage extends UtilityClass{
 	AppiumDriver<WebElement> driver;
-
+	
 	public VideoRecordingPage(AppiumDriver<WebElement> driver) {
 		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
-
+	
 	@AndroidFindBy(accessibility = "Rotate your device Left or Right")
 	 @iOSXCUITFindBy(accessibility = "Rotate your device Left or Right" )
 	private WebElement rotateDeviceMessage;
-
+	
 	public WebElement getRotateDeviceMessage() {
 		return rotateDeviceMessage;
 	}
-	
+
 	@AndroidFindBy(xpath  = "//android.view.View[@index='6']")
 	 @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@index='7']" )
 	private WebElement RecordingTimer;
@@ -34,6 +34,9 @@ public class VideoRecordingPage extends UtilityClass {
 	public WebElement getRecordingTimer() {
 		return RecordingTimer;
 	}
+	
+	@AndroidFindBy(xpath = "//android.view.View[4]")
+	private WebElement defaultNoiceCansellation_On;
 
 	// upload from device
 	@AndroidFindBy(accessibility = "The device must be on landscape mode")
@@ -239,6 +242,7 @@ public class VideoRecordingPage extends UtilityClass {
 
 	public void checkChangingVideoQualityFromRecorder() throws InterruptedException {
 		Thread.sleep(10000);
+		defaultNoiceCansellation_On.click();//Disabling default noise cancellation
 		quality_CameraScreen.click();
 		Thread.sleep(2000);
 		cameraQuality_High.click();
@@ -341,7 +345,7 @@ public class VideoRecordingPage extends UtilityClass {
 		imageCaptureButton_DuringRecording.click();
 		Thread.sleep(4000);//wait for record 4 seconds video
 		stop_Recording.click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		imageVideo_Count_AfterRecording.click();
 		RecordingVideoAndImagesActionsPage actionPage=new RecordingVideoAndImagesActionsPage(driver);
 		if(actionPage.getVideos_Title().isDisplayed()) {
@@ -385,8 +389,37 @@ public class VideoRecordingPage extends UtilityClass {
 		}
 		
 	}
+
 	
 	
+	@AndroidFindBy(xpath = "//android.view.View[10]")
+	private WebElement cameraFunction_StartRecording;
+	@AndroidFindBy(xpath = "//android.view.View[8]")
+	private WebElement cameraStopRecording;
+	
+	public void cameraQualityFromSetting() throws InterruptedException
+	{
 		
+		
+	//	checkVideoRecordingWithImageCapture();
+		cameraFunction_StartRecording.click();
+		log.info("Clicked on startRecording" );
+		Thread.sleep(10000);
+		cameraStopRecording.click();
+		log.info("Clicked on stop recording button");
+		Thread.sleep(3000);
+		continue_Button.click();
+		log.info("Clicked on continue button");
+		
+//		log.info("Clicked on Camera quality button" );
+//		boolean lowCamValue= cameraQuality_Low.isSelected();
+//		String lowCamValue1= cameraQuality_Low.getText();
+//		boolean lowCamValue2= cameraQuality_Low.isEnabled();
+//		System.out.println("Boolean value low camera Quality is :-"+lowCamValue+"Boolean value low camera Quality is gettext :-"+lowCamValue1+"Boolean value low camera Quality is isEnabled :-"+lowCamValue2);
+//		boolean value=cameraQuality_Medium.isEnabled();
+//		System.out.println("Medium is enabled:-"+value);
+	}
+	
+
 
 }

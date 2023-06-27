@@ -33,7 +33,9 @@
 				</methods>
 			</class>
 		</classes>
-	</test> <!--
+		
+	</test> 
+	<!--
 	Test_OrderDetailsPage -->
 </suite> <!--
 Suite_OrderDetailsPage -->

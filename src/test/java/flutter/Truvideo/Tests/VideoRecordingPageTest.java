@@ -57,4 +57,12 @@ public class VideoRecordingPageTest extends BaseClass{
 		Assert.assertTrue(vidioRecordingPage.checkVideoRecordingWithImageCapture());
 	}
 	
+	@Test
+   public void verifyCameraQuality() throws InterruptedException
+   {
+		vidioRecordingPage=new VideoRecordingPage(driver);
+		vidioRecordingPage.cameraQualityFromSetting();
+   }
+	
+
 }

@@ -1,14 +1,15 @@
 package flutter.Truvideo.Pages;
 
-import java.util.List;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
-import org.testng.asserts.SoftAssert;
 import flutter.Truvideo.Utils.UtilityClass;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.asserts.SoftAssert;
+
+import java.util.List;
 
 public class CreateNewUserPage extends UtilityClass {
 
@@ -201,3 +202,4 @@ public class CreateNewUserPage extends UtilityClass {
 	}
 
 }
+

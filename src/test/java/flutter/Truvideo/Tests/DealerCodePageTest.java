@@ -26,5 +26,12 @@ public class DealerCodePageTest extends BaseClass {
 		Assert.assertTrue(dealerCodePage.dealerLogin_ValidCredentials());
 	}
 	
+	@Test//Sales
+	public void verifyLogin_ValidDealerCode_Sales() throws Exception {
+		dealerCodePage=new DealerCodePage(driver);
+		Assert.assertTrue(dealerCodePage.salesDealerLogin_ValidCredentials());
+	}
+	
 	
 }
+

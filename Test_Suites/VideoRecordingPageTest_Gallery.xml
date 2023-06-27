@@ -31,6 +31,8 @@
 			<methods>
 				<include name="verifyVideoUploading_MediaGallery"></include>
 			</methods>
+			</class>
 		</classes>
 	</test> 
+	
 </suite> 

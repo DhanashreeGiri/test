@@ -1,8 +1,10 @@
 package flutter.Truvideo.Pages;
-
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+
+import com.testsigma.flutter.FlutterElement;
+
 import flutter.Truvideo.Utils.UtilityClass;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -10,10 +12,9 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 
 public class DealerCodePage extends UtilityClass {
-	AppiumDriver<WebElement> driver;
+	AppiumDriver driver;
 	
-
-	public DealerCodePage(AppiumDriver<WebElement> driver) {
+	public DealerCodePage(AppiumDriver driver) {
 		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
@@ -162,5 +163,38 @@ public class DealerCodePage extends UtilityClass {
 		}
 	
 	}
-
+	
+	public boolean salesDealerLogin_ValidCredentials() throws Exception {
+		try {
+	        if (popUpOK.isDisplayed()) {
+	        	Thread.sleep(2000);
+	            log.info("PopUp Displayed");
+	            popUpOK.click();
+	        }
+	    } catch (NoSuchElementException e) {
+	        log.info("PopUp not present");
+	    }
+		log.info("Entering Dealer code");
+		EIGHT.click();
+		ZERO.click();
+		TWO.click();
+		SEVEN.click();
+		NINE.click();
+		SEVEN.click();
+		log.info("Sales Dealer code is entered");
+		UserListPage userListpage=new UserListPage(driver);
+		if(userListpage.getDealerName().isDisplayed())
+		{
+			log.info("Dealer name is Displayed");
+			return true;
+		}
+		else
+		{
+			log.info("Dealer name is not displayed");
+			return false;
+		}
+	
+	}
+	
 }
+

@@ -22,6 +22,6 @@
 			  <exclude name="verifyNavigationToAddOrderPage"></exclude>
 		  </methods>
       </class>
-    </classes>
+    </classes> 
   </test> 
 </suite> 

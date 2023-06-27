@@ -21,8 +21,68 @@ public class ProfileIconScreen extends UtilityClass{
    @iOSXCUITFindBy(accessibility = "Log out")
    private WebElement logOut_Button;
    
+   @AndroidFindBy(accessibility = "NO")
+   @iOSXCUITFindBy(accessibility = "Log out")
+   private WebElement noButton;
+   
+   @AndroidFindBy(accessibility = "YES")
+   @iOSXCUITFindBy(accessibility = "Log out")
+   private WebElement yesButton;
+   
+   @AndroidFindBy(accessibility = "Settings")
+   private WebElement settingsButton;
+   
+   @AndroidFindBy(accessibility = "Demo-BMW2")
+   private WebElement dealerName;
+   
    public WebElement getLogOut_Button() {
 	   return logOut_Button;
    }
    
+   public boolean checkNavigationToSettingsScreen() {
+	   settingsButton.click();
+	   RO_SettingPage settingsScreen = new RO_SettingPage(driver);
+		if (settingsScreen.getSettingsLabel().isDisplayed()) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+   
+   public boolean varifyDealerName()
+   {
+	   if(dealerName.isDisplayed())
+	   {
+		   log.info("Changed dealer name is displayed");
+		   return true;
+	   }else {
+		   return false;
+	   }
+   }
+
+   
+   public boolean verifyLogoutButton() throws InterruptedException
+   {
+	   logOut_Button.click();
+	   log.info("Clicked on Logout button :- Logout confirm box is opened");
+	   yesButton.click();
+	   log.info("Logout process is done :-User navigating on User List page");
+	   Thread.sleep(5000);
+	   UserListPage userListpage=new UserListPage(driver);
+		if(userListpage.getDealerName().isDisplayed())
+		{
+			log.info("Dealer name is Displayed");
+			return true;
+		}
+		else
+		{
+			log.info("Dealer name is not displayed");
+			return false;
+		}
+	   
+   }
+
 }
+
+
+

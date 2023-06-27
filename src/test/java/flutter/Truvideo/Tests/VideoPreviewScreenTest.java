@@ -40,5 +40,12 @@ public class VideoPreviewScreenTest extends BaseClass {
 		videoPreviewScreen = new VideoPreviewScreen(driver);
 		Assert.assertTrue(videoPreviewScreen.checkPreviewScreenFunction());
 	}
+	
+	@Test()       //ForCameraQualityThroughSetting
+	public void verifyNavigatingonPendianToUploadScreenCameraQualitySetting() throws InterruptedException
+	{
+		videoPreviewScreen = new VideoPreviewScreen(driver);
+		Assert.assertTrue(videoPreviewScreen.forCameraQualityFunction());
+	}
 
 }

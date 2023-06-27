@@ -8,6 +8,7 @@ import org.testng.annotations.*;
 import flutter.Truvideo.Utils.AppConfig;
 import flutter.Truvideo.Utils.CapabilityReader;
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.InteractsWithApps;
 
 public class BaseClass {
 
@@ -26,8 +27,9 @@ public static AppiumDriver<WebElement> driver;
 			log.info("Error in Reading Capabilities from Json File ");
 			e.printStackTrace();
 		}
+		       
 		driver.launchApp();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		log.info("Connected to Appium Server, Launching Application. . .");
 		
 		return driver;
@@ -38,3 +40,4 @@ public static AppiumDriver<WebElement> driver;
 		driver.quit();
 	}
 }
+

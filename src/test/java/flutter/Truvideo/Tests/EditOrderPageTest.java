@@ -20,5 +20,5 @@ public class EditOrderPageTest extends BaseClass{
 		editOrderPage=new EditOrderPage(driver);
 		Assert.assertTrue(editOrderPage.editOrder());
 	}
-	
+
 }
