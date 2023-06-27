@@ -3,6 +3,7 @@ package flutter.Truvideo.Tests;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import flutter.Truvideo.BaseClass.BaseClass;
+import flutter.Truvideo.Pages.DealerCodePage;
 import flutter.Truvideo.Pages.UserListPage;
 import lombok.extern.slf4j.Slf4j;
 
@@ -59,6 +60,6 @@ public class UserListPageTest extends BaseClass {
 		userListPage = new UserListPage(driver);
 		Assert.assertTrue(userListPage.selectUserToLogin_WithValidPin("Disha Gupta"));
 	}
-	
+		
 }
 
