@@ -164,5 +164,37 @@ public class DealerCodePage extends UtilityClass {
 	
 	}
 	
+	public boolean salesDealerLogin_ValidCredentials() throws Exception {
+		try {
+	        if (popUpOK.isDisplayed()) {
+	        	Thread.sleep(2000);
+	            log.info("PopUp Displayed");
+	            popUpOK.click();
+	        }
+	    } catch (NoSuchElementException e) {
+	        log.info("PopUp not present");
+	    }
+		log.info("Entering Dealer code");
+		EIGHT.click();
+		ZERO.click();
+		TWO.click();
+		SEVEN.click();
+		NINE.click();
+		SEVEN.click();
+		log.info("Sales Dealer code is entered");
+		UserListPage userListpage=new UserListPage(driver);
+		if(userListpage.getDealerName().isDisplayed())
+		{
+			log.info("Dealer name is Displayed");
+			return true;
+		}
+		else
+		{
+			log.info("Dealer name is not displayed");
+			return false;
+		}
+	
+	}
+	
 }
 

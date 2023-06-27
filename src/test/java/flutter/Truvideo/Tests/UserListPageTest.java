@@ -60,6 +60,12 @@ public class UserListPageTest extends BaseClass {
 		userListPage = new UserListPage(driver);
 		Assert.assertTrue(userListPage.selectUserToLogin_WithValidPin("Disha Gupta"));
 	}
+	
+	@Test
+	public void verify_Login_ValidPin_Sales() throws Exception {
+		userListPage = new UserListPage(driver);
+		Assert.assertTrue(userListPage.selectUserToLogin_WithValidPin("Disha Gupta Sales"));
+	}
 		
 }
 

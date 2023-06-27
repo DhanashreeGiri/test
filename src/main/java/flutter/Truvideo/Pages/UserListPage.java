@@ -238,8 +238,8 @@ public class UserListPage extends UtilityClass {
 		}
 		RO_ListPage roListpage = new RO_ListPage(driver);
 		Thread.sleep(3000);
-		if (roListpage.getOrderPageTitle().isDisplayed()) {
-			log.info("User logged in successfully and Navigating to the RO List Page");
+		if (roListpage.getCreateButton().isDisplayed()) {
+			log.info("User logged in successfully and Navigating to the RO/Prospects List Page");
 			return true;
 		} else {
 			log.info("User login failed");

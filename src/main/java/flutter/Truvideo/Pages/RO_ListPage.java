@@ -79,6 +79,10 @@ public class RO_ListPage extends UtilityClass {
 	@AndroidFindBy(accessibility = "CREATE")
 	@iOSXCUITFindBy(accessibility = "CREATE")
 	private WebElement createButton;
+	
+	public WebElement getCreateButton() {
+		return createButton;
+	}
 
 	@AndroidFindBy(accessibility = "ALL")
 	@iOSXCUITFindBy(accessibility = "ALL")
