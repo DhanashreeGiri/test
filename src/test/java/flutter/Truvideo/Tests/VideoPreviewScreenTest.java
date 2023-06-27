@@ -47,7 +47,5 @@ public class VideoPreviewScreenTest extends BaseClass {
 		videoPreviewScreen = new VideoPreviewScreen(driver);
 		Assert.assertTrue(videoPreviewScreen.forCameraQualityFunction());
 	}
-	private void syso() {
-		// TODO Auto-generated method stub
-        }
+
 }

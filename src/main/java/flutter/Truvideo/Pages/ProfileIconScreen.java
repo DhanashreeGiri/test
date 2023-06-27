@@ -59,6 +59,7 @@ public class ProfileIconScreen extends UtilityClass{
 		   return false;
 	   }
    }
+
    
    public boolean verifyLogoutButton() throws InterruptedException
    {
@@ -80,8 +81,8 @@ public class ProfileIconScreen extends UtilityClass{
 		}
 	   
    }
-   private void syso() {
-		// TODO Auto-generated method stub
 
-	}
 }
+
+
+

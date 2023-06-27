@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-	<listeners>
+<suite name="Suite_ContactsList">
+	<!--<listeners>
 		<listener class-name="flutter.Truvideo.TestUtils.Listeners"></listener>
-	</listeners>
-	<test thread-count="5" name="Test">
+	</listeners>-->
+	<test thread-count="5" name="Test_ROListPage">
 		<classes>
 			<class name="flutter.Truvideo.Tests.DealerCodePageTest">
 				<methods>
-					<include name="verifyLogin_ValidDealerCode" />
+					<include name="verifyLogin_ValidDealerCode"></include>
 				</methods>
 			</class>
 			<class name="flutter.Truvideo.Tests.UserListPageTest">
@@ -18,11 +18,10 @@
 			</class>
 			<class name="flutter.Truvideo.Tests.RO_ListPageTest">
 				<methods>
-					<include name="verifyNavigationTo_Chat"></include>
+					<include name="verifyNavigationTo_Contacts"></include>
 				</methods>
 			</class>
-			<class name="flutter.Truvideo.Tests.ChatListPageTest"/>
+			<class name="flutter.Truvideo.Tests.ContactsListPageTest"></class>
 		</classes>
 	</test>
-
-</suite>
+</suite> 

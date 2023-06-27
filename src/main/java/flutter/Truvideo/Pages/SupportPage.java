@@ -73,8 +73,5 @@ AppiumDriver<WebElement> driver;
 			return false;
 		}
 	}
-	private void syso() {
-		// TODO Auto-generated method stub
 
-	}
 }

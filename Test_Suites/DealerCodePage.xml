@@ -6,8 +6,11 @@
 	</listeners>
   <test thread-count="5" name="Tests_DealerCodePage">
     <classes>
-      <class name="flutter.Truvideo.Tests.DealerCodePageTest"/>
+      <class name="flutter.Truvideo.Tests.DealerCodePageTest">
+		  <methods>
+			  <exclude name="verifyLogin_ValidDealerCode_Sales"></exclude>
+		  </methods>
+      </class>
     </classes>
-  </test> 
+  </test>  
 </suite> 
-

@@ -64,8 +64,5 @@ public class VideoRecordingPageTest extends BaseClass{
 		vidioRecordingPage.cameraQualityFromSetting();
    }
 	
-	
-	private void syso() {
-		// TODO Auto-generated method stub
-        }
+
 }

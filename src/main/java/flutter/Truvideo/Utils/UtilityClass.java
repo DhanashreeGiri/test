@@ -1,24 +1,25 @@
-
 package flutter.Truvideo.Utils;
 
 import java.time.Duration;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.RemoteWebElement;
-import flutter.Truvideo.BaseClass.BaseClass;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.PerformsTouchActions;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
-import io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder;
+import io.appium.java_client.pagefactory.AndroidBy;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 
@@ -73,19 +74,24 @@ public class UtilityClass {
 			((IOSDriver<WebElement>) driver).executeScript("mobile: scroll", scrollObject);
 		}
 	}
-
-	/*
-	 * public void scrollDown() { JavascriptExecutor js = (JavascriptExecutor)
-	 * driver; HashMap<String, String> scrollObject = new HashMap<String, String>();
-	 * scrollObject.put("direction", "down"); js.executeScript("mobile: scroll",
-	 * scrollObject); }
-	 * 
-	 * public void scrollUp() { JavascriptExecutor js = (JavascriptExecutor) driver;
-	 * HashMap<String, String> scrollObject = new HashMap<String, String>();
-	 * scrollObject.put("direction", "up"); js.executeScript("mobile: scroll",
-	 * scrollObject); }
-	 */
-
+	
+	// Scroll to an element with the text "ElementText" on Android & ios
+	public void selectElementByVisualText(String attributeValue) {
+		try {
+			WebElement element = (WebElement)driver.findElement(MobileBy.AndroidUIAutomator(
+		    "new UiScrollable(new UiSelector()).scrollIntoView("
+		    + "new UiSelector().description(\"" + attributeValue + "\"));"));
+			element.click();
+		}catch(Exception e) {
+			HashMap<String, Object> scrollObject = new HashMap<>();
+			scrollObject.put("predicateString", "label == '" + attributeValue + "'");
+			scrollObject.put("toVisible", "true");
+			driver.executeScript("mobile:scroll", scrollObject);
+            driver.findElement(MobileBy.AccessibilityId(attributeValue)).click();
+		}
+	}
+	
+	
 	public void scrollUp() {
 		Dimension dimension = driver.manage().window().getSize();
 		Double scrollHeightEnd = dimension.getHeight() * 0.5;
@@ -107,29 +113,11 @@ public class UtilityClass {
 				.waitAction(WaitOptions.waitOptions(Duration.ofMillis(1000))).moveTo(PointOption.point(0, scrollEnd))
 				.release().perform();
 	}
+	
+	public void waitElementToBeClickable(WebElement element) {  
+			  WebDriverWait wait=new WebDriverWait(driver,60);
+	       wait.until(ExpectedConditions.visibilityOf(element));
+		 }
 
-
-
-//	public void scrollDown() {
-
-//		JavascriptExecutor js = (JavascriptExecutor) driver;
-//		HashMap<String, String> scrollObject = new HashMap<String, String>();
-//		scrollObject.put("direction", "down");
-//		js.executeScript("mobile: scroll", scrollObject);
-
-//	}
-
-//	public void scroll1(WebElement element) {
-
-//		JavascriptExecutor js = (JavascriptExecutor) driver;
-//		Map<String, Object> params = new HashMap<>();
-//		params.put("element", ((RemoteWebElement) element).getId());
-//		js.executeScript("mobile:scrollToVisible", params);
-
-//	}
-
-	private void syso() {
-		// TODO Auto-generated method stub
-        }
 }
 

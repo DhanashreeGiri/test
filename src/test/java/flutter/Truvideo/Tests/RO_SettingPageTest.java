@@ -45,6 +45,7 @@ public class RO_SettingPageTest extends BaseClass {
 		Assert.assertTrue(settingpage.defaultCountry("India"));
 		
 	}
+
 	@Test
 	public void checkingLowCamQuality() throws InterruptedException
 	{
@@ -69,9 +70,6 @@ public class RO_SettingPageTest extends BaseClass {
 		
 	}
 	
-	private void syso() {
-		// TODO Auto-generated method stub
-        }
+	
 }
-
 

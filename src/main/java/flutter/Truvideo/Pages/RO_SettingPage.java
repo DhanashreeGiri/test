@@ -301,6 +301,7 @@ public class RO_SettingPage extends UtilityClass {
 		log.info("clicked on back arrow and user is navigated on RO List screen");
 		
 	}
+
 	public void mediumCameraQuality()
 	{
 		screenScroll();
@@ -323,8 +324,7 @@ public class RO_SettingPage extends UtilityClass {
 		log.info("clicked on back arrow and user is navigated on RO List screen");
 		
 	}
-	private void syso() {
-		// TODO Auto-generated method stub
 
-	}
+
 }
+

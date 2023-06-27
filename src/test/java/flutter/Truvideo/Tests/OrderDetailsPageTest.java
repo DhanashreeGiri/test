@@ -59,7 +59,4 @@ public class OrderDetailsPageTest extends BaseClass{
 		orderDetails.checkNavigationToListPage();
 	}
 	
-	private void syso() {
-		// TODO Auto-generated method stub
-        }
 }

@@ -16,8 +16,6 @@ public class SupportPageTest extends BaseClass {
 		Assert.assertTrue(support.checkSupportFunctionality("rahul.kapse@5exceptions.com", "9689798989", "Testing Support"));
 		
 	}
-	private void syso() {
-		// TODO Auto-generated method stub
-        }
+
 
 }

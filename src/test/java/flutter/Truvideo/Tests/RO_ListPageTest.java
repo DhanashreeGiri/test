@@ -82,14 +82,13 @@ public class RO_ListPageTest extends BaseClass{
 		Assert.assertTrue(ro_ListPage.checkNavigationTo_AddOrder_Page());
 	}
 	
+
 	@Test(priority = 15)  //Using for selecting first Existing New RO
 	public void verifyNavigationFirstNewExistingRODetailsPage() {
 		ro_ListPage=new RO_ListPage(driver);
 		ro_ListPage.checkNavigationTo_OrderDetails_Existing_FirstNewRO();
 	}
 	
-	private void syso() {
-		// TODO Auto-generated method stub
-        }
+
 }
 

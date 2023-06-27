@@ -33,6 +33,9 @@ public class VideoRecordingPage extends UtilityClass{
 	public WebElement getRecordingTimer() {
 		return RecordingTimer;
 	}
+	
+	@AndroidFindBy(xpath = "//android.view.View[4]")
+	private WebElement defaultNoiceCansellation_On;
 
 	// upload from device
 	@AndroidFindBy(accessibility = "The device must be on landscape mode")
@@ -204,6 +207,7 @@ public class VideoRecordingPage extends UtilityClass{
 
 	public void checkChangingVideoQualityFromRecorder() throws InterruptedException {
 		Thread.sleep(10000);
+		defaultNoiceCansellation_On.click();//Disabling default noise cancellation
 		quality_CameraScreen.click();
 		Thread.sleep(2000);
 		cameraQuality_High.click();
@@ -306,7 +310,7 @@ public class VideoRecordingPage extends UtilityClass{
 		imageCaptureButton_DuringRecording.click();
 		Thread.sleep(4000);//wait for record 4 seconds video
 		stop_Recording.click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		imageVideo_Count_AfterRecording.click();
 		RecordingVideoAndImagesActionsPage actionPage=new RecordingVideoAndImagesActionsPage(driver);
 		if(actionPage.getVideos_Title().isDisplayed()) {
@@ -350,9 +354,7 @@ public class VideoRecordingPage extends UtilityClass{
 		}
 		
 	}
-	
-	
-	
+
 	
 	
 	@AndroidFindBy(xpath = "//android.view.View[10]")
@@ -383,8 +385,6 @@ public class VideoRecordingPage extends UtilityClass{
 //		System.out.println("Medium is enabled:-"+value);
 	}
 	
-	private void syso() {
-		// TODO Auto-generated method stub
-        }
+
 
 }

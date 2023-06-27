@@ -29,7 +29,5 @@ public class ProfileIconScreenTest extends BaseClass {
 		Profileiconscreen=new ProfileIconScreen(driver);
 		Assert.assertTrue(Profileiconscreen.verifyLogoutButton());
 	}
-	private void syso() {
-		// TODO Auto-generated method stub
-        }
+
 }

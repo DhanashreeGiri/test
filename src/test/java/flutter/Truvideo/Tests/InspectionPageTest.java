@@ -81,8 +81,6 @@ public class InspectionPageTest extends BaseClass {
 	}
 	
 	
-	private void syso() {
-		// TODO Auto-generated method stub
-        }
+	
 	
 }

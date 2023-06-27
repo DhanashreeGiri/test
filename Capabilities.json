@@ -2,11 +2,11 @@
 [
 
     {
-        "name":"Samsung S21 5G",
+        "name":"Galaxy S21 5G",
         "caps":{
             "automationName":"UiAutomator2",
             "platformName":"ANDROID",
-            "deviceName":"Samsung S21 5G",
+            "deviceName":"Galaxy S21 5G",
             "platformVersion":"13.0",
             "bundleId":"com.truvideo.enterprise.rc",
             "app":"/src/main/resources/ApplicationFile/RCTruvideoflutter.apk"
@@ -32,6 +32,18 @@
             "deviceName":"M2007J17I",
             "platformVersion":"12.0",
             "bundleId":"com.truvideo.enterprise.rc",
+            "app":"/src/main/resources/ApplicationFile/RCTruvideoflutter.apk"
+                }
+    },
+    {
+        "name":"iPhone12mini",
+        "caps":{
+                "appium:deviceName": "iPhone 12 mini",
+                "appium:platformVersion": "16.2",
+                "platformName": "iOS",
+                "appium:automationName": "XCUITest",
+                "appium:noReset": true,
+                "appium:bundleId": "com.truvideo.enterprise.rc",
             "app":"/src/main/resources/ApplicationFile/RCTruvideoflutter.apk"
                 }
     }

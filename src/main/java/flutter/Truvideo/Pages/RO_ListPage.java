@@ -79,6 +79,10 @@ public class RO_ListPage extends UtilityClass {
 	@AndroidFindBy(accessibility = "CREATE")
 	@iOSXCUITFindBy(accessibility = "CREATE")
 	private WebElement createButton;
+	
+	public WebElement getCreateButton() {
+		return createButton;
+	}
 
 	@AndroidFindBy(accessibility = "ALL")
 	@iOSXCUITFindBy(accessibility = "ALL")
@@ -147,11 +151,11 @@ public class RO_ListPage extends UtilityClass {
 			}
 	}
 
-		
 	public boolean checkRO_Status_New() throws Exception {
 		newFilter.click();
 		Thread.sleep(1000);
 		Set<String> statusList = new HashSet<String>();
+		if(statusList == null || statusList.isEmpty()){
 		for (WebElement statusObject : filterStatusList) {
 			try {
 				statusList.add(statusObject.getAttribute("content-desc"));
@@ -162,34 +166,35 @@ public class RO_ListPage extends UtilityClass {
 		for (String status : statusList) {
 			if (status.contains("New")) {
 				log.info("In new :->Status is :->" + status);
-				return true;
-			} else {
-				return false;
 			}
 		}
-		return false;
+		return true;
+		}else {
+			return false;
+		}
 	}
 
 	public boolean checkRO_Status_Rejected() throws Exception {
 		rejectedFilter.click();
 		Thread.sleep(1000);
 		Set<String> statusList = new HashSet<String>();
-		for (WebElement statusObject : filterStatusList) {
-			try {
-				statusList.add(statusObject.getAttribute("content-desc"));
-			} catch (Exception e) {
-				statusList.add(statusObject.getAttribute("label"));
+		if(statusList == null || statusList.isEmpty()){
+			for (WebElement statusObject : filterStatusList) {
+				try {
+					statusList.add(statusObject.getAttribute("content-desc"));
+				} catch (Exception e) {
+					statusList.add(statusObject.getAttribute("label"));
+				}
 			}
-		}
-		for (String status : statusList) {
-			if (status.contains("Rejected")) {
-				log.info("In Rejected :->Status is :->" + status);
-				return true;
-			} else {
+			for (String status : statusList) {
+				if (status.contains("Rejected")) {
+					log.info("In Rejected :->Status is :->" + status);
+				}
+			}
+			return true;
+			}else {
 				return false;
 			}
-		}
-		return false;
 	}
 
 	public boolean checkRO_Status_All() throws Exception {
@@ -219,20 +224,21 @@ public class RO_ListPage extends UtilityClass {
 	public boolean checkRO_Status_My() throws Exception {
 		myFilter.click();
 		Thread.sleep(1000);
+		if(!filterStatusList.isEmpty()) {
 		for (WebElement statusObject : filterStatusList) {
 			statusObject.click();
-			if (technicianName.equals("￼Name: Disha Gupta")) {
-				log.info("The RO in My Filter is of Login technician");
+			if (technicianName.getText().contains(UserListPage.userName)) {
+				log.info("The RO in My Filter is of Login technician"+technicianName.getText());
 				Thread.sleep(1000);
 				backButton_RODetails.click();
 				log.info("Return back to ROList screen");
 				System.out.println("Return back to ROList screen");
 			}
 			backButton_RODetails.click();
-			return true;
 		}
-		{
-			log.info("The RO in My Filter is of Login technician");
+		return true;
+		}else{
+		log.info("The RO in My Filter is not of Login technician");
 			return false;
 		}
 	}
@@ -300,13 +306,13 @@ public class RO_ListPage extends UtilityClass {
 			return false;
 		}
 	}
+
 	public void checkNavigationTo_OrderDetails_Existing_FirstNewRO() {
 		newFilter.click();
 		filterStatusList.get(0).click();
 		log.info("Selected First RO" );
 		
-		
-
 	}
+
 }
 

@@ -239,6 +239,7 @@ public class OrderDetailsPage extends UtilityClass {
 			return false;
 		}
 	}
+
 	
 	public void checkNavigationToListPage() throws InterruptedException
 	{
@@ -246,8 +247,5 @@ public class OrderDetailsPage extends UtilityClass {
 		backButton.click();
 		log.info("Clicked on back button and user will navigate to List Page");
 	}
-	private void syso() {
-		// TODO Auto-generated method stub
 
-	}
 }

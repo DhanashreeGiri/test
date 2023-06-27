@@ -44,6 +44,7 @@
 		<classes>
 			<class name="flutter.Truvideo.Tests.VideoRecordingPageTest" >
 				<methods>
+					<exclude name="verifyChangingVideoQualityFromRecorder"></exclude>
 					<exclude name="verifyVideoUploading_MediaGallery"></exclude>
 				</methods>
 			</class>

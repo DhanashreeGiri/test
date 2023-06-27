@@ -27,7 +27,5 @@ public class MessagingScreenTest extends BaseClass {
 		messageScreen.checkConversationStatus();
 	}
 
-	private void syso() {
-		// TODO Auto-generated method stub
-        }
+	
 }

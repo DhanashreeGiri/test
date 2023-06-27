@@ -38,8 +38,14 @@ public class PendingToUploadPage extends UtilityClass{
 	@AndroidFindBy(xpath = "//android.view.View[2]")
 	private WebElement backButton_playerScreen;
 	
+	@AndroidFindBy(accessibility = "The video was re-encoded")
+	private WebElement encodingTag;
+	
+	@AndroidFindBy(xpath = "//android.view.View[6]")
+	private WebElement tagDropdown_Media;
+	
 	@AndroidFindBy(xpath = "//android.view.View[3]")
-	private WebElement tagDropdown;
+	private WebElement tagDropdown_Recorder;
 	
 	@AndroidFindBy(accessibility = "Inspection Video")
 	private WebElement inspection_Video;
@@ -118,7 +124,7 @@ public class PendingToUploadPage extends UtilityClass{
 		log.info("video paused inside pending to upload screen");
 		Thread.sleep(1000);
 		backButton_playerScreen.click();
-		if(tagDropdown.isDisplayed()) {
+		if(tagDropdown_Media.isDisplayed()) {
 			log.info("Navigate back to upload screen");
 			return true;
 		}else {
@@ -131,7 +137,15 @@ public class PendingToUploadPage extends UtilityClass{
 		Thread.sleep(5000);
 		scrollDown();
 		Thread.sleep(1000);
-		tagDropdown.click();
+		try {
+			if(encodingTag.isDisplayed()) {
+				tagDropdown_Media.click();
+			}else {
+				tagDropdown_Recorder.click();
+			}
+		}catch (Exception e) {
+			
+		}
 		Thread.sleep(2000);
 		log.info("Video tag dropdown opened");
 		sanitization_Video.click();
@@ -249,8 +263,5 @@ public class PendingToUploadPage extends UtilityClass{
 			return false;
 		}
 	}
-	private void syso() {
-		// TODO Auto-generated method stub
 
-	}
 }

@@ -1,5 +1,7 @@
 package flutter.Truvideo.Pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.asserts.SoftAssert;
@@ -29,6 +31,10 @@ public class MessagingScreen extends UtilityClass {
 
 	@AndroidFindBy(accessibility = "THIS CONVERSATION IS OPEN")
 	private WebElement thisConversationIsOpen_text;
+	
+	public WebElement getConversationStatus_Open() {
+		return thisConversationIsOpen_text;
+	}
 
 	@AndroidFindBy(accessibility = "YOU’VE ALREADY RESPONDED.")
 	private WebElement youHaveAlreadyResponded_text;
@@ -59,6 +65,16 @@ public class MessagingScreen extends UtilityClass {
 
 	@AndroidFindBy(xpath = "//android.view.View/android.view.View[4]/android.view.View/android.view.View[1]")
 	private WebElement firstSentMessage;
+	
+	@AndroidFindBy(xpath = "//android.view.View/android.view.View[4]/android.view.View/android.view.View")
+	private List<WebElement> messages_Sent_Received;
+	
+	@AndroidFindBy(xpath = "//android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]")
+	private WebElement backButton;
+	
+	public WebElement getBackButton() {
+		return backButton;
+	}
 
 	public boolean checkDefaultScreenDuringNewConversation() {
 		if (thisConversationIsOpen_text.isDisplayed() && noItemsFound_text.isDisplayed()
@@ -77,11 +93,12 @@ public class MessagingScreen extends UtilityClass {
 		sendButton.click();
 		message_Title.click();// hiding keyboard
 		Thread.sleep(5000);
-		if (firstSentMessage.isDisplayed() && youHaveAlreadyResponded_text.isDisplayed()) {
-			log.info("First message sent and Staus changed to Responded");
+		if (messages_Sent_Received.get(messages_Sent_Received.size()-1).isDisplayed() && youHaveAlreadyResponded_text.isDisplayed()) {
+			log.info("Sent Message is :->" + messages_Sent_Received.get(messages_Sent_Received.size()-1).getAttribute("content-desc"));
+			log.info("message sent and Staus changed to Responded");
 			return true;
 		} else {
-			log.info("First message sent and Staus changed to Responded");
+			log.info("message sent and Staus changed to Responded");
 			return false;
 		}
 	}
@@ -96,8 +113,5 @@ public class MessagingScreen extends UtilityClass {
 		soft.assertTrue(youHaveAlreadyResponded_text.isDisplayed());
 		soft.assertAll();
 	}
-	private void syso() {
-		// TODO Auto-generated method stub
 
-	}
 }

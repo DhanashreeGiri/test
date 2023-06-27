@@ -16,7 +16,5 @@ public class ChangeDealerPageTest extends BaseClass {
 		Assert.assertTrue(changeDealer.changeDealer("BMW"));
 	}
 	
-	private void syso() {
-		// TODO Auto-generated method stub
-        }
+	
 }
