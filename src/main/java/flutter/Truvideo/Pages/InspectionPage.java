@@ -2,6 +2,7 @@ package flutter.Truvideo.Pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import flutter.Truvideo.Utils.UtilityClass;
 import io.appium.java_client.AppiumDriver;
@@ -23,6 +24,9 @@ public class InspectionPage extends UtilityClass{
 	@iOSXCUITFindBy(accessibility = "Inspection")
 	private WebElement inspection_Title;
 	
+	@iOSXCUITFindBy(accessibility = "Inspections")
+	private WebElement inspection_TitleAgain;
+	
 	public WebElement getInspection_Title() {
 		return inspection_Title;
 	}
@@ -30,7 +34,12 @@ public class InspectionPage extends UtilityClass{
 	
 	  
 	   
-	   @iOSXCUITFindBy(accessibility="Standard Multipoint Inspection - Mazda")
+	   public WebElement getInspection_TitleAgain() {
+		return inspection_TitleAgain;
+	}
+
+	
+	@iOSXCUITFindBy(accessibility="Standard Multipoint Inspection - Mazda")
 	   private WebElement tempOne;
 
 	   @iOSXCUITFindBy(xpath="(//XCUIElementTypeStaticText[@name=\"Mazda Full Circle Inspection\"])[1]")
@@ -268,8 +277,20 @@ public class InspectionPage extends UtilityClass{
         @iOSXCUITFindBy(accessibility="Check Tires / Measure Tire Tread Depth\n"
 		+ "5/5")
 	   		
-		   private WebElement closeChkListCheckTires_MeasureTireThreadDepth;    
+		   private WebElement closeChkListCheckTires_MeasureTireThreadDepth;  
+        
+        @iOSXCUITFindBy(accessibility="Check Tires / Measure Tire Tread Depth\n"
+        		+ "0/4")
+        	   		
+        		   private WebElement ChkListCheckTires_MeasureTireThreadDepth;    
 
+        @iOSXCUITFindBy(accessibility="Check Tires / Measure Tire Tread Depth\n"
+        		+ "4/4")
+        	   		
+        		   private WebElement closeChkListCheckTires_MeasureTireThreadDepth_1;    
+
+
+	   
 	   
         @iOSXCUITFindBy(accessibility="Measure Front / Rear Brake Linings\n"
         		+ "0/6")
@@ -342,8 +363,11 @@ public class InspectionPage extends UtilityClass{
 	     private WebElement terminalCondition;
        
        @iOSXCUITFindBy(xpath="//XCUIElementTypeOther[3][@index='10']")
-	     private WebElement stateOfCharge;  
+	     private WebElement i_EloopstateOfCharge;  
      
+       @iOSXCUITFindBy(xpath="//XCUIElementTypeOther[3][@index='7']")
+	     private WebElement stateOfCharge;  
+       
        @iOSXCUITFindBy(xpath="//XCUIElementTypeApplication[@name=\"TruVideo Enterprise\"]/XCUIElementTypeWindow/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]")
 	     private WebElement btnBackAgain;
        
@@ -355,7 +379,7 @@ public class InspectionPage extends UtilityClass{
        		   private WebElement closeChkListCheckBatteryPerformance;   
 		
        @iOSXCUITFindBy(accessibility="SUBMIT INSPECTION")
-	     private WebElement btnSubmit;
+	     private WebElement btnSubmitInspection;
        
        @iOSXCUITFindBy(accessibility="Success")
 	     private WebElement lblSuccess;  
@@ -368,8 +392,68 @@ public class InspectionPage extends UtilityClass{
 
        @iOSXCUITFindBy(xpath="//XCUIElementTypeStaticText[contains(@name, 'SUBMITTED')]")
 	     private WebElement statusSubmitted;  
+       
+       @iOSXCUITFindBy(accessibility = "CREATE")
+       private WebElement btnCreate;
 
+       @iOSXCUITFindBy(accessibility="MARK ALL AS GREEN")
+	   private WebElement btnGreen;
+       
+
+       @iOSXCUITFindBy(accessibility="Measure Front / Rear Brake Linings\n"
+       		+ "1/5")
+       		
+       	   		
+       		   private WebElement chkListMeasureFront_RearBrakeLinings_1; 
+       
+       @iOSXCUITFindBy(accessibility="Measure Front / Rear Brake Linings\n"
+          		+ "5/5")
+          		
+          	   		
+          		   private WebElement closechkListMeasureFront_RearBrakeLinings_1; 
+
+
+
+
+       @iOSXCUITFindBy(accessibility="Check Battery Performance\n"
+       		+ "1/3")
+       		
+       	   		
+       		   private WebElement chkListCheckBatteryPerformance_1; 
+
+
+       @iOSXCUITFindBy(accessibility="Check Battery Performance\n"
+       		+ "3/3")
+       		
+       	   		
+       		   private WebElement  closeChkListCheckBatteryPerformance_1; 
+       
+       
+       @iOSXCUITFindBy(xpath="//XCUIElementTypeOther[5]")
+	     private WebElement LF_1;      
 	   
+       
+
+       @iOSXCUITFindBy(xpath="//XCUIElementTypeOther[9][@index='10']")
+	     private WebElement  RF_1;      
+	   
+       @iOSXCUITFindBy(xpath="//XCUIElementTypeOther[13][@index='15']")
+	     private WebElement  LR_1;      
+	   
+       @iOSXCUITFindBy(xpath="//XCUIElementTypeOther[13][@index='15']")
+	     private WebElement  RR_1;      
+	   
+       @iOSXCUITFindBy(xpath="//XCUIElementTypeOther[5]")
+	     private WebElement  LF_2;   
+       
+       @iOSXCUITFindBy(xpath="//XCUIElementTypeOther[9][@index='10']")
+	     private WebElement  RF_2;     
+	   
+       @iOSXCUITFindBy(xpath="//XCUIElementTypeOther[13][@index='15']")
+	     private WebElement  LR_2;     
+	   
+       @iOSXCUITFindBy(xpath="//XCUIElementTypeOther[13][@index='15']")
+	     private WebElement  RR_2;     
 	   //@iOSXCUITFindBy(accessibility="DEPRECATED-Mazda Full Circle Inspection")
 	  // private WebElement tempFive;
 	   
@@ -556,7 +640,8 @@ public class InspectionPage extends UtilityClass{
         scrollUp();
  	   scrollUp();
       Thread.sleep(2000);
- 	 closeChkListAdditionalRecommendations.click();
+      closeChkListAdditionalRecommendations.click();
+      Thread.sleep(2000);
  	 
       }
       }
@@ -640,7 +725,7 @@ public class InspectionPage extends UtilityClass{
     			 terminalCondition.click();
     			 screenScroll();
     			 Thread.sleep(2000);
-    			 stateOfCharge.click();
+    			 i_EloopstateOfCharge.click();
     			 one.click();
     			 two.click();
     			 three.click();
@@ -654,8 +739,112 @@ public class InspectionPage extends UtilityClass{
        	      
 }
       }
+      
+  public boolean checkSubmitInspection() throws InterruptedException {
+	 OrderDetailsPage orderDetailsPage= new OrderDetailsPage(driver);
+    		  btnSubmitInspection.click();
+    		log.info("User is navigated to popup message");
+    		Assert.assertEquals(true,lblSuccess.isDisplayed());
+    		Assert.assertEquals(true,submitMessage.isDisplayed());
+    		log.info("Verify Success Popup");
+    		btnClose.click();
+    		log.info("Verify User is navigated to order detail screen");
+    		Thread.sleep(5000);
+    		orderDetailsPage.checkNavigation_To_Inspection();
+    		if(statusSubmitted.isDisplayed()) {
+    			return true;
+    		}else {
+    			return false;
+    		}
+
+ }
+ 
+   public boolean checkMarkAllAsGreenButtonFunctionality() throws InterruptedException {
+	   btnCreate.click();
+	   log.info("Verify User is navigated to inspection template list");
+	   tempTwo.click();
+	   btnGreen.click();
+	   if (closeChkListIntExt.isDisplayed()&&closeChkListAddRecommendations.isDisplayed() && closeChkListOpenRecalls.isDisplayed() &&
+	      closeChkListInterior_Exterior.isDisplayed()&& closeChkListUnderhood.isDisplayed()) {
+	      screenScroll();
+	     if(closeChkListUnderVehicle.isDisplayed()&&closeChkListAdditionalRecommendations.isDisplayed()
+	  
+	    		 &&ChkListCheckTires_MeasureTireThreadDepth.isDisplayed()&&chkListMeasureFront_RearBrakeLinings_1.isDisplayed()&&chkListCheckBatteryPerformance_1.isDisplayed()) {
+	    	 log.info("All Green fields are filled");
+	    	 Thread.sleep(3000);
+	     }
+	return true;
+	   }else {
+		return false;
+	}
 }
-
-	
-
-
+   
+   public void checkMulti_inspectionFunctionality() throws InterruptedException {
+	   
+ 	  if (ChkListCheckTires_MeasureTireThreadDepth.isDisplayed()){
+ 		 ChkListCheckTires_MeasureTireThreadDepth .click();
+ 		  log.info("Fill the remaining checklist");
+ 		  Thread.sleep(2000);
+ 		  screenScroll();
+ 		  Thread.sleep(3000);
+ 		   LF_1.click();
+ 		   RF_1.click();
+ 		  screenScroll();
+ 		  Thread.sleep(2000);
+ 		  LR_1.click();
+ 		  screenScroll();
+ 		  Thread.sleep(2000);
+ 		  RR_1.click();
+ 		  scrollUp();
+	 	  scrollUp();
+	 	 Thread.sleep(6000);
+	 	 closeChkListCheckTires_MeasureTireThreadDepth_1.click();
+	 	Thread.sleep(3000);
+	 	chkListMeasureFront_RearBrakeLinings_1.click();
+	 	screenScroll();
+	 	Thread.sleep(2000);
+	    LF_2.click();
+	    RF_2.click();
+	 	screenScroll();
+	 	Thread.sleep(2000);
+	 	LR_2.click();
+		screenScroll();
+		Thread.sleep(2000);
+	 	RR_2.click();
+	 	scrollUp();
+	 	scrollUp();
+	 	scrollUp();
+	 	Thread.sleep(2000);
+	 	 closechkListMeasureFront_RearBrakeLinings_1.click();
+	 	Thread.sleep(2000);
+	 	chkListCheckBatteryPerformance_1.click();
+	 	Thread.sleep(2000);
+		   screenScroll();
+		   screenScroll();
+			 Thread.sleep(2000);
+			 txtboxColdCranking.click();
+			 one.click();
+			 two.click();
+			 three.click();
+			 four.click();
+			 btnBack.click();
+			 screenScroll();
+			 Thread.sleep(2000);
+			 i_EloopstateOfCharge.click();
+			 one.click();
+			 two.click();
+			 three.click();
+			 four.click();
+			 btnBackAgain.click();
+			 scrollUp();
+   	 	     scrollUp();
+   	 	    Thread.sleep(2000);
+  	 	    closeChkListCheckBatteryPerformance_1.click();
+  	        Thread.sleep(2000); 
+  	      btnSubmitInspection.click();
+  	      btnClose.click();
+	 	
+}
+}
+   
+}

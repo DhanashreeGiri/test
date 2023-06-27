@@ -80,6 +80,21 @@ public class InspectionPageTest extends BaseClass {
 		inspectionPage.checkchkListCheckBatteryPerformance();
 	}
 	
+	@Test(priority=13)
+	public void verifycheckSubmitInspection()throws InterruptedException {
+		inspectionPage = new InspectionPage(driver);
+		inspectionPage.checkSubmitInspection();
+	}
+	@Test(priority=14)
+	public void verifycheckMarkAllAsGreenButtonFunctionality()throws InterruptedException {
+		inspectionPage = new InspectionPage(driver);
+		inspectionPage.checkMarkAllAsGreenButtonFunctionality();
+	}
+	@Test(priority=15)
+	public void verifycheckMulti_inspectionFunctionality()throws InterruptedException {
+		inspectionPage = new InspectionPage(driver);
+		inspectionPage.checkMulti_inspectionFunctionality();
+	}
 	
 	
 	

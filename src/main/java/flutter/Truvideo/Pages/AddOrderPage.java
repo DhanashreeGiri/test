@@ -137,9 +137,6 @@ public class AddOrderPage extends UtilityClass{
 		Thread.sleep(2000);
 		advisor_Title.click();
 		advisor_SearchBox.sendKeys("Disha Gupta");
-		Thread.sleep(2000);
-		advisor_SearchBox.click();//need to delete in next build
-		advisor_SearchBox.sendKeys("Disha Gupta");
 		DishaGupta_advisor.click();
 		Thread.sleep(2000);
 		firstName_textBox.click();
@@ -171,4 +168,5 @@ public class AddOrderPage extends UtilityClass{
 		}
 		
 	}
+}
 

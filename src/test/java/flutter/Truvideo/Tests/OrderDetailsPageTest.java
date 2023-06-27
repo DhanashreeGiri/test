@@ -51,5 +51,9 @@ public class OrderDetailsPageTest extends BaseClass{
 		orderDetails=new OrderDetailsPage(driver);
 		Assert.assertTrue(orderDetails.checkNavigation_PendingToUploadScreen());
 	}
-	
+	@Test
+	public void verifyNavigationToInspection() throws InterruptedException {
+		orderDetails=new OrderDetailsPage(driver);
+		Assert.assertTrue(orderDetails.checkNavigation_To_Inspection());
+	}
 }

@@ -28,6 +28,7 @@ public class VideoRecordingPage extends UtilityClass {
 	}
 	
 	@AndroidFindBy(xpath  = "//android.view.View[@index='6']")
+	 @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@index='7']" )
 	private WebElement RecordingTimer;
 	
 	public WebElement getRecordingTimer() {
@@ -36,36 +37,47 @@ public class VideoRecordingPage extends UtilityClass {
 
 	// upload from device
 	@AndroidFindBy(accessibility = "The device must be on landscape mode")
+	 @iOSXCUITFindBy(accessibility = "The device must be on landscape mode" )
 	private WebElement theDeviceMustBeOnLandscapeMode_text;
 
 	@AndroidFindBy(accessibility = "PICK FROM DEVICE GALLERY")
+	 @iOSXCUITFindBy(accessibility = "PICK FROM DEVICE GALLERY" )
 	private WebElement pickFromGallery;
 
 	@AndroidFindBy(id = "com.android.permissioncontroller:id/permission_allow_button")
+	 @iOSXCUITFindBy(accessibility = "Allow Access to All Photos" )
 	private WebElement accessPhotosAndMedia_Allow;
 
 	@AndroidFindBy(xpath = "//android.view.View[contains(@content-desc,'Recent')]")
+	 @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[contains(@value,'Recents')]" )
 	private WebElement RecentTab;
 
 	@AndroidFindBy(xpath = "//android.view.View[contains(@content-desc,'ALL')]")
+	 @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[contains(@value,'ALL')]" )
 	private WebElement all_Tab;
 
 	@AndroidFindBy(xpath = "//android.view.View[contains(@content-desc,'VIDEOS')]")
+	 @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[contains(@value,'VIDEOS')]" )
 	private WebElement videos_Tab;
 
 	@AndroidFindBy(xpath = "//android.view.View[contains(@content-desc,'PICTURES')]")
+	 @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[contains(@value,'PICTURES')]" )
 	private WebElement pictures_Tab;
 
 	@AndroidFindBy(xpath = "//android.widget.ImageView[1]")
+	 @iOSXCUITFindBy(xpath = "//XCUIElementTypeImage[1]" )
 	private WebElement firstVideoOrImage_InEach_Tab;
 
 	@AndroidFindBy(xpath = "//android.widget.ImageView[2]")
+	 @iOSXCUITFindBy(xpath = "//XCUIElementTypeImage[2]" )
 	private WebElement secondVideoOrImage_InEach_Tab;
 	
 	@AndroidFindBy(xpath = "//android.widget.ImageView[3]")
+	 @iOSXCUITFindBy(xpath = "//XCUIElementTypeImage[@index='3']" )
 	private WebElement ThirdVideoOrImage_InEach_Tab;
 
 	@AndroidFindBy(accessibility = "CONTINUE")
+	 @iOSXCUITFindBy(accessibility = "CONTINUE" )
 	private WebElement continueButton;
 
 	@AndroidFindBy(id = "com.android.permissioncontroller:id/permission_allow_button")
@@ -102,69 +114,92 @@ public class VideoRecordingPage extends UtilityClass {
 	private WebElement noiseCancellationDisabled;
 
 	@AndroidFindBy(xpath = "//android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[2]")
+	@iOSXCUITFindBy(accessibility = "Camera quality")
 	private WebElement quality_CameraScreen;
 
 	@AndroidFindBy(accessibility = "Camera Quality")
+	@iOSXCUITFindBy(accessibility = "Camera quality")
 	private WebElement cameraQuality_text;
 
 	@AndroidFindBy(xpath  = "//android.view.View[@index='10']")
+	 @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[7]" )
 	private WebElement cameraQuality_Low;
 
 	@AndroidFindBy(xpath = "//android.view.View[@index='11']")
+	 @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[8]" )
 	private WebElement cameraQuality_Medium;
 
 	@AndroidFindBy(xpath  = "//android.view.View[12]")
+	 @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[9]" )
 	private WebElement cameraQuality_High;
 
 	@AndroidFindBy(xpath = "//android.view.View[3]")
+	@iOSXCUITFindBy(accessibility = "Flash")
 	private WebElement flash_CameraScreen;
 
 	@AndroidFindBy(xpath = "//android.view.View[4]")
+	@iOSXCUITFindBy(accessibility = "Noise cancelling")
 	private WebElement narator_CameraScreen;
 	
 	@AndroidFindBy(xpath = "//android.view.View[5]")
+	@iOSXCUITFindBy(accessibility = "Noise cancelling")
 	private WebElement noiseCancellationON_CameraScreen;
 	
 	@AndroidFindBy(xpath = "//android.view.View[4]")
+	@iOSXCUITFindBy(accessibility = "Noise cancelling")
 	private WebElement noiseCancellationOff_CameraScreen;
 	
 	@AndroidFindBy(xpath = "//android.view.View[10]")
+	 @iOSXCUITFindBy(accessibility = "Switch cameras" )
 	private WebElement frontCamera_BeforeRecording;
 	
-	@AndroidFindBy(xpath = "//android.view.View[@index='8']")//android.view.View[8]
+	@AndroidFindBy(xpath = "//android.view.View[@index='8']")
+	//android.view.View[8]
+	 @iOSXCUITFindBy(accessibility = "Switch cameras" )
 	private WebElement frontCamera_DuringRecording;
 	
 	@AndroidFindBy(xpath = "//android.view.View[8]")
+	 @iOSXCUITFindBy(accessibility = "Switch cameras" )
 	private WebElement BackCamera_DuringRecording;
 	
 	@AndroidFindBy(xpath = "//android.view.View[12]")
+	 @iOSXCUITFindBy(accessibility = "Take picture" )
 	private WebElement imageCaptureButton_BeforeRecording;
 	
 	@AndroidFindBy(xpath = "//android.view.View[14]")
+	 @iOSXCUITFindBy(accessibility = "Take picture" )
 	private WebElement secondAndAfterCaptureButton_BeforeRecording;
 	
 	@AndroidFindBy(xpath = "//android.view.View[11]")
+	 @iOSXCUITFindBy(accessibility = "Take picture" )
 	private WebElement imageCaptureButton_DuringRecording;
 	
 	@AndroidFindBy(xpath = "//android.view.View[@index='5']")
+	@iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@index='6']" )
 	private WebElement imageVideo_Count_AfterImageCapture;
 	
 	@AndroidFindBy(xpath = "//android.view.View[@index='3']")
+	@iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@index='4']" )
 	private WebElement imageVideo_Count_AfterRecording;
 	
 	@AndroidFindBy(xpath = "//android.view.View[11]")
+	@iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[4][@index='11']" )
 	private WebElement start_Recording;//android.view.View[9]
 	
 	@AndroidFindBy(xpath = "//android.view.View[9]")
+	@iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[4][@index='9']" )
 	private WebElement final_StartRecording;
 	
 	@AndroidFindBy(xpath = "//android.view.View[10]")
+	@iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[5][@index='10']" )
 	private WebElement stop_Recording;//android.view.View[9]
 	
 	@AndroidFindBy(xpath = "//android.view.View[9]")
+	@iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[5][@index='10']" )
 	private WebElement finale_StopRecording;
 	
 	@AndroidFindBy(accessibility  = "CONTINUE")
+	@iOSXCUITFindBy(accessibility = "CONTINUE" )
 	private WebElement continue_Button;
 	
 	

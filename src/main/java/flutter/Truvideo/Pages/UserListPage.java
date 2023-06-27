@@ -63,7 +63,7 @@ public class UserListPage extends UtilityClass {
 	private WebElement changeDealer;
 
 	@AndroidFindBy(accessibility = "DEMO Main Street Toyota")
-	@iOSXCUITFindBy(accessibility = "DEMO-Main Street")
+	@iOSXCUITFindBy(accessibility = "DEMO Main Street Toyota")
 	private WebElement dealerName;
 
 	public WebElement getDealerName() {

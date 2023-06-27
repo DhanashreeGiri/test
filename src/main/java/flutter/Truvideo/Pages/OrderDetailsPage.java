@@ -198,12 +198,20 @@ public class OrderDetailsPage extends UtilityClass {
 	// need to call in inspection.xml
 	public boolean checkNavigation_To_Inspection() {
 		InspectionPage inspectionPage = new InspectionPage(driver);
-		inspectionsTab.click();
-		if (inspectionPage.getInspection_Title().isDisplayed()) {
+		if(inspectionsTab.isDisplayed()) {
+			inspectionsTab.click();
+		try {
+		if (inspectionPage.getInspection_Title().isDisplayed() || inspectionPage.getInspection_TitleAgain().isDisplayed()) {
 			log.info("User is navigated to the Inspection page");
 			return true;
 		} else {
 			log.info("User is not able to navigated to the Inspection page");
+			return false;
+		}
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		}{
 			return false;
 		}
 	}
