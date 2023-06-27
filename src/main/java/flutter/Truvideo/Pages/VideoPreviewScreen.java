@@ -184,6 +184,26 @@ public class VideoPreviewScreen extends UtilityClass{
 	
 	
 	
+	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[2]")
+	private WebElement greenContinueButton;
+	public boolean forCameraQualityFunction() throws InterruptedException
+	{
+		greenContinueButton.click();
+		log.info("Clicked on Green (Continue) button");
+		OrderDetailsPage orderDetailsPage=new OrderDetailsPage(driver);
+		Thread.sleep(4000);
+		scrollDown();
+		if(orderDetailsPage.getPendingToUploadVideo().isDisplayed()) {
+			return true;
+		}else {
+			return false;
+		}
+		
+	}
+	
+	
+	
+	
 	
 	private void syso() {
 		// TODO Auto-generated method stub

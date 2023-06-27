@@ -22,6 +22,13 @@ public class ProfileIconScreenTest extends BaseClass {
 		Profileiconscreen=new ProfileIconScreen(driver);
 		Assert.assertTrue(Profileiconscreen.varifyDealerName());
 	}
+	
+	@Test
+	public void verifyLogoutFunctionality() throws InterruptedException
+	{
+		Profileiconscreen=new ProfileIconScreen(driver);
+		Assert.assertTrue(Profileiconscreen.verifyLogoutButton());
+	}
 	private void syso() {
 		// TODO Auto-generated method stub
         }

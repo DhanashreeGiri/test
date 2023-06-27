@@ -21,6 +21,14 @@ public class ProfileIconScreen extends UtilityClass{
    @iOSXCUITFindBy(accessibility = "Log out")
    private WebElement logOut_Button;
    
+   @AndroidFindBy(accessibility = "NO")
+   @iOSXCUITFindBy(accessibility = "Log out")
+   private WebElement noButton;
+   
+   @AndroidFindBy(accessibility = "YES")
+   @iOSXCUITFindBy(accessibility = "Log out")
+   private WebElement yesButton;
+   
    @AndroidFindBy(accessibility = "Settings")
    private WebElement settingsButton;
    
@@ -50,6 +58,27 @@ public class ProfileIconScreen extends UtilityClass{
 	   }else {
 		   return false;
 	   }
+   }
+   
+   public boolean verifyLogoutButton() throws InterruptedException
+   {
+	   logOut_Button.click();
+	   log.info("Clicked on Logout button :- Logout confirm box is opened");
+	   yesButton.click();
+	   log.info("Logout process is done :-User navigating on User List page");
+	   Thread.sleep(5000);
+	   UserListPage userListpage=new UserListPage(driver);
+		if(userListpage.getDealerName().isDisplayed())
+		{
+			log.info("Dealer name is Displayed");
+			return true;
+		}
+		else
+		{
+			log.info("Dealer name is not displayed");
+			return false;
+		}
+	   
    }
    private void syso() {
 		// TODO Auto-generated method stub

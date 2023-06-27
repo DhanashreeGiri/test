@@ -45,6 +45,30 @@ public class RO_SettingPageTest extends BaseClass {
 		Assert.assertTrue(settingpage.defaultCountry("India"));
 		
 	}
+	@Test
+	public void checkingLowCamQuality() throws InterruptedException
+	{
+		settingpage=new RO_SettingPage(driver);
+		settingpage.lowCameraQuality();
+		
+	}
+	
+	@Test
+	public void checkingMediumCamQuality() throws InterruptedException
+	{
+		settingpage=new RO_SettingPage(driver);
+		settingpage.mediumCameraQuality();
+		
+	}
+	
+	@Test
+	public void checkingHighCamQuality() throws InterruptedException
+	{
+		settingpage=new RO_SettingPage(driver);
+		settingpage.highCameraQuality();
+		
+	}
+	
 	private void syso() {
 		// TODO Auto-generated method stub
         }

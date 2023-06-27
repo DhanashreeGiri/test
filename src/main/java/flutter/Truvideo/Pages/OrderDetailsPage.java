@@ -105,6 +105,9 @@ public class OrderDetailsPage extends UtilityClass {
 
 	@AndroidFindBy(xpath = "//android.widget.ImageView[@index='0']")
 	private WebElement pendingToUpload_video;
+	
+	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]")
+	private WebElement backButton;
 
 	public WebElement getPendingToUploadVideo() {
 		return pendingToUpload_video;
@@ -222,9 +225,11 @@ public class OrderDetailsPage extends UtilityClass {
 		}
 	}
 
-	public boolean checkNavigation_PendingToUploadScreen() {
+	public boolean checkNavigation_PendingToUploadScreen() throws InterruptedException {
 		scrollDown();
+		Thread.sleep(5000);
 		pendingToUpload_video.click();
+		log.info("Clicked on video details :-  User will navigate to Pending to Upload screen");
 		PendingToUploadPage pendingToUpload = new PendingToUploadPage(driver);
 		if (pendingToUpload.getPendingToUpload_Title().isDisplayed()) {
 			log.info("User is on Pending to Upload screen");
@@ -233,6 +238,13 @@ public class OrderDetailsPage extends UtilityClass {
 			log.info("User is not able to navigate to Pending Upload screen");
 			return false;
 		}
+	}
+	
+	public void checkNavigationToListPage() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		backButton.click();
+		log.info("Clicked on back button and user will navigate to List Page");
 	}
 	private void syso() {
 		// TODO Auto-generated method stub

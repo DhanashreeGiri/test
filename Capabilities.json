@@ -7,7 +7,7 @@
             "automationName":"UiAutomator2",
             "platformName":"ANDROID",
             "deviceName":"Samsung S21 5G",
-            "platformVersion":"12.0",
+            "platformVersion":"13.0",
             "bundleId":"com.truvideo.enterprise.rc",
             "app":"/src/main/resources/ApplicationFile/RCTruvideoflutter.apk"
                 }

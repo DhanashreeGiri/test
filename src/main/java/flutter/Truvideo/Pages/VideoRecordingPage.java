@@ -352,6 +352,37 @@ public class VideoRecordingPage extends UtilityClass{
 	}
 	
 	
+	
+	
+	
+	@AndroidFindBy(xpath = "//android.view.View[10]")
+	private WebElement cameraFunction_StartRecording;
+	@AndroidFindBy(xpath = "//android.view.View[8]")
+	private WebElement cameraStopRecording;
+	
+	public void cameraQualityFromSetting() throws InterruptedException
+	{
+		
+		
+	//	checkVideoRecordingWithImageCapture();
+		cameraFunction_StartRecording.click();
+		log.info("Clicked on startRecording" );
+		Thread.sleep(10000);
+		cameraStopRecording.click();
+		log.info("Clicked on stop recording button");
+		Thread.sleep(3000);
+		continue_Button.click();
+		log.info("Clicked on continue button");
+		
+//		log.info("Clicked on Camera quality button" );
+//		boolean lowCamValue= cameraQuality_Low.isSelected();
+//		String lowCamValue1= cameraQuality_Low.getText();
+//		boolean lowCamValue2= cameraQuality_Low.isEnabled();
+//		System.out.println("Boolean value low camera Quality is :-"+lowCamValue+"Boolean value low camera Quality is gettext :-"+lowCamValue1+"Boolean value low camera Quality is isEnabled :-"+lowCamValue2);
+//		boolean value=cameraQuality_Medium.isEnabled();
+//		System.out.println("Medium is enabled:-"+value);
+	}
+	
 	private void syso() {
 		// TODO Auto-generated method stub
         }

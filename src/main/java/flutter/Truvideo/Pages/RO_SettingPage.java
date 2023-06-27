@@ -91,6 +91,30 @@ public class RO_SettingPage extends UtilityClass {
 	@AndroidFindBy(accessibility = "High")
 	private WebElement highQuality;
 	
+	@AndroidFindBy(xpath = "//android.view.View[contains(@content-desc, 'Open shaking the device')]")
+	private WebElement openShakingtheDevice;
+	
+	@AndroidFindBy(xpath = "//android.view.View[contains(@content-desc, 'Noise Cancelling')]")
+	private WebElement noiceCancelling;
+	
+	@AndroidFindBy(xpath = "//android.view.View[contains(@content-desc, 'Camera Shake-to-play')]")
+	private WebElement cameraShakeToPlay;
+	
+	@AndroidFindBy(xpath = "//android.view.View[contains(@content-desc, 'Shake sensitivity')]")
+	private WebElement shakeSensitivity;
+	
+	@AndroidFindBy(xpath = "//android.view.View[contains(@content-desc, 'Shake Minimum Count')]")
+	private WebElement shakeMinimumCount;
+	
+	@AndroidFindBy(accessibility = "DELETE ACCOUNT")
+	private WebElement deleteAccount;
+	
+	@AndroidFindBy(accessibility = "DELETE")
+	private WebElement delete;
+	
+	@AndroidFindBy(accessibility = "NO")
+	private WebElement NO;
+	
 	public WebElement getSettingsLabel() {
 		   return settings;
 	   }
@@ -268,10 +292,33 @@ public class RO_SettingPage extends UtilityClass {
 
 	public void lowCameraQuality()
 	{
+		screenScroll();
 		camQualityOption.click();
 		log.info("Clicked on camera quality option:-'Low','Medium','High' option is displayed");
 		lowQuality.click();
 		log.info("Changed camera quality to LOW");
+		backArrow.click();
+		log.info("clicked on back arrow and user is navigated on RO List screen");
+		
+	}
+	public void mediumCameraQuality()
+	{
+		screenScroll();
+		camQualityOption.click();
+		log.info("Clicked on camera quality option:-'Low','Medium','High' option is displayed");
+		mediumQuality.click();
+		log.info("Changed camera quality to Medium");
+		backArrow.click();
+		log.info("clicked on back arrow and user is navigated on RO List screen");
+		
+	}
+	public void highCameraQuality()
+	{
+		screenScroll();
+		camQualityOption.click();
+		log.info("Clicked on camera quality option:-'Low','Medium','High' option is displayed");
+		highQuality.click();
+		log.info("Changed camera quality to High");
 		backArrow.click();
 		log.info("clicked on back arrow and user is navigated on RO List screen");
 		

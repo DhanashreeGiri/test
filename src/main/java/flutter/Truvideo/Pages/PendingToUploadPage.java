@@ -1,5 +1,8 @@
 package flutter.Truvideo.Pages;
 
+import java.util.List;
+
+import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import flutter.Truvideo.Utils.UtilityClass;
@@ -95,6 +98,15 @@ public class PendingToUploadPage extends UtilityClass{
 	@AndroidFindBy(xpath = "//android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]")
 	private WebElement backButton;// no need if bug is fixed
 	
+	@AndroidFindBy(xpath = "//android.view.View[contains(@content-desc,'320x240')]")
+	private List<WebElement> lowResolution;
+	
+	@AndroidFindBy(xpath = "//android.view.View[contains(@content-desc,'720x480')]")
+	private  List<WebElement>  mediumResolution;
+	
+	@AndroidFindBy(xpath = "//android.view.View[contains(@content-desc,'1280x720')]")
+	private List<WebElement> highResolution;
+	
 
 	
 	public boolean checkVideoIsPlaying() throws InterruptedException {
@@ -177,6 +189,65 @@ public class PendingToUploadPage extends UtilityClass{
 			log.info("Video Uploading failed");
 			return false;
 		}	
+	}
+	
+	String resultion;
+	
+	public boolean checkVideoLowQuality()
+	{
+		String resultion=lowResolution.get(0).getAttribute("content-desc");
+		log.info(resultion);
+		System.out.println("checking low resolution"+resultion );
+		
+		log.info("User is navigated on RO Details Page");
+		
+		//Assert.assertTrue(resultion.contains("320x240"));
+		scrollDown();
+         deleteButton.click();
+         deleteButton.click();
+		if(resultion.contains("320x240")) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	public boolean checkVideoMediumQuality()
+	{
+		String resultion=mediumResolution.get(0).getAttribute("content-desc");
+		log.info(resultion);
+		System.out.println("checking medium resolution"+resultion );
+		
+		log.info("User is navigated on RO Details Page");
+		
+		//Assert.assertTrue(resultion.contains("640x480"));
+		scrollDown();
+        deleteButton.click();
+        deleteButton.click();
+		if(resultion.contains("720x480")) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	public boolean checkVideoHighQuality()
+	{
+		String resultion=highResolution.get(0).getAttribute("content-desc");
+		log.info(resultion);
+		System.out.println("checking high resolution"+resultion );
+		
+		log.info("User is navigated on RO Details Page");
+		
+		//Assert.assertTrue(resultion.contains("1280x720"));
+		scrollDown();
+        deleteButton.click();
+        deleteButton.click();
+		if(resultion.contains("1280x720")) {
+			return true;
+		}else {
+			return false;
+		}
 	}
 	private void syso() {
 		// TODO Auto-generated method stub

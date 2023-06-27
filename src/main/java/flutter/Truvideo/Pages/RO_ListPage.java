@@ -300,8 +300,12 @@ public class RO_ListPage extends UtilityClass {
 			return false;
 		}
 	}
-	private void syso() {
-		// TODO Auto-generated method stub
+	public void checkNavigationTo_OrderDetails_Existing_FirstNewRO() {
+		newFilter.click();
+		filterStatusList.get(0).click();
+		log.info("Selected First RO" );
+		
+		
 
 	}
 }
