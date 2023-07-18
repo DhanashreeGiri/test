@@ -46,19 +46,19 @@ public class UserListPageTest extends BaseClass {
 	@Test(priority = 6)
 	public void verify_HelloThere_PersonalPinText() throws Exception {
 		userListPage = new UserListPage(driver);
-		Assert.assertTrue(userListPage.check_VisibleText_PersonalPinScreen("Disha Gupta"));
+		Assert.assertTrue(userListPage.check_VisibleText_PersonalPinScreen("Sandip Test"));
 	}
 	
 	@Test(priority = 7)
 	public void verify_Login_InValidPin() throws Exception {
 		userListPage = new UserListPage(driver);
-		Assert.assertTrue(userListPage.selectUserToLogin_WitInvalidPin("Disha Gupta"));
+		Assert.assertTrue(userListPage.selectUserToLogin_WitInvalidPin("Sandip Test"));
 	}
 	
 	@Test(priority = 8)
 	public void verify_Login_ValidPin() throws Exception {
 		userListPage = new UserListPage(driver);
-		Assert.assertTrue(userListPage.selectUserToLogin_WithValidPin("Disha Gupta"));
+		Assert.assertTrue(userListPage.selectUserToLogin_WithValidPin("Sandip Test"));
 	}
 	
 	@Test

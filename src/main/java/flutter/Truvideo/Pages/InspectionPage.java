@@ -369,38 +369,9 @@ public class InspectionPage extends UtilityClass {
 	@iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[17][@index='27']")
 	private WebElement rR;
 
-	@iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"YES\"]")
-	private WebElement declinedTires;
+	
+	
 
-	@iOSXCUITFindBy(accessibility = "Check Tires / Measure Tire Tread Depth\n" + "5/5")
-	private WebElement closeChkListCheckTires_MeasureTireThreadDepth;
-
-	@iOSXCUITFindBy(accessibility = "Measure Front / Rear Brake Linings\n" + "0/6")
-	private WebElement chkListMeasureFront_RearBrakeLinings;
-
-	@iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[4][@index='4']")
-	private WebElement LF;
-
-	@iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"10\"]")
-	private WebElement tapTen;
-
-	@iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[8][@index='12']")
-	private WebElement RF;
-
-	@iOSXCUITFindBy(xpath = "(//XCUIElementTypeStaticText[@name=\"0\"])[2]")
-	private WebElement tapZero;
-
-	@iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[9][@index='12']")
-	private WebElement LR;
-
-	@iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[13][@index='17']")
-	private WebElement RR;
-
-	@iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"NO INSPD\"]")
-	private WebElement measurement;
-
-	@iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"NO\"]")
-	private WebElement declinedTyres;
 
 	@iOSXCUITFindBy(accessibility = "Measure Front / Rear Brake Linings\n" + "6/6")
 
@@ -431,34 +402,14 @@ public class InspectionPage extends UtilityClass {
 	@iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"NO\"]")
 	private WebElement declinedBattery;
 
-	@iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"BAD\"]")
-	private WebElement terminalCondition;
-
-	@iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[3][@index='10']")
-	private WebElement stateOfCharge;
-
-	@iOSXCUITFindBy(xpath = "//XCUIElementTypeApplication[@name=\"TruVideo Enterprise\"]/XCUIElementTypeWindow/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]")
-	private WebElement btnBackAgain;
-
-	@iOSXCUITFindBy(accessibility = "Check Battery Performance\n" + "4/4")
-
-	private WebElement closeChkListCheckBatteryPerformance;
-
 	@iOSXCUITFindBy(accessibility = "SUBMIT INSPECTION")
 	private WebElement btnSubmit;
 
-	@iOSXCUITFindBy(accessibility = "Success")
-	private WebElement lblSuccess;
-
-	@iOSXCUITFindBy(accessibility = "Inspection submitted successfully!")
-	private WebElement submitMessage;
-
+	
 	@iOSXCUITFindBy(accessibility = "CLOSE")
 	private WebElement btnClose;
 
-	@iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[contains(@name, 'SUBMITTED')]")
-	private WebElement statusSubmitted;
-
+	
 	// @iOSXCUITFindBy(accessibility="DEPRECATED-Mazda Full Circle Inspection")
 	// private WebElement tempFive;
 
@@ -553,56 +504,9 @@ public class InspectionPage extends UtilityClass {
 
 	}
 
-	public void checkchkListInterior_Exterior() throws InterruptedException {
-		if (chkListInterior_Exterior.isDisplayed()) {
-			chkListInterior_Exterior.click();
-			log.info("Fill the checklist Interior/Exterior");
-			screenScroll();
-			Thread.sleep(2000);
-			chkParkingBrake.click();
-			Thread.sleep(2000);
-			closeChkListInterior_Exterior.click();
+	
 
-		}
-	}
-
-	public void checkchkListUnderHood() throws InterruptedException {
-		if (ChkListUnderhood.isDisplayed()) {
-			ChkListUnderhood.click();
-			log.info("Fill the checklist Underhood");
-
-			chkWasherFluid.click();
-			chkBrakeFluid.click();
-			screenScroll();
-			screenScroll();
-			Thread.sleep(2000);
-			transmissionFluid.click();
-			powerSteeringFluid.click();
-			coolantRecovery.click();
-			screenScroll();
-			screenScroll();
-			Thread.sleep(2000);
-			engineOilLevel.click();
-			exhaustFluid.click();
-			coolingSystem.click();
-			screenScroll();
-			screenScroll();
-			screenScroll();
-			Thread.sleep(2000);
-			driveBelts.click();
-			oilLeaks.click();
-			airFilter.click();
-			scrollUp();
-			scrollUp();
-			scrollUp();
-			scrollUp();
-			scrollUp();
-			scrollUp();
-			scrollUp();
-			Thread.sleep(2000);
-			closeChkListUnderhood.click();
-		}
-	}
+	
 
 	public void checkCheckListUnderVehicle() throws InterruptedException {
 		if (chkListUnderVehicle.isDisplayed()) {
@@ -631,133 +535,12 @@ public class InspectionPage extends UtilityClass {
 		}
 	}
 
-	public void checkChecklistAdditionalRecommandations_1() throws InterruptedException {
-		if (chkListAdditionalRecommendations.isDisplayed()) {
-			chkListAdditionalRecommendations.click();
-			log.info("Fill the checklist Additional recommendations");
-			Thread.sleep(2000);
-			brakes.click();
-			screenScroll();
-			screenScroll();
-			Thread.sleep(2000);
-			cabinAirFilter.click();
-			timingBelt.click();
-			scrollUp();
-			scrollUp();
-			Thread.sleep(2000);
-			closeChkListAdditionalRecommendations.click();
+	
+	
 
-		}
-	}
+	
 
-	public void checkchkListCheckTires_MeasureTireThreadDepth() throws InterruptedException {
-		if (chkListCheckTires_MeasureTireThreadDepth.isDisplayed()) {
-			chkListCheckTires_MeasureTireThreadDepth.click();
-			log.info("Fill the checklist ChecK Tires/Measure Tire Thead Depth");
-			screenScroll();
-			Thread.sleep(2000);
-			lF.click();
-			rF.click();
-			tapOne.click();
-			screenScroll();
-			screenScroll();
-			Thread.sleep(2000);
-			lR.click();
-			tapTwo.click();
-			rR.click();
-			screenScroll();
-			Thread.sleep(5000);
-			declinedTires.click();
-			scrollUp();
-			scrollUp();
-			scrollUp();
-			Thread.sleep(2000);
-			closeChkListCheckTires_MeasureTireThreadDepth.click();
-
-		}
-	}
-
-	public void checkchkListMeasureFront_RearBrakeLinings() throws InterruptedException {
-
-		if (chkListMeasureFront_RearBrakeLinings.isDisplayed()) {
-			chkListMeasureFront_RearBrakeLinings.click();
-			log.info("Fill the checklist MeasureFront/Rear Brake Linings");
-			Thread.sleep(2000);
-			screenScroll();
-
-			Thread.sleep(2000);
-			LF.click();
-			tapTen.click();
-			RF.click();
-			tapZero.click();
-			screenScroll();
-			screenScroll();
-			screenScroll();
-			Thread.sleep(4000);
-			LR.click();
-			RR.click();
-			screenScroll();
-			Thread.sleep(3000);
-			measurement.click();
-			declinedTyres.click();
-			scrollUp();
-			scrollUp();
-			scrollUp();
-			scrollUp();
-			Thread.sleep(2000);
-			closeChkListMeasureFront_RearBrakeLinings.click();
-
-		}
-	}
-
-	public void checkchkListCheckBatteryPerformance() throws InterruptedException {
-
-		if (chkListCheckBatteryPerformance.isDisplayed()) {
-			chkListCheckBatteryPerformance.click();
-			log.info("Fill the checklist check battery performance");
-			Thread.sleep(2000);
-			screenScroll();
-			screenScroll();
-			Thread.sleep(2000);
-			txtboxColdCranking.click();
-			one.click();
-			two.click();
-			three.click();
-			four.click();
-			btnBack.click();
-			declinedBattery.click();
-			terminalCondition.click();
-			screenScroll();
-			Thread.sleep(2000);
-			stateOfCharge.click();
-			one.click();
-			two.click();
-			three.click();
-			four.click();
-			btnBackAgain.click();
-			scrollUp();
-			scrollUp();
-			Thread.sleep(2000);
-			closeChkListCheckBatteryPerformance.click();
-			Thread.sleep(5000);
-
-		}
-	}
-
-}
-
-	    	   public void checkchkListInterior_Exterior() throws InterruptedException {
-	    		   if ( chkListInterior_Exterior.isDisplayed()){
-	    			   chkListInterior_Exterior .click();
-	        		   log.info("Fill the checklist Interior/Exterior");
-	        		   screenScroll();
-	        		   Thread.sleep(2000);
-	        		   chkParkingBrake.click();
-	        		   Thread.sleep(2000);
-	        		   closeChkListInterior_Exterior.click();
-	        		   
-}
-	    	   }
+	    	   
 	    	   
  
       public void checkchkListUnderHood() throws InterruptedException {
@@ -797,33 +580,7 @@ public class InspectionPage extends UtilityClass {
 		   closeChkListUnderhood.click();
 }
 }  
-      
-      public void checkCheckListUnderVehicle() throws InterruptedException {
-    	  if (  chkListUnderVehicle.isDisplayed()){
-    		  chkListUnderVehicle.click();
-   		   log.info("Fill the checklist UnderVehicle");
-   		constantVelocity.click();
-   		clutchOperation.click();
-   	   screenScroll();
-	   screenScroll();
-	   Thread.sleep(2000);
-	   steering.click();
-	   suspension.click();
-	   screenScroll();
-	   screenScroll();
-	   Thread.sleep(2000);
-	 
-	   exhaustSystem.click();
-	   brakeLine.click();
-	
-	   scrollUp();
-	   scrollUp();
-	   scrollUp();
-	   scrollUp();
-	   Thread.sleep(2000);
-	   closeChkListUnderVehicle.click();
-      }
-}  
+     
       
       public void checkChecklistAdditionalRecommandations_1() throws InterruptedException {
 	       if ( chkListAdditionalRecommendations.isDisplayed()){

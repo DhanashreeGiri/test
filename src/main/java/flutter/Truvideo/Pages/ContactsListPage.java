@@ -59,12 +59,15 @@ public class ContactsListPage extends UtilityClass {
 	private List<WebElement> call_Button;
 
 	@AndroidFindBy(accessibility = "YOU HAVE NO FAVORITES")
+	@iOSXCUITFindBy(accessibility = "YOU HAVE NO FAVORITES")
 	private WebElement youHaveNoFavorites_Text;
 	
 	@AndroidFindBy(accessibility = "Added to favorite contacts.")
+	@iOSXCUITFindBy(accessibility = "Added to favorite contacts.")
 	private WebElement addedToFavoriteContacts_Text;
 	
 	@AndroidFindBy(accessibility = "Removed from favorite contacts.")
+	@iOSXCUITFindBy(accessibility = "Removed from favorite contacts.")
 	private WebElement removedFromFavorite_text;
 	
 	@AndroidFindBy(id="com.android.permissioncontroller:id/permission_allow_foreground_only_button")

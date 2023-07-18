@@ -29,6 +29,7 @@ public class ChatListPage extends UtilityClass {
 	}
 	
 	@AndroidFindBy(accessibility = "CREATE")
+	@iOSXCUITFindBy(accessibility = "CREATE")
 	private WebElement createChatButton;
 	
 	@AndroidFindBy(xpath = "//android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[5]/android.view.View/android.view.View")

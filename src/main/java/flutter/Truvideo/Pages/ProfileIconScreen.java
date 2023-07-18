@@ -22,17 +22,19 @@ public class ProfileIconScreen extends UtilityClass{
    private WebElement logOut_Button;
    
    @AndroidFindBy(accessibility = "NO")
-   @iOSXCUITFindBy(accessibility = "Log out")
+   @iOSXCUITFindBy(accessibility = "NO")
    private WebElement noButton;
    
    @AndroidFindBy(accessibility = "YES")
-   @iOSXCUITFindBy(accessibility = "Log out")
+   @iOSXCUITFindBy(accessibility = "YES")
    private WebElement yesButton;
    
    @AndroidFindBy(accessibility = "Settings")
+   @iOSXCUITFindBy(accessibility = "Settings")
    private WebElement settingsButton;
    
    @AndroidFindBy(accessibility = "Demo-BMW2")
+   @iOSXCUITFindBy(accessibility = "Demo-BMW2")
    private WebElement dealerName;
    
    public WebElement getLogOut_Button() {

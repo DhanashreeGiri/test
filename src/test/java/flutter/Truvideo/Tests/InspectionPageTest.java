@@ -41,7 +41,7 @@ public class InspectionPageTest extends BaseClass {
 	@Test(priority=6)
 	public void verifycheckchkListInterior_Exterior()  throws InterruptedException {
 		inspectionPage = new InspectionPage(driver);
-		inspectionPage.checkchkListInterior_Exterior();
+		inspectionPage.checkChecklistInterior_Exterior();
 	}
 	@Test(priority=7)
 	public void verifycheckchkListUnderHood()  throws InterruptedException {
