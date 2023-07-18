@@ -21,7 +21,8 @@
         "platformVersion":"15.5",
         "bundleId":"com.truvideo.enterprise.rc",
         "udid":"f56dbf11ec7c4f28f4147740577c3dfa121023b3",
-        "app":"/src/main/resources/ApplicationFile/TruVideoEnterprise.app"
+        "app":"/src/main/resources/ApplicationFile/TruVideoEnterprise.app",
+        "autoAcceptAlerts":true
             }
      },
      {
@@ -46,5 +47,20 @@
                 "appium:bundleId": "com.truvideo.enterprise.rc",
             "app":"/src/main/resources/ApplicationFile/RCTruvideoflutter.apk"
                 }
-    }
+    },
+    
+    {
+    "name":"iPhone8(2)",
+    "caps":{
+        "automationName":"XCUITest",
+        "platformName":"iOS",
+        "deviceName":"iPhone8(2)",
+        "platformVersion":"16.3.1",
+        "bundleId":"com.truvideo.enterprise.rc",
+        "udid":"0f7ff0b1aacc9d6c1cecb453205ba82cf7e21762",
+        "app":"/src/main/resources/ApplicationFile/TruVideoEnterprise.app",
+        "autoAcceptAlerts":true
+            }
+     }
+    
 ]
